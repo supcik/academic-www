@@ -7,7 +7,7 @@ draft = false
 
 [menu.docs]
     parent = "setup"
-    weight = 50
+    weight = 11
 +++
 
 Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](/academic/updates/) prior to updating your site.
