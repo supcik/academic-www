@@ -24,4 +24,4 @@ The WordPress plugin converts all posts, pages, taxonomies, metadata, and settin
 
 ## Phase Two
 
-Given the Jekyll formatted contents of your generated zip file in the step above, proceed to follow the guide on [importing a Jekyll site into Academic]({{< ref "docs/migrate-from-jekyll.md" >}}).
+Given the Jekyll formatted contents of your generated zip file in the step above, proceed to follow the guide on [importing a Jekyll site into Academic]({{< relref "migrate-from-jekyll.md" >}}).

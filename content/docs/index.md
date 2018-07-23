@@ -19,7 +19,7 @@ Key features:
 - Easily manage various content including homepage, blog posts, publications, talks, and projects
 - Extensible via [themes](../themes/) and [plugins](../widgets/)
 - Can't find the widget you want? Use the Custom widget!
-- Write in [Markdown]({{< ref "docs/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
+- Write in [Markdown]({{< relref "writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
@@ -29,10 +29,10 @@ Key features:
 
 To get the most out of Academic, start by reviewing a few introductory topics:
 
-[Setup]({{< ref "docs/install.md" >}}) - Install Academic for your platform.
+[Setup]({{< relref "install.md" >}}) - Install Academic for your platform.
 
-[Quick Start]({{< ref "docs/get-started.md" >}}) and [Settings]({{< ref "docs/customization.md" >}}) - Customize your website.
+[Quick Start]({{< relref "get-started.md" >}}) and [Settings]({{< relref "customization.md" >}}) - Customize your website.
 
-[Add content]({{< ref "docs/managing-content.md" >}}) - Add content to your homepage such as blog posts, projects, talks, or publications.
+[Add content]({{< relref "managing-content.md" >}}) - Add content to your homepage such as blog posts, projects, talks, or publications.
 
 [Community](http://discuss.gohugo.io) - Connect with the Academic and Hugo community.

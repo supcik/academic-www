@@ -8,7 +8,7 @@ date = 2018-07-23
   weight = 50
 +++
 
-A search widget can be added to your site to empower your users to search your website content for keywords. A [demo](http://localhost:1313/academic/#search) can be found on the homepage of this site. The search engine is curently powered by [Algolia](https://www.algolia.com). Alternative providers may be added in the future.
+A search widget can be added to your site to empower your users to search your website content for keywords. A [demo]({{< relref "../#search" >}}) can be found on the homepage of this site. The search engine is curently powered by [Algolia](https://www.algolia.com). Alternative providers may be added in the future.
 
 To enable the search widget:
 

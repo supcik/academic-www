@@ -34,19 +34,19 @@ Edit your biography in the *about* widget `content/home/about.md` that you copie
 
 ## Customize the homepage
 
-Refer to our guide on using [widgets]({{< ref "widgets.md" >}}) to customize your homepage.
+Refer to our guide on using [widgets]({{< relref "../widgets.md" >}}) to customize your homepage.
 
 ## Add your content
 
-Refer to our guide on [managing content]({{< ref "docs/managing-content.md" >}}) to create your own publications, blog posts, talks, and projects.
+Refer to our guide on [managing content]({{< relref "managing-content.md" >}}) to create your own publications, blog posts, talks, and projects.
 
 ## Remove unused widgets and pages
 
-[How to remove unused widgets and content pages]({{< ref "docs/managing-content.md#removing-content" >}}).
+[How to remove unused widgets and content pages]({{< relref "managing-content.md#removing-content" >}}).
 
 ## Themes
 
-Check out the [available color themes]({{< ref "themes.md" >}}) and set the theme using  the `color_theme` option in `config.toml`.
+Check out the [available color themes]({{< relref "../themes.md" >}}) and set the theme using  the `color_theme` option in `config.toml`.
 
 The following font styles are available and can be set by the `font` option in `config.toml`:
 

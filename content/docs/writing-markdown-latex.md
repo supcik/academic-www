@@ -203,7 +203,7 @@ The `highlight_languages` options specified in `config.toml` and in a page's pre
 
 If the `highlight_languages` option is set, then the corresponding javascript files will be served from the [cdnjs server](https://cdnjs.com/libraries/highlight.js/). To see a list of available languages, visit the [cdnjs page](https://cdnjs.com/libraries/highlight.js/) and search for links with the word "languages".
 
-The `highlight_languages` option provides an easy and convenient way to include support for additional languages to be severed from a CDN. If serving unmodified files from cdnjs doesn't meet your needs, you can include javascript files for additional language support via one of the methods described in the [getting started guide]({{< ref "docs/index.md#third-party-and-local-scripts-js" >}}).
+The `highlight_languages` option provides an easy and convenient way to include support for additional languages to be severed from a CDN. If serving unmodified files from cdnjs doesn't meet your needs, you can include javascript files for additional language support via one of the methods described in the [customization guide]({{< relref "customization.md#add-scripts-js" >}}).
 
 #### Option `highlight_style`
 

@@ -10,11 +10,11 @@ aliases = ["post/managing-content/"]
   weight = 20
 +++
 
-This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< ref "docs/writing-markdown-latex.md" >}}).<!--more-->
+This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
 To enable LaTeX math rendering for a page, you should include `math = true` in the page's `+++` preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config.toml`.
 
-To disable source code highlighting by default for all pages, set `highlight = false` in `config.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's preamble. See the [code-highlighting docs]({{< ref "docs/writing-markdown-latex.md#code-highlighting" >}}) for more details.
+To disable source code highlighting by default for all pages, set `highlight = false` in `config.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's preamble. See the [code-highlighting docs]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for more details.
 
 To display a featured image in content page headers, the parameters below can be inserted towards the end of a page's `+++` preamble. It is assumed that the image is located in your `static/img/` folder, so the full path in the example below will be `static/img/headers/getting-started.png`. The `caption` parameter can be used to write an image caption or credit. 
 

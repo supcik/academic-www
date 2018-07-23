@@ -26,6 +26,7 @@ Widgets empower you to fully customize your site. They display as sections on th
 - Tag cloud
 - Hero (introduction)
 - Featurette (show features)
+- Search
 - Custom widget (add your own content!)
 
 The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don't need and customize the parameters of the widgets you wish to keep.

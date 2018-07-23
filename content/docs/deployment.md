@@ -17,7 +17,7 @@ If using Netlify, your site will be built automatically, otherwise run the `hugo
 
 ## Netlify
 
-We recommend deploying your site with Netlify. Netlify is free and provides fast global access, automated deployment when you add or modify content, and one-click HTTPS security. [Check out our guide to deploy with Netlify]({{< ref "docs/install.md" >}}).
+We recommend deploying your site with Netlify. Netlify is free and provides fast global access, automated deployment when you add or modify content, and one-click HTTPS security. [Check out our guide to deploy with Netlify]({{< relref "install.md#install-with-web-browser" >}}).
 
 ## GitHub Pages
 

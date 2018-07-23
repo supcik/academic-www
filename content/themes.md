@@ -55,6 +55,6 @@ The following color themes are available and can be set by the `color_theme` opt
 
 In this section, we will curate themes submitted by users. To create your own theme and request it to be added to this section, follow these steps:
 
-* Follow the [guide to create a new theme]({{< ref "docs/get-started.md#themes" >}})
+* Follow the [guide to create a new theme]({{< relref "/docs/get-started.md#themes" >}})
 * Upload your theme file to a new Github repository
 * [Open a ticket](https://github.com/sourcethemes/academic-www/issues) with a link to your theme's Github repository and a screenshot
