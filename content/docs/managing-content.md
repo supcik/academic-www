@@ -159,19 +159,20 @@ Then edit the newly created file `content/talk/my-talk-name.md` with your full t
 
 So you would like to create a page which utilizes Academic's widget system, similar to the homepage?
 
-Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *courses* page by creating a `content/courses/` folder.
+Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *tutorials* page by creating a `content/tutorials/` folder.
 
-Within your new `content/courses/` folder, create a file named `_index.md` containing the following parameters:
+Within your new `content/tutorials/` folder, create a file named `_index.md` containing the following parameters:
 
 ```
 +++
-title = "Courses"
-date = 2017-01-01
-widgets = true
+title = "Tutorials"  # Add a page title.
+date = 2017-01-01T00:00:00  # Add today's date.
+widgets = true  # Page type is a Widget Page.
+summary = ""  # Add a page description.
 +++
 ```
 
-Install widgets into your `content/courses/` folder. To achieve this, widgets can be copied from your `content/home/` folder or downloaded from [Github](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/home).
+Install widgets into your `content/tutorials/` folder. To achieve this, widgets can be copied from your `content/home/` folder or downloaded from [Github](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/home).
 
 ## Create other pages (e.g. CV)
 
