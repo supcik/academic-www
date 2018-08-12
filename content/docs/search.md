@@ -11,7 +11,7 @@ date = 2018-07-23
 
 A search widget can be added to your site to empower your users to search your website content for keywords. A [demo]({{< relref "../#search" >}}) can be found on the homepage of this site.
 
-The search widget may either be powered by the **built-in** algorithm (based on *Fuse.js*) or powered by [Algolia](https://www.algolia.com). Alternatively, you can create your own third party search widget by following the guide in the [Google](#google) section below.
+The search widget may either be powered by the **built-in** algorithm (based on *Fuse.js*) or powered by [Algolia](https://www.algolia.com). Alternatively, you can create your own third party (e.g. Google) search widget by following the guide in the [Alternatives](#alternatives) section below.
 
 ## Enable
 
@@ -24,12 +24,7 @@ To enable the search widget:
 
 Continue reading below to learn how to configure your desired search provider.
 
-## Disable
-
-1. Under `[params.search]` in `config.toml` set `engine = 0`
-1. Delete `home/search.md` or set `active = false` in its front matter
-
-## Built-in
+### Built-in
 
 To use the free integrated search engine:
 
@@ -37,7 +32,7 @@ To use the free integrated search engine:
 
 Note that this search engine runs entirely in the web browser on the visitor's device. Thus, it is not scalable to a very large number of pages. If you have a very large amount of content, we recommend opting for a server side search engine such as Algolia or Google (see below).
 
-## Algolia
+### Algolia
 
 1. Under `[params.search]` in `config.toml` set `engine = 2`
 1. Register a **free** [Algolia](https://www.algolia.com) account and follow their wizard to create a new search app 
@@ -48,10 +43,16 @@ Note that this search engine runs entirely in the web browser on the visitor's d
 1. Serve (or build and upload) your site and test out the shiny new search widget on your home page :smile:
 
 Note that whenever your content changes (e.g. you add a new page), you will need to re-build and re-upload the search index to Algolia.
- 
-## Google
 
-Google search is not integrated into the *search* widget, but can be implemented as follows:
+## Disable
+
+1. Under `[params.search]` in `config.toml` set `engine = 0`
+1. Delete `home/search.md` or set `active = false` in its front matter
+
+
+## Alternatives
+
+Alternative search providers, such as Google search, are not integrated into the *search* widget, but can be implemented by creating your own custom widget. For example,
 
 1. Create a [custom widget]({{< relref "/widgets.md" >}}) in your `/content/home/` folder
 1. Signup for [Google Custom Search Engine](https://cse.google.com/cse/)
