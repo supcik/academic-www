@@ -2,7 +2,7 @@
 title = "Update"
 
 date = 2016-04-20
-lastmod = 2017-12-26
+# lastmod = 2017-12-26
 draft = false
 
 [menu.docs]
@@ -47,7 +47,7 @@ Uninstall your current version of Academic by deleting the contents of `themes/a
 
 ## Troubleshooting
 
-Check out the [release notes]({{< relref "/updates" >}}) for the version that you are updating to, paying attention to the breaking changes.
+Check out the [release notes]({{< relref "/updates" >}}) for the version that you are updating to, paying attention to the breaking changes. You can check which version you currently have by using Git or by viewing `themes/academic/data/academic.toml`.
 
 If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed in `config.toml` or the `+++` front matter of content files.
 

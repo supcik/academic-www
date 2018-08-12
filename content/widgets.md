@@ -2,7 +2,7 @@
 title = "Widgets"
 
 date = 2016-04-19
-lastmod = 2018-01-20
+# lastmod = 2018-01-20
 draft = false
 
 # tags = ["academic", "hugo"]
@@ -16,17 +16,18 @@ aliases = ["post/widgets/"]
 Widgets empower you to fully customize your site. They display as sections on the homepage or on widget pages. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:
 
 - About/biography
-- Selected publications
+- Featured publications
 - Recent publications
 - Recent news/blog posts
 - Projects
-- Selected talks
+- Featured talks
 - Recent talks
 - Contact
 - Tag cloud
 - Hero (introduction)
 - Featurette (show features)
 - Search
+- Carousel
 - Custom widget (add your own content!)
 
 The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don't need and customize the parameters of the widgets you wish to keep.
