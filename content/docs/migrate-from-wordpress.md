@@ -4,6 +4,10 @@ title = "Migrate from Wordpress"
 date = 2017-12-03
 lastmod = 2017-12-03
 
+
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 linktitle = "From Wordpress"
 [menu.docs]
   parent = "migrate"

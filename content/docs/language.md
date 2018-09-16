@@ -5,6 +5,9 @@ date = 2016-04-20
 lastmod = 2018-01-20
 draft = false
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 math = false
 
 [menu.docs]

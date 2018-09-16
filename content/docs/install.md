@@ -5,6 +5,9 @@ date = 2016-04-20
 lastmod = 2018-01-20
 draft = false
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 [menu.docs]
   parent = "setup"
   weight = 1
@@ -16,6 +19,8 @@ You can choose from one of the following four methods to install:
 * install on your computer using Git with the Command Prompt/Terminal app
 * install on your computer by downloading the ZIP files
 * install on your computer with RStudio
+
+[Hugo v0.48+](https://gohugo.io/getting-started/installing/) is required if installing on your computer.
 
 ## Install with web browser
 

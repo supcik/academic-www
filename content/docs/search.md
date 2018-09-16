@@ -4,6 +4,9 @@ title = "Search"
 date = 2018-07-23
 # lastmod = 2018-08-01
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 [menu.docs]
   parent = "setup"
   weight = 50

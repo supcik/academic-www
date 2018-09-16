@@ -18,7 +18,7 @@ title = "Elements for **Every** Kind of Site"
   name = "Publication"
   link = ""
 [[element]]
-  name = "Talk"
+  name = "Talk & Slides"
   link = ""
 [[element]]
   name = "Filterable Portfolio"

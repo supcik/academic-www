@@ -5,6 +5,9 @@ date = 2017-12-24
 lastmod = 2018-03-02
 draft = false
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 [menu.docs]
     parent = "deploy"
     identifier = "deployment"

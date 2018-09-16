@@ -37,14 +37,8 @@ defaultContentLanguageInSubdir = false
 enableGitInfo = true
 
 [outputs]
-  home = [ "HTML", "CSS", "RSS", "search" ]
+  home = [ "HTML", "CSS", "RSS", "JSON" ]
   section = [ "HTML", "RSS" ]
-
-[outputFormats.search]
-  baseName = "search"
-  isPlainText = true
-  mediaType = "application/json"
-  notAlternative = true
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
@@ -56,31 +50,32 @@ enableGitInfo = true
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "ocean"
+  color_theme = "academic"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
   font = "default"
 
   # Your details.
-  name = "Lena Smith"
-  role = "Professor of Artificial Intelligence"
+  name = "Academic"
+  role = "The website builder for Hugo."
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Stanford University", url = "" } ]
+#  organizations = [ { name = "Stanford University", url = "" } ]
 
-  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "test@example.org"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
-  office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "888 888 88 88"
-  skype = "echo123"
-  telegram = ""
+#  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
+#  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+#  email = "test@example.org"
+#  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+#  office_hours = "Monday 10:00 to 13:00 or email for appointment"
+#  phone = "888 888 88 88"
+  twitter = "GeorgeCushen"
+#  skype = "echo123"
+#  telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
-  keybase = ""
+#  keybase = ""
 
   # Discussion link (e.g. link to a forum, mailing list, or chat).
   #   Uncomment line below to use.
@@ -105,7 +100,7 @@ enableGitInfo = true
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  map = 1
+  map = 0
   map_api_key = "AIzaSyC0UpDZelwtllqj2RKVKopeyqUHvuE2a1o"
   latitude = "37.4275"
   longitude = "-122.1697"
@@ -214,19 +209,19 @@ enableGitInfo = true
 
   # Social/Academic Networking
   #
-  # Icon pack "fa" includes the following social network icons:
+  # Icon pack "fab" includes the following social network icons:
   #
   #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
   #   youtube, instagram, soundcloud
   #
-  #   For email icon, use "fa" icon pack, "envelope" icon, and
+  #   For email icon, use "fas" icon pack, "envelope" icon, and
   #   "mailto:your@email.com" as the link.
   #
-  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #   Full list: https://fontawesome.com/icons
   #
-  # Icon pack "ai" includes the following academic network icons:
+  # Icon pack "ai" includes the following academic icons:
   #
-  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
   #
   #   Full list: https://jpswalsh.github.io/academicons/
 
@@ -235,10 +230,10 @@ enableGitInfo = true
 #    icon_pack = "fa"
 #    link = "mailto:test@example.org"
 #
-  [[params.social]]
-    icon = "twitter"
-    icon_pack = "fa"
-    link = "//twitter.com/GeorgeCushen"
+#  [[params.social]]
+#    icon = "twitter"
+#    icon_pack = "fa"
+#    link = "//twitter.com/GeorgeCushen"
 #
 #  [[params.social]]
 #    icon = "google-scholar"
@@ -260,30 +255,46 @@ enableGitInfo = true
   align_right = false
 
 [[menu.main]]
-  name = "Docs"
+  pre = "<i class=\"fas fa-book\" style=\"color: #00d1b2;\"></i>"
+  name = "Documentation"
   url = "docs/"
   weight = 10
 
 [[menu.main]]
+  pre = "<i class=\"fas fa-newspaper\" style=\"color: #00d1b2;\"></i>"
   name = "Updates"
   url = "updates/"
   weight = 20
 
 [[menu.main]]
+  pre = "<i class=\"fas fa-brush\" style=\"color: #00d1b2;\"></i>"
   name = "Themes"
   url = "themes/"
   weight = 30
 
 [[menu.main]]
+  pre = "<i class=\"fas fa-address-card\" style=\"color: #00d1b2;\"></i>"
   name = "Widgets"
   url = "widgets/"
   weight = 40
 
-[[menu.main]]
-  name = "GitHub"
-  post = "<i class=\"fa fa-external-link\"></i>"
+[[menu.main_right]]
+  name = "<i class=\"fab fa-github-alt\" style=\"color: #333; font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
   url = "https://github.com/gcushen/hugo-academic"
-  weight = 50
+  weight = 10
+
+[[menu.main_right]]
+  name = "<i class=\"fab fa-twitter\" style=\"color: #55acee; font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
+  url = "https://twitter.com/GeorgeCushen"
+  weight = 20
+
+[[menu.main_right]]
+  name = "<span class=\"btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3\">Install</span>"
+  post = ""
+  url = "docs/install/"
+  weight = 30
 
 # Documentation menu.
 

@@ -7,21 +7,21 @@ date = "2017-11-21"
 weight = 20
 
 [[feature]]
-  icon = "files-o"
-  icon_pack = "fa"
+  icon = "battery-full"
+  icon_pack = "fas"
   name = "Highly Flexible"
-  description = "Easily manage many different types of content including the homepage, blog posts, publications, talks, projects, and custom pages. Academic even has multilingual support."
+  description = "Easily manage many different types of content including the homepage, blog posts, publications, talks, slides, tutorials, projects, and custom pages. Academic even has multilingual support."
   
 [[feature]]
-  icon = "pencil"
-  icon_pack = "fa"
-  name = "Markdown, Code, and Math Support"
+  icon = "edit"
+  icon_pack = "fas"
+  name = "Markdown, Code, Math"
   description = "Write in Markdown (or RMarkdown) with support for code highlighting and LaTeX math formatting. You can even use our time-saving shortcodes too."
   
 [[feature]]
-  icon = "picture-o"
-  icon_pack = "fa"
-  name = "Themes and Plugins"
+  icon = "brush"
+  icon_pack = "fas"
+  name = "Themes & Plugins"
   description = "Academic has a powerful theme and plugin system. Themes let you modify Academic's colors to suit your preferences. Then choose the widgets you want and place them where you want."    
 
 +++

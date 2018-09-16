@@ -5,6 +5,9 @@ date = 2016-04-17
 lastmod = 2018-01-13
 draft = false
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 math = true
 aliases = ["post/writing-markdown-latex/"]
 

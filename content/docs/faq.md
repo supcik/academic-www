@@ -2,7 +2,10 @@
 date = 2016-04-10
 lastmod = 2017-11-22
 draft = false
-# tags = ["academic", "hugo"]
+
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 title = "Troubleshooting"
 summary = """Troubleshoot common issues."""
 +++

@@ -3,32 +3,16 @@ widget = "custom"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = ""  # "Academic"
+title = "Features"  # "Academic"
 subtitle = ""  # "**Create a beautifully simple personal or academic website**"
 
 # Order that this section will appear in.
 weight = 30
 +++
 
-<!--
-<div style="text-align: center;">
-<h1>Academic</h1>
-<h2 style="margin-top: 0;">Create a beautifully simple personal or academic website</h2>
-</div>
--->
+This website is powered by **Academic**, [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/), and can be built in **under 10 minutes**.
 
-<div style="height: 5px;"></div>
-
-{{% jumbotron %}}
-This website is powered by [Academic](https://github.com/gcushen/hugo-academic), [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/), and can be built in **under 10 minutes**.
-
-<div style="text-align: center;">
-  <a class="btn btn-intro btn-lg" href="{{< relref "/docs/index.md" >}}">Get Started!</a>
-</div>
-
-Explore the [demo](https://themes.gohugo.io/theme/academic/) and head on over to the [Docs]({{< relref "/docs/index.md" >}}) section for the latest documentation.
-
-If you like Academic, [_star_ it on Github](https://github.com/gcushen/hugo-academic) to show your support and keep track of updates :smiley:
+Explore the [personal demo](https://themes.gohugo.io/theme/academic/) or project/organization demo (this site), and then consider heading on over to [install]({{< relref "/docs/install.md" >}}) and [customize]({{< relref "/docs/get-started.md" >}}) your own site.
 
 Key features:
 
@@ -42,8 +26,8 @@ Key features:
 - Responsive and mobile friendly
 - Simple and refreshing one page design
 
-<div style="text-align: center;">
-  <a class="btn btn-intro btn-lg" style="font-size: 1rem; margin-bottom: 0;" href="https://twitter.com/intent/tweet?text=I%27m%20revamping%20my%20website%20with%20the%20awesome%20Academic%20Theme%20by%20%40GeorgeCushen&amp;url=https%3A%2F%2Fgoo.gl%2FsqhmTN" target="_blank">Tweet It!</a>
-</div>
+If you like Academic, [_star_ it on Github](https://github.com/gcushen/hugo-academic) to show your support and keep track of updates :smiley:
 
-{{% /jumbotron %}}
+<div style="text-align: center;">
+  <a class="btn btn-primary btn-lg" style="font-size: 1rem; margin-bottom: 0;" href="https://twitter.com/intent/tweet?text=I%27m%20revamping%20my%20website%20with%20the%20awesome%20%23HugoAcademic%20by%20%40GeorgeCushen&amp;url=https%3A%2F%2Fgoo.gl%2FsqhmTN" target="_blank">Tweet It!</a>
+</div>

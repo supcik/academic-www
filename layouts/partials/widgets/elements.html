@@ -9,7 +9,7 @@
 <div class="row" style="margin-top: 2.5rem">
   {{ range $page.Params.element }}
   <div class="col-md-3" style="font-size: 2rem;">
-    <span class="label label-default" style="font-weight: bold;">{{ .name | markdownify | emojify }}</span>
+    <span class="badge badge-light" style="font-weight: bold;">{{ .name | markdownify | emojify }}</span>
   </div>
   {{ end }}
 </div>

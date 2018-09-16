@@ -3,6 +3,9 @@ title = "Migrate from Jekyll"
 
 date = 2014-03-10
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 linktitle = "From Jekyll"
 [menu.docs]
   parent = "migrate"

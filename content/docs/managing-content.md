@@ -5,6 +5,9 @@ title = "Managing content"
 math = false
 aliases = ["post/managing-content/"]
 
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
 [menu.docs]
   parent = "content"
   weight = 20
