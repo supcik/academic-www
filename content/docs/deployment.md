@@ -2,7 +2,6 @@
 title = "Overview"
 
 date = 2017-12-24
-lastmod = 2018-03-02
 draft = false
 
 toc = true  # Show table of contents? true/false
@@ -66,21 +65,11 @@ Next, **regenerate** your website's HTML code by running Hugo and uploading the 
 
 Once Git has finished uploading your site to Github, you can open your new `https://<USERNAME>.github.io` website in your browser, substituting *<USERNAME>* with your Github username.
 
-### Custom domains
-
-You can further personalize your website with your own domain name.
-
-We can highly recommend [Namecheap](https://www.namecheap.com/?aff=105828) for **registering a domain**, as they provide great value for money whilst providing fast support. To find a good domain that is available, try a mix of your first and last names or initials, with either a `.com` or `.me` ending.
-
-**For Netlify deployments**, once your domain is registered, navigate to the *Custom domains* section of the Netlify admin panel and then follow [their wizard](https://www.netlify.com/docs/custom-domains/#assigning-a-custom-domain) to assign your domain to your site.
-
-**For Github deployments**, you'll need to login to your domain registrar to point your domain to Github, and create a `CNAME` file in the `static` folder of your website, so that Github knows your intentions. For more information, check out the [domains guide by Github](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
-
-Remember that after you have setup a custom domain, you will need to wait approximately 24-48 hours for the DNS to propagate and then you'll need to update `baseurl` in your `config.toml` to your new URL, regenerate your site (see above section), and redeploy.
-
 ### Automating deployment
 
-If you are feeling more adventurous, you can consider automating deployment so that when a change, such as a new blog post, is pushed to your `academic-kickstart` repository, your website (`<USERNAME>.github.io` repository) is automatically re-built.
+If you are feeling more adventurous, you can consider automating deployment so that when a change, such as a new blog post, is pushed to your `academic-kickstart` repository, your website (`<USERNAME>.github.io` repository) is automatically re-built. Check out the [discussion forum](http://discourse.gohugo.io/) for inspiration!
+
+If you prefer easy automated deployments whenever you make a change to your site, we recommend deploying with Netlify (see above) rather than Github Pages.
 
 ## Amazon S3
 
