@@ -1,10 +1,10 @@
 +++
 widget = "custom"
 active = true
-date = "2016-04-20T00:00:00"
+date = 2016-04-20T00:00:00
 
-title = "Features"  # "Academic"
-subtitle = ""  # "**Create a beautifully simple personal or academic website**"
+title = "Features"
+subtitle = ""
 
 # Order that this section will appear in.
 weight = 30
@@ -27,7 +27,3 @@ Key features:
 - Simple and refreshing one page design
 
 If you like Academic, [_star_ it on Github](https://github.com/gcushen/hugo-academic) to show your support and keep track of updates :smiley:
-
-<div style="text-align: center;">
-  <a class="btn btn-primary btn-lg" style="font-size: 1rem; margin-bottom: 0;" href="https://twitter.com/intent/tweet?text=I%27m%20revamping%20my%20website%20with%20the%20awesome%20%23HugoAcademic%20by%20%40GeorgeCushen&amp;url=https%3A%2F%2Fgoo.gl%2FsqhmTN" target="_blank">Tweet It!</a>
-</div>

@@ -12,9 +12,9 @@ type = "docs"  # Do not modify.
   weight = 50
 +++
 
-A search widget can be added to your site to empower your users to search your website content for keywords. A [demo]({{< relref "../#search" >}}) can be found on the homepage of this site.
+A search box can be added to your site to empower your users to search your website content for keywords. If search is enabled, a search box can be shown on the home page (using the search widget) and in the sidebar of any content using the docs/tutorials layout (as can be seen on this site).
 
-The search widget may either be powered by the **built-in** algorithm (based on *Fuse.js*) or powered by [Algolia](https://www.algolia.com). Alternatively, you can create your own third party (e.g. Google) search widget by following the guide in the [Alternatives](#alternatives) section below.
+The search feature may either be powered by the **built-in** algorithm (based on *Fuse.js*) or powered by [Algolia](https://www.algolia.com). Alternatively, you can create your own third party (e.g. Google) search widget by following the guide in the [Alternatives](#alternatives) section below.
 
 ## Enable
 
