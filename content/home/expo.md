@@ -43,5 +43,5 @@ filter_default = 0
 
 +++
 
-Did you design a beautiful website with Academic too? **Tell us about it!** <span class="ml-3">
+Did you create a beautiful website with Academic too? **Tell us about it!** 🤗 <span class="ml-3">
 <a class="btn btn-primary" style="font-size: 1rem; margin-bottom: 1rem;" href="https://twitter.com/intent/tweet?text=I'm creating a beautiful website from Markdown using the awesome Academic framework by %40GeorgeCushen!&amp;hashtags=MadeWithAcademic&amp;url=https://sourcethemes.com" target="_blank"><i class="fab fa-twitter"></i> #MadeWithAcademic</a></span>
