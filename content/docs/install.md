@@ -63,12 +63,12 @@ blogdown::install_hugo()
 
 Now restart RStudio and you can create an Academic project directly from the menu `File -> New Project -> New Directory` - see Figures 1 and 2 below:
 
-{{< figure src="img/docs/rstudio-create-project.png" title="Create project" >}}
-{{< figure src="img/docs/rstudio-project-type.png" title="Choose *website using Blogdown* as the project type" >}}
+{{< figure library="1" src="docs/rstudio-create-project.png" title="Create project" >}}
+{{< figure library="1" src="docs/rstudio-project-type.png" title="Choose *website using Blogdown* as the project type" >}}
 
 Enter `gcushen/hugo-academic` as the theme:
 
-{{< figure src="img/docs/rstudio-theme.png" title="Choose the Academic theme" >}}
+{{< figure library="1" src="docs/rstudio-theme.png" title="Choose the Academic theme" >}}
 
 Then you will see a panel in RStudio named *Build* containing a *Build Website* button. When you click this button, RStudio will call `blogdown::build_site()` to build the website, automatically generating files in the `public/` folder.
 
