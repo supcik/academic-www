@@ -49,25 +49,29 @@ Content can be written using [Markdown](https://github.com/adam-p/markdown-here/
 
 ## Images
 
-Images may be added to a page by placing them in your `static/img/` folder and referencing them using one of the following two notations:
+Images may be added to a page by either placing them in your `static/img/` media library or in your [page's folder](https://gohugo.io/content-management/page-bundles/), and then referencing them using one of the following notations:
 
-A general image:
+A figure from your `static/img/` media library:
 
-    ![alternative text for search engines](/img/screenshot.png)
+    {{</* figure library="1" src="image.jpg" title="A caption" */>}}
 
-An unnumbered figure with caption:
+A figure within a [page's folder](https://gohugo.io/content-management/page-bundles/) (e.g. `content/post/hello/`) :
 
-    {{</* figure src="/img/screenshot.png" title="Caption" */>}}
+    {{</* figure src="image.jpg" title="A caption" */>}}
 
 A numbered figure with caption:
 
-    {{</* figure src="/img/screenshot.png" title="Caption" numbered="true" */>}}
+    {{</* figure src="image.jpg" title="A caption" numbered="true" */>}}
+
+A general image:
+
+    ![alternative text for search engines](/img/image.jpg)
 
 ## Image gallery
 
 To add an image gallery to a page:
 
-1. Add gallery images to within your `static/img/` folder
+1. Add gallery images to within your `static/img/` media library folder
 2. Reference your images at the end of the front matter of a content file in the form:
     ```
     [[gallery_item]]
