@@ -90,7 +90,15 @@ To add an image gallery to a page:
 
 The following kinds of video may be added to a page.
 
-**Local video** file - place a video in your `static/img/` folder and reference it using the form:
+**Local video file**
+
+Videos may be added to a page by either placing them in your `static/img/` media library or in your [page's folder](https://gohugo.io/content-management/page-bundles/), and then referencing them using one of the following notations.
+
+A video from your `static/img/` media library:
+
+    {{</* video library="1" src="my_video.mp4" controls="yes" */>}}
+    
+A video within a [page's folder](https://gohugo.io/content-management/page-bundles/) (e.g. `content/post/hello/`):
 
     {{</* video src="my_video.mp4" controls="yes" */>}}
 
