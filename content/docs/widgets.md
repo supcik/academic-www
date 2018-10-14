@@ -12,7 +12,7 @@ type = "docs"  # Do not modify.
 
 [menu.docs]
   parent = "setup"
-  weight = 45
+  weight = 35
 +++
 
 Widgets empower you to fully customize your site. They display as sections on the homepage or on widget pages. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:

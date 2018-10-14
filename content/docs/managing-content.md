@@ -15,11 +15,31 @@ type = "docs"  # Do not modify.
 
 This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
-To enable LaTeX math rendering for a page, you should include `math = true` in the page's `+++` preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config.toml`.
+## Featured image
 
-To disable source code highlighting by default for all pages, set `highlight = false` in `config.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's preamble. See the [code-highlighting docs]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for more details.
+To display a **featured image** in content pages, simply drag an image named `featured.*` (e.g. `featured.jpg`) into your page's folder.
 
-To display a featured image in content page headers, the parameters below can be inserted towards the end of a page's `+++` preamble. It is assumed that the image is located in your `static/img/` folder, so the full path in the example below will be `static/img/headers/getting-started.png`. The `caption` parameter can be used to write an image caption or credit. 
+{{% alert note %}}
+If your page does not have its own folder within its section folder, you can refactor a page named `NAME.md` to `NAME/index.md`, creating the folder `NAME`. (Note that this requires Academic v3+ and Hugo v0.48+.)
+{{% /alert %}}
+
+Want to caption the image or set the focal point for thumbnails? The parameters below can be added to the bottom of your page front matter to customize the appearance of the image. The caption supports Markdown and can be used to write an image caption or credit. The focal point ensures that automatic resizes of the image keep the subject in view.
+
+```toml
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
+[image]
+  # Caption (optional)
+  caption = "Photo by [Academic](https://sourcethemes.com/academic/)"
+
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Smart"
+```
+
+## Header image
+
+To display a full width **header image** in archive pages (e.g. `YOUR_URL/post/`), the header parameters below can be inserted towards the end of a page's `+++` preamble. It is assumed that the image is located in your `static/img/` folder, so the full path in the example below will be `static/img/header.png`. The `caption` parameter supports Markdown and can be used to write an image caption or credit. 
 
 ```toml
 [header]
@@ -28,15 +48,17 @@ caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic
 
 ```
 
-{{% alert note %}}
-If you wish to prevent a featured image automatically being used for a post's thumbnail on the homepage, the `preview = false` parameter can be added to `[header]`.
-{{% /alert %}}
+## Math and Code
+
+To enable **LaTeX math** rendering for a page, you should include `math = true` in the page's `+++` preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config.toml`.
+
+To disable **source code highlighting** for all pages, set `highlight = false` in `config.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's preamble. See the [code-highlighting docs]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for more details.
 
 ## Create a publication
 
 To create a new publication:
 
-    hugo new publication/my-paper-name.md
+    hugo new --kind publication publication/my-paper-name
 
 Then edit the default variables at the top of `content/publication/my-paper-name.md` to include the details of your publication. The `url_` variables are used to generate links associated with your publication, such as for viewing PDFs of papers. Here is an example:
 
@@ -69,9 +91,6 @@ publication_short = "In *ICA*"
 abstract = "The abstract. Markdown and math can be used (note that math may require escaping as detailed in the red alert box below)."
 abstract_short = "A short version of the abstract."
 
-# Featured image thumbnail (optional)
-image_preview = ""
-
 # Is this a selected publication? (true/false)
 selected = true
 
@@ -101,13 +120,6 @@ math = true
 
 # Does the content use source code highlighting?
 highlight = true
-
-# Featured image
-# Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
-[header]
-image = "headers/bubbles-wide.jpg"
-caption = "My caption :smile:"
-
 +++
 
 Further details on your publication can be written here using *Markdown* for formatting. This text will be displayed on the Publication Detail page.
@@ -132,7 +144,7 @@ Any double quotes (`"`) or backslashes (e.g. LaTeX `\times`) occurring within th
 
 To create a blog/news article:
 
-    hugo new post/my-article-name.md
+    hugo new  --kind post post/my-article-name
 
 Then edit the newly created file `content/post/my-article-name.md` with your full title and content.
 
@@ -146,7 +158,7 @@ To disable commenting for a specific post, you can add `disable_comments = true`
 
 To create a project:
 
-    hugo new project/my-project-name.md
+    hugo new  --kind project project/my-project-name
 
 Then edit the newly created file `content/project/my-project-name.md`. Either you can link the project to an external project website by setting the `external_link = "http://external-project.com"` variable at the top of the file, or you can add content (below the final `+++`) in order to render a project page on your website.
 
@@ -154,9 +166,19 @@ Then edit the newly created file `content/project/my-project-name.md`. Either yo
 
 To create a talk:
 
-    hugo new talk/my-talk-name.md
+    hugo new  --kind talk talk/my-talk-name
 
 Then edit the newly created file `content/talk/my-talk-name.md` with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.
+
+## Create slides
+
+Slides can be created very efficiently using Markdown, presented to your audience, and shared on your site. Speaker notes included!
+
+See the [slides demo](https://themes.gohugo.io//theme/academic/slides/example-slides#/) - although note that this demo is hosted by Hugo team and they have modified their demo to reduce functionality. Build the example site (`themes/academic/exampleSite/`) locally to see the full demo including speaker notes.
+
+Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/slides/example-slides.md) at `themes/academic/exampleSite/content/slides/example-slides.md` to learn how to get started.
+
+Link slides to a talk or publication by editing the `url_slides` option in the talk/publication page to point to your slides. For example, `url_slides = "slides/example-slides"` points to the slide deck in this example. See the full example front matter which includes `url_slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
 
 ## Create a widget page
 
@@ -197,7 +219,7 @@ Then edit the `title` parameter in each `_index.md` as desired and add any conte
 
 ## Removing content
 
-Generally, to remove content, simply delete the relevant file from your `content/post`, `content/publication`, `content/project`, or `content/talk` folder.
+Generally, to remove content, simply delete the relevant page file/folder from your `content/post`, `content/publication`, `content/project`, or `content/talk` folder.
 
 ## View your updated site
 
@@ -205,8 +227,4 @@ After you have made changes to your site, you can view it by running the `hugo s
 
 ## Deploy your site
 
-Finally, you can build the static website to a `public/` folder ready for deployment using the `hugo` command.
-
-You may then deploy your site by copying the `public/` directory (by FTP, SFTP, WebDAV, Rsync, git push, etc.) to your production web server.
-
-Note that running `hugo` does not remove any previously generated files before building. Therefore, it's best practice to delete your `public/` directory prior to running `hugo` to ensure no old or interim files are deployed to your server.
+Finally, you can [deploy your site]({{< relref "deployment.md" >}}). 

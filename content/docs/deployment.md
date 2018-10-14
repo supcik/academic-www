@@ -17,6 +17,8 @@ Sites built using Academic can be deployed in a large variety of ways due to the
 
 If using Netlify, your site will be built automatically, otherwise run the `hugo` command in your terminal to generate your site in the `public/` folder - now it is ready to copy across to your host.
 
+With Academic, you can make a great impression on your visitors with your own [custom domain name]({{< relref "domain.md" >}}). 
+
 ## Netlify
 
 We recommend deploying your site with Netlify. Netlify is free and provides fast global access, automated deployment when you add or modify content, and one-click HTTPS security. [Check out our guide to deploy with Netlify]({{< relref "install.md#install-with-web-browser" >}}).

@@ -20,3 +20,14 @@ date = 2017-12-01
 title = "My first blog post"
 +++
 ```
+
+## RStudio
+
+Alternatively, if you are using RStudio to edit your site and wish to include an RMarkdown file, you'll need to utilise YAML in your RMarkdown file as RMarkdown does not yet support the TOML format. Thus, your RMarkdown front matter will appear similar to below, set between triple-minus `---` lines
+
+```yaml
+---
+date: 2017-12-01
+title: My first blog post
+---
+```

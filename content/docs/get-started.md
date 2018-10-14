@@ -35,7 +35,7 @@ Don't worry if you are not 100% happy with the colors or font yet, as these can 
 
 ## Choose the right layout for you
 
-Academic has a template for you weather you are you creating a website for your CV, academic research, blog, course, lab, business, photography, portfolio, or restaurant!
+Academic has a template for you whether you are you creating a website for your CV, academic research, blog, course, lab, business, photography, portfolio, or restaurant!
 
 What kind of content would you like to publish? Academic supports:
 
@@ -49,7 +49,7 @@ What kind of content would you like to publish? Academic supports:
 - **Slides**: write slides very efficiently with Markdown, present them at your talk, and share them online
 - **Publications**: import your research publications from BibTeX
 
-Once you have decided on the content which you would like to publish, take a look at the [available homepage widgets]({{< relref "widgets.md" >}}) and consider which ones would be most relevant to you.
+Once you have decided on the type of content that you would like to publish, take a look at the [available homepage widgets]({{< relref "widgets.md" >}}) and consider which ones would be most relevant to you.
 
 Then, open your `content/home/` folder and set the `active` parameter to either `true` or `false` for each widget depending on if you wish to display it or not. Widgets that you don't need can alternatively be deleted rather than setting `active` to `false`.
 
