@@ -2,7 +2,7 @@
 title = "Install"
 
 date = 2016-04-20
-lastmod = 2018-01-20
+#lastmod = 2018-01-20
 draft = false
 
 toc = true  # Show table of contents? true/false
@@ -20,7 +20,7 @@ You can choose from one of the following four methods to install:
 * install on your computer by downloading the ZIP files
 * install on your computer with RStudio
 
-[Hugo v0.48+](https://gohugo.io/getting-started/installing/) is required if installing on your computer.
+[Hugo v0.49+](https://gohugo.io/getting-started/installing/) is required if installing on your computer.
 
 ## Install with web browser
 
@@ -84,3 +84,6 @@ If you wish to initialise your site with the demo content, copy the contents of 
 cp -av themes/academic/exampleSite/* .
 ```
 
+## Next steps
+
+[Follow the step by step guide to setup your new site]({{< relref "get-started.md" >}}).

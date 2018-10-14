@@ -28,6 +28,10 @@ Key features:
 - Simple and refreshing one page design
 - Multilingual and easy to customize
 
+## Why Academic?
+
+Learn [why Academic was created and the benefits of using it to power your site](https://georgecushen.com/create-your-website-with-hugo/).
+
 ## First steps
 
 To get the most out of Academic, start by reviewing a few introductory topics:

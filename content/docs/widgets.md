@@ -5,12 +5,14 @@ date = 2016-04-19
 # lastmod = 2018-01-20
 draft = false
 
-# tags = ["academic", "hugo"]
-math = false
-summary = """
-Enable/disable and configure widgets to customize your homepage.
-"""
-aliases = ["post/widgets/"]
+aliases = ["widgets/"]
+
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
+[menu.docs]
+  parent = "setup"
+  weight = 45
 +++
 
 Widgets empower you to fully customize your site. They display as sections on the homepage or on widget pages. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:
@@ -24,8 +26,8 @@ Widgets empower you to fully customize your site. They display as sections on th
 - Recent talks
 - Contact
 - Tag cloud
-- Hero (introduction)
-- Featurette (show features)
+- Hero (call-to-action)
+- Featurette (showcase key features or skills)
 - Search
 - Carousel
 - Custom widget (add your own content!)

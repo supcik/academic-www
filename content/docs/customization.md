@@ -2,7 +2,7 @@
 title = "Customization"
 
 date = 2016-04-20
-lastmod = 2018-01-20
+#lastmod = 2018-01-20
 draft = false
 
 toc = true  # Show table of contents? true/false
@@ -19,11 +19,13 @@ aliases = ["post/getting-started/"]
 
 It is possible to carry out many customizations *without* editing any code in the `themes/academic/` folder, making it easier to update the framework in the future.
 
-## Menu
+## Custom theme
 
-The `[[menu.main]]` entries towards the bottom of `config.toml` define the navigation links at the top of the website. They can be added or removed as desired.
+To **customize the color theme**, you can copy a theme such as `themes/academic/data/themes/default.toml` to `data/themes/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/themes/` folders if they do not already exist. Now you can adjust the colors within your theme file.
 
-To create a dropdown sub-menu, add `identifier = "something"` to the parent item and `parent = "something"` to the child item.
+To **customize the font theme**, you can copy a theme such as `themes/academic/data/fonts/default.toml` to `data/fonts/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/fonts/` folders if they do not already exist. Now you can adjust the font size and family, choosing from the library of [Google Fonts](https://fonts.google.com/) if you wish.
+
+If you create your own theme, consider giving it a unique name and *sharing* your new color or font theme with the [community](http://discuss.gohugo.io/).
 
 ## Website icon
 
@@ -32,6 +34,10 @@ Save your main icon and mobile icon as square PNG images named `icon.png` (32x32
 ## Analytics
 
 To enable [Google Analytics](http://www.google.com/analytics), add your tracking code in `config.toml` similarly to `googleAnalytics = "UA-12345678-9"`.
+
+## Comments
+
+The Disqus commenting variable (`disqusShortname`) in `config.toml` can be set to your own [Disqus](https://disqus.com/) shortname to enable visitors to comment on your posts.
 
 ## Add scripts (JS)
 
