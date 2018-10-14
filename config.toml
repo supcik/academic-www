@@ -9,7 +9,7 @@
 baseurl = "https://sourcethemes.com/academic/"
 
 # Title of your site
-title = "Source Themes"
+title = "Academic"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -51,7 +51,7 @@ enableGitInfo = true
   # AUTHOR SETUP
 
   # Your details.
-  name = "Source Themes"
+  name = "Academic"
   role = ""
 
 #  # Organizations/Affiliations.
@@ -285,10 +285,16 @@ enableGitInfo = true
   weight = 30
 
 [[menu.main]]
-  pre = "<i class=\"fas fa-address-card\" style=\"color: #00d1b2;\"></i>"
-  name = "Widgets"
-  url = "widgets/"
+  pre = "<i class=\"fas fa-donate\" style=\"color: #00d1b2;\"></i>"
+  name = "Support Academic"
+  url = "#support"
   weight = 40
+
+#[[menu.main]]
+#  pre = "<i class=\"fas fa-address-card\" style=\"color: #00d1b2;\"></i>"
+#  name = "Widgets"
+#  url = "widgets/"
+#  weight = 40
 
 [[menu.main_right]]
   name = "<i class=\"fab fa-github-alt\" style=\"color: #333; font-size: 1rem; line-height: 1.25\"></i>"
