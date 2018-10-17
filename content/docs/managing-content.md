@@ -15,6 +15,10 @@ type = "docs"  # Do not modify.
 
 This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
+{{% alert warning %}}
+Note that there is a bug in Hugo v0.49 affecting the `hugo new ...` commands on this page. There is a [workaround for Hugo v0.49](https://github.com/gcushen/hugo-academic/issues/732#issuecomment-430049337).
+{{% /alert %}}
+
 ## Featured image
 
 To display a **featured image** in content pages, simply drag an image named `featured.*` (e.g. `featured.jpg`) into your page's folder.
@@ -56,85 +60,64 @@ To disable **source code highlighting** for all pages, set `highlight = false` i
 
 ## Create a publication
 
-To create a new publication:
+### Automatically
 
-    hugo new --kind publication publication/my-paper-name
+The leading reference management tools enable you to export your publications to the open BibTeX format. If you are new to research we recommend managing references with [Zotero](https://www.zotero.org/), a popular open source tool.
 
-Then edit the default variables at the top of `content/publication/my-paper-name.md` to include the details of your publication. The `url_` variables are used to generate links associated with your publication, such as for viewing PDFs of papers. Here is an example:
+In your reference management tool, create a list of your own publications and export it as a `*.bib` BibTeX file.
 
-```
-+++
-title = "A publication title, such as title of a paper"
+Python 3 is a prerequisite, so please [install Python 3](https://realpython.com/installing-python/) if it's not already installed. Also, you should backup your website before continuing, or ensure that it is checked into Git so that you can review the changes that will be proposed by Academic's admin tool later on.
 
-# Date first published.
-date = "2013-07-01"
+Open your Terminal or Command Prompt app and install Academic's admin tool:
 
-# Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["First author's name", "Second author's name"]
-
-# Publication type.
-# Legend:
-# 0 = Uncategorized
-# 1 = Conference proceedings
-# 2 = Journal
-# 3 = Work in progress
-# 4 = Technical report
-# 5 = Book
-# 6 = Book chapter
-publication_types = ["1"]
-
-# Publication name and optional abbreviated version.
-publication = "In *International Conference on Academic*. You may use *Markdown* for italics etc."
-publication_short = "In *ICA*"
-
-# Abstract and optional shortened version.
-abstract = "The abstract. Markdown and math can be used (note that math may require escaping as detailed in the red alert box below)."
-abstract_short = "A short version of the abstract."
-
-# Is this a selected publication? (true/false)
-selected = true
-
-# Projects (optional).
-#   Associate this publication with one or more of your projects.
-#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-#   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
-projects = []
-
-# Links (optional).
-url_pdf = "pdf/my-paper-name.pdf"
-url_preprint = ""
-url_code = ""
-url_dataset = ""
-url_project = ""
-url_slides = ""
-url_video = ""
-url_poster = ""
-url_source = ""
-
-# Custom links (optional).
-#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Custom Link", url = "http://example.org"}]
-
-# Does the content use math formatting?
-math = true
-
-# Does the content use source code highlighting?
-highlight = true
-+++
-
-Further details on your publication can be written here using *Markdown* for formatting. This text will be displayed on the Publication Detail page.
+```python
+pip3 install -U academic
 ```
 
-The `url_` links can either point to local or web content. Associated local publication content, such as PDFs, may be copied to a `static/pdf/` folder and referenced like `url_pdf = "pdf/my-paper-name.pdf"`.
+Use the `cd` command to navigate to your website folder in the terminal.
 
-You can also associate custom link buttons with the publication by adding the following block within the variable preamble above, which is denoted by `+++`:
+Then import your publications with:
+
+```bash
+academic import --bibtex <path_to_your/publications.bib>
+```
+
+The tool is in *beta* status and intended purely to help assist you, so the generated output in the `publications` folder should be reviewed prior to publishing your site. You can also consider enhancing the output by taking a look at the front matter parameters in the files alongside the details in the *Manually* section below.
+
+To contribute to the tool or submit feature requests and bug report, please check out the [**Academic admin tool on GitHub**](https://github.com/sourcethemes/academic-admin). 
+
+### Manually
+
+Alternatively, publications can be manually created using the command:
+
+    hugo new --kind publication publication/<my-publication>
+
+where `<my-publication>` is the name of your publication, using hyphens (`-`) instead of spaces.
+
+Then edit the parameters in `content/publication/<my-publication>/index.md` to include the details of your publication. The main parameters include:
+
+- **title:** the title of your publication
+- **date:** the date that your publication was first published (must be in a valid TOML date format)
+- **publication_types:** use the legend to specify the type of your publication, e.g. conference proceedings
+- **publication:** where your title was published - Markdown formatting is enabled here for italic etc.
+- **abstract:** the summary of your publication
+
+Further details on your publication can be written in the body of the document (after the `+++` metadata section ends) using *Markdown* for formatting. This text will be displayed on the publication's page.
+
+To enable visitors to read your work, either paste a link to your PDF in `url_pdf` or add a PDF file with the same name as your publication's own folder to your publication's folder and a PDF link will be automatically generated. For example, if your publication is located at `publication/photons/index.md`, place a PDF at `publication/photons/photons.pdf`.
+
+To enable visitors to easily cite your work, export a BibTeX citation file named `cite.bib` from your reference management tool to your publication's own folder and a citation link will be automatically generated.
+
+**Linking other resources**
+
+The `url_` links can either point to local or web content. Associated local publication content, may be copied to the publication's folder and referenced like `url_code = "code.zip"`.
+
+You can also associate custom link buttons with the publication by adding the following block within the front matter:
 
 ```
 url_custom = [{name = "Custom Link 1", url = "http://example.org"},
               {name = "Custom Link 2", url = "http://example.org"}]
 ```
-
-If you set `list_format=2` to enable a detailed listing of publications in the Publication Widget (`home/publications.md`) or Publication Archive (`publication/_index.md`), then there are a few more optional variables that you can include in the publication page preamble. You may use `abstract_short = "friendly summary of abstract"` and `publication_short = "abbreviated publication details"` to display a friendly summary of the abstract and abbreviate the publication details, respectively. Furthermore, there is the option to display a different image on the homepage to the publication detail page by setting `image_preview = "my-image.jpg"`. This can be useful if you wish to scale down the image for the homepage or simply if you just wish to show a different image for the preview.
 
 {{% alert warning %}}
 Any double quotes (`"`) or backslashes (e.g. LaTeX `\times`) occurring within the value of any frontmatter parameter (such as the *abstract*) should be escaped with a backslash (`\`). For example, the symbol `"` and LaTeX text `\times` become `\"` and `\\times`, respectively. Refer to the [TOML documentation](https://github.com/toml-lang/toml#user-content-string) for more info.
