@@ -58,6 +58,17 @@ To enable **LaTeX math** rendering for a page, you should include `math = true` 
 
 To disable **source code highlighting** for all pages, set `highlight = false` in `config.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's preamble. See the [code-highlighting docs]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for more details.
 
+## Page features
+
+The following parameters can be added to the front matter of a page to control its features:
+
+```toml
+reading_time = false  # Show estimated reading time?
+share = false  # Show social sharing links?
+profile = false  # Show author profile?
+comments = false  # Show comments?
+```
+
 ## Create a publication
 
 ### Automatically
