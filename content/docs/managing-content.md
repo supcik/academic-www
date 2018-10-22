@@ -174,6 +174,16 @@ Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo
 
 Link slides to a talk or publication by editing the `url_slides` option in the talk/publication page to point to your slides. For example, `url_slides = "slides/example-slides"` points to the slide deck in this example. See the full example front matter which includes `url_slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
 
+## Create a course or documentation
+
+The *docs* layout is designed for **knowledge sharing**. Use cases include **online courses, tutorials, software documentation, and knowledge bases**.
+
+This website is using the *docs* layout for the purpose of documenting Academic. Also, there is a [online course demo](https://themes.gohugo.io//theme/academic/tutorial/).
+
+Refer to the [example course](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/tutorial) at `themes/academic/exampleSite/content/tutorial/` to learn how to get started.
+
+If you are a data analyst/scientist using the **R** language (e.g. *RStudio* and *RMarkdown*), we recommend taking a look at the dedicated [R boilerplate project on GitHub](https://github.com/sourcethemes/project-kickstart-r). 
+
 ## Create a widget page
 
 So you would like to create a page which utilizes Academic's widget system, similar to the homepage?
