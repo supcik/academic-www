@@ -2,7 +2,7 @@
 title = "Writing content with Markdown, LaTeX, and Shortcodes"
 
 date = 2016-04-17
-lastmod = 2018-01-13
+#lastmod = 2018-01-13
 draft = false
 
 toc = true  # Show table of contents? true/false
@@ -29,9 +29,9 @@ Content can be written using [Markdown](https://github.com/adam-p/markdown-here/
 
 ## Emphasis
 
-    Italics with *asterisks* or _underscores_.
+    Italics with _underscores_.
 
-    Bold with **asterisks** or __underscores__.
+    Bold with **asterisks**.
 
     Combined emphasis with **asterisks and _underscores_**.
 
