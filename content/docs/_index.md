@@ -17,17 +17,6 @@ math = true
 
 The Academic framework enables you to easily create a beautifully simple website using the [Hugo](https://gohugo.io) static site generator in under 10 minutes :rocket:
 
-Key features:
-
-- Easily manage various content including homepage, blog posts, publications, talks, and projects
-- Extensible via [themes](../themes/) and [plugins](../widgets/)
-- Can't find the widget you want? Use the Custom widget!
-- Write in [Markdown]({{< relref "writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
-- Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
-- Responsive and mobile friendly
-- Simple and refreshing one page design
-- Multilingual and easy to customize
-
 ## Why Academic?
 
 Learn [why Academic was created and the benefits of using it to power your site](https://georgecushen.com/create-your-website-with-hugo/).
