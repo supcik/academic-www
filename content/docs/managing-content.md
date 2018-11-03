@@ -16,7 +16,7 @@ type = "docs"  # Do not modify.
 This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
 {{% alert warning %}}
-Note that there is a bug in Hugo v0.49 affecting the `hugo new ...` commands on this page. There is a [workaround for Hugo v0.49](https://github.com/gcushen/hugo-academic/issues/732#issuecomment-430049337).
+Hugo **v0.49** has a bug affecting the `hugo new ...` commands on this page. Please update Hugo to **v0.50+**.
 {{% /alert %}}
 
 ## Featured image
