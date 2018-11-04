@@ -27,7 +27,7 @@ To display a **featured image** in content pages, simply drag an image named `fe
 If your page does not have its own folder within its section folder, you can refactor a page named `NAME.md` to `NAME/index.md`, creating the folder `NAME`. (Note that this requires Academic v3+ and Hugo v0.50+.)
 {{% /alert %}}
 
-Want to caption the image or set the focal point for thumbnails? The parameters below can be added to the bottom of your page front matter to customize the appearance of the image. The caption supports Markdown and can be used to write an image caption or credit. The focal point ensures that automatic resizes of the image keep the subject in view.
+Want to caption the image or set a focal point to influence how the image is cropped? The parameters below can be added to the bottom of your page front matter to customize the appearance of the image. The caption supports Markdown and can be used to write an image caption or credit. The focal point ensures that automatic resizes of the image keep the subject in view.
 
 ```toml
 # Featured image
@@ -39,17 +39,19 @@ Want to caption the image or set the focal point for thumbnails? The parameters 
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
   focal_point = "Smart"
+  
+  # Show image only in page previews?
+  preview_only = false
 ```
 
 ## Header image
 
-To display a full width **header image** in archive pages (e.g. `YOUR_URL/post/`), the header parameters below can be inserted towards the end of a page's `+++` preamble. It is assumed that the image is located in your `static/img/` folder, so the full path in the example below will be `static/img/header.png`. The `caption` parameter supports Markdown and can be used to write an image caption or credit. 
+To display a full width **header image** in archive pages (e.g. `YOUR_URL/post/`), the header parameters below can be inserted towards the end of a page's `+++` preamble. It is assumed that the image is located in your `static/img/` media library, so the full path in the example below will be `static/img/header.png`. The `caption` parameter supports Markdown and can be used to write an image caption or credit. 
 
 ```toml
 [header]
-image = "headers/getting-started.png"
-caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
-
+  image = "headers/getting-started.png"
+  caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 ```
 
 ## Math and Code
