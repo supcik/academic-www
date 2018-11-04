@@ -24,7 +24,7 @@ Hugo **v0.49** has a bug affecting the `hugo new ...` commands on this page. Ple
 To display a **featured image** in content pages, simply drag an image named `featured.*` (e.g. `featured.jpg`) into your page's folder.
 
 {{% alert note %}}
-If your page does not have its own folder within its section folder, you can refactor a page named `NAME.md` to `NAME/index.md`, creating the folder `NAME`. (Note that this requires Academic v3+ and Hugo v0.48+.)
+If your page does not have its own folder within its section folder, you can refactor a page named `NAME.md` to `NAME/index.md`, creating the folder `NAME`. (Note that this requires Academic v3+ and Hugo v0.50+.)
 {{% /alert %}}
 
 Want to caption the image or set the focal point for thumbnails? The parameters below can be added to the bottom of your page front matter to customize the appearance of the image. The caption supports Markdown and can be used to write an image caption or credit. The focal point ensures that automatic resizes of the image keep the subject in view.
