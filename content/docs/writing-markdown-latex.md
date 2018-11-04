@@ -69,11 +69,26 @@ A general image:
 
 ## Image gallery
 
-To add an image gallery to a page:
+**To add an image gallery to a page bundle:**
+
+1. Create a gallery album folder within your [page bundle](https://gohugo.io/content-management/page-bundles/) (i.e. within your page's own folder)
+2. Add images to your new album folder
+3. Paste `{{</* gallery album="<ALBUM FOLDER>" */>}}` where you would like the gallery to appear in the page content, changing the album parameter to match the name of your album folder
+
+Optionally, to add captions for your images, add the following instances to the end of your page's front matter:
+
+```toml
+[[gallery_item]]
+album = "<ALBUM FOLDER>"
+image = "<IMAGE NAME>.jpg"
+caption = "Write your image caption here"
+```
+
+**Alternatively, create an image gallery with images from the internet or your `static/img/` media library:**
 
 1. Add gallery images to within your `static/img/` media library folder
 2. Reference your images at the end of the front matter of a content file in the form:
-    ```
+    ```toml
     [[gallery_item]]
     album = "1"
     image = "my_image.jpg"
