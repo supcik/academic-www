@@ -24,7 +24,7 @@ Hugo **v0.49** has a bug affecting the `hugo new ...` commands on this page. Ple
 To display a **featured image** in content pages, simply drag an image named `featured.*` (e.g. `featured.jpg`) into your page's folder.
 
 {{% alert note %}}
-If your page does not have its own folder within its section folder, you can refactor a page named `NAME.md` to `NAME/index.md`, creating the folder `NAME`. (Note that this requires Academic v3+ and Hugo v0.50+.)
+If your page does not have its own folder ([*page bundle*](https://gohugo.io/content-management/page-bundles/)) within its section folder, you can refactor a page named `NAME.md` to `NAME/index.md`, creating the folder `NAME`. There is a [tool to help automate this process](https://github.com/sourcethemes/academic-scripts). Page bundles require Academic v3+ and Hugo v0.50+.
 {{% /alert %}}
 
 Want to caption the image or set a focal point to influence how the image is cropped? The parameters below can be added to the bottom of your page front matter to customize the appearance of the image. The caption supports Markdown and can be used to write an image caption or credit. The focal point ensures that automatic resizes of the image keep the subject in view.

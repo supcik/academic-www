@@ -13,13 +13,29 @@ type = "docs"  # Do not modify.
     weight = 11
 +++
 
-Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](/academic/updates/) prior to updating your site.
+The update process consists of:
 
-Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your `themes/academic` directory) and record your current version number.
+1. [Preparation](#preparation)
+2. [Updating Academic](#update-academic)
+3. [Migrating your content](#migrate-content) front matter and configuration by applying any relevant breaking changes
+
+Feel free to [star Academic on Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](/academic/updates/) to learn what's new.
+
+## Preparation
+
+Before updating Academic, it is strongly recommended to make a full **backup** of your website folder (including `themes/academic/`).
+
+Then, **record your current version**, so that after you update Academic, you can apply any relevant breaking changes to the TOML/YAML site configuration and front matter in your `content/` folder. To find your current version, look in `themes/academic/data/academic.toml`. Note that if you installed the *master* version rather than a specific release, then extra care should be taken (such as by checking the git log if you installed with git) as you may be in-between versions.
+
+{{% alert note %}}
+Academic Kickstart comes with an [update script](https://github.com/sourcethemes/academic-kickstart/blob/master/update_academic.sh) to check for available updates - just remember to temporarily comment out the last line so that you can view the list of available updates first without actually performing the update.
+{{% /alert %}}
+
+## Update Academic
 
 Please follow the method below which corresponds to how you originally installed Academic:
 
-## If you installed `academic-kickstart`
+### If you installed `academic-kickstart`
 
 By default, Academic is installed as a Git sub-module which can be updated by running the following command:
 
@@ -27,7 +43,7 @@ By default, Academic is installed as a Git sub-module which can be updated by ru
 git submodule update --remote --merge
 ```
 
-## If you installed by Git cloning `hugo-academic`
+### If you installed by Git cloning `hugo-academic`
 
 Before updating for the first time, the remote *origin* repository should be renamed to *upstream*:
 
@@ -44,14 +60,26 @@ Then, update by running:
 
     $ git pull upstream
 
-## If you installed from a ZIP
+### If you installed from a ZIP
 
 Uninstall your current version of Academic by deleting the contents of `themes/academic/`. [Download](https://github.com/gcushen/hugo-academic/archive/master.zip) and extract the latest version of Academic to your `themes/academic/` folder.
 
+## Migrate Content
+
+When you update Academic itself, you can jump straight to the latest and greatest version. However, content migration requires consecutively applying any relevant steps from each release.
+
+To migrate your TOML/YAML front matter and configuration, apply any relevant steps from the *Breaking Changes* section of each consecutive [release note](/academic/updates/) since the version you were originally on. If a release has no *Breaking Changes* section, then no changes are required.
+ 
+For example, if your site was previously on *v2.4.0*, then apply the breaking changes for the consecutive releases since v2.4.0, i.e. [v3.0.0]({{< relref "/updates/v3.0.0.md#breaking-changes" >}}) and [v3.1.0]({{< relref "/updates/v3.1.0.md#breaking-changes" >}}).
+
+To help migrate content to be compatible with new versions of Academic, there are some tools available in the **[Academic Scripts](https://github.com/sourcethemes/academic-scripts)** repository.
+
 ## Troubleshooting
 
-Check out the [release notes]({{< relref "/updates" >}}) for the version that you are updating to, paying attention to the breaking changes. You can check which version you currently have by using Git or by viewing `themes/academic/data/academic.toml`.
+Check out the [release notes]({{< relref "/updates" >}}) for the consecutive version that you are updating to, paying attention to the breaking changes. You can check which version you currently have, refer to the *Preparation* section above.
 
 If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed in `config.toml` or the `+++` front matter of content files.
 
 If you have modified files in `themes/academic`, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (`git add <filename>`).
+
+Also, if you overrided any Academic files (by using Hugo's inheritance principle), then these may cause conflicts after updating. Consider removing them or checking if the original file(s) that you are overriding have changed in any way and require syncing with your custom version of the file(s).
