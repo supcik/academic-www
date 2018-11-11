@@ -50,7 +50,7 @@ To display a full width **header image** in archive pages (e.g. `YOUR_URL/post/`
 
 ```toml
 [header]
-  image = "headers/getting-started.png"
+  image = "header.png"
   caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 ```
 
