@@ -19,7 +19,7 @@ Both the **interface** and **content** language can be changed to suit your need
 
 ## Interface
 
-The **Interface Language** is used to change the language throughout your site. The following interface languages are currently available: English, 中文 (简体), Español, Português, Deutsch, Euskara, Français, Italiano, 한국어, Nederlands, Polski, Русский, Türkçe, Tiếng Việt and Catalan.
+The **Interface Language** is used to change the language throughout your site. The following interface languages are currently available: English, 中文 (简体), Español, Português, Deutsch, Euskara, Français, Italiano, 日本語, 한국어, Nederlands, Polski, Русский, Türkçe, Tiếng Việt and Catalan.
 
 The interface text is stored in language files which are collected from Academic's `themes/academic/i18n/` folder, as well as an `i18n/` folder at the root of your project.
 
