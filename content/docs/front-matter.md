@@ -33,3 +33,7 @@ date: 2017-12-01
 title: My first blog post
 ---
 ```
+
+{{% alert note %}}
+**RMarkdown should be saved with the `.Rmarkdown` file extension** rather than the `.Rmd` extension.
+{{% /alert %}}
