@@ -18,7 +18,7 @@ If search is enabled, a **search icon** will automatically appear in the navigat
 
 {{< figure library="1" src="docs/search.png" title="Enable users to quickly discover relevant content by searching from the navigation bar." >}}
 
-It's possible to **customize the search system** to your needs. The search feature may either be powered by the **built-in** algorithm (default) or powered by [Algolia](#algolia). Alternatively, you can create your own third party (e.g. Google) search widget by following the guide in the [Alternatives](#alternatives) section below.
+It's possible to **customize the search system** to your needs. The search feature may either be powered by the **built-in** algorithm (default) or powered by [Algolia](#algolia). Alternatively, you can [disable](#disable) the integrated search engine and instead create your own third party (e.g. Google) search widget by following the guide in the [Alternatives](#alternatives) section below.
 
 ### Built-in
 
