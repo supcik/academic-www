@@ -45,7 +45,7 @@ enableGitInfo = true
 [blackfriday]
   hrefTargetBlank = false  # `true` opens external links in a new tab.
   fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
-  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
+  smartypants = false  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
 
 [params]
   # AUTHOR SETUP
@@ -106,7 +106,7 @@ enableGitInfo = true
   font = "default"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = "The website builder for Hugo. Create a beautifully simple site in under 10 minutes."
+  description = "The website builder for Hugo. Create a beautifully simple site from Markdown in under 10 minutes."
 
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = "screenshot.png"
