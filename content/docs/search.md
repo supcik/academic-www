@@ -33,7 +33,7 @@ Note that this search engine runs entirely in the web browser on the visitor's d
 1. Build your site by running the `hugo` command in Terminal or Command Prompt
 1. Upload the generated `public/index.json` file to the *Indicies* page in your Algolia dashboard
 1. Paste the Algolia *App ID*, *API Key*, and *Index Name* from the *Indicies* and *API Keys* pages of your Algolia Dashboard into the `[params.search.algolia]` section in `config.toml`
-1. Under `[params.search]` in `config.toml`, set `engine = 1` to activate the Algolia search engine
+1. Under `[params.search]` in `config.toml`, set `engine = 2` to activate the Algolia search engine
 1. Serve (or build and upload) your site and test out the shiny new search widget on your home page :smile:
 
 Note that whenever your content changes (e.g. you add a new page), you will need to re-build and re-upload the search index to Algolia.
