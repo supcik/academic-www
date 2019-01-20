@@ -56,15 +56,39 @@ If you do not require a particular widget, you can simply delete any associated 
 
 To remove a navigation link from the top of the page, remove the associated `[[menu.main]]` entry in `config.toml`.
 
-### Positioning widgets
+### Position widgets
 
 The order that the homepage widgets are displayed in is defined by the `weight` parameter in each of the files in the `content/home/` directory. The widgets are displayed in ascending order of their `weight`, so you can simply edit the `weight` parameters as desired.
 
-### Developing a new widget
+### Develop a new widget
 
-Details will be added here to guide developers on creating custom widgets using HTML and CSS.
+This section guides developers to create custom widgets using HTML and CSS. You may also be interested in the [custom widget]({{< relref "widgets.md#custom" >}}).
 
-You may also be interested in the [custom widget]({{< relref "widgets.md#custom" >}}).
+Let's create a new widget, the *Awesome* widget. First create the `layouts/partials/widgets/` folder structure in the root of your site (**not in** `themes/academic/`).
+
+Next, create the widget file `awesome.html` in your new `layouts/partials/widgets/` folder.
+
+Now we can open `awesome.html` in a text editor and create our desired layout using HTML and [Hugo's Go Templating](https://gohugo.io/templates/introduction/). Styling can be performed by [adding new CSS styles via the Custom CSS feature]({{< relref "customization.md#customize-style-css" >}}). In this example, let's add the following code to our `awesome.html` widget which will display the section content in a large blue font:
+
+```html
+<div style="font-size: 2rem; color: blue">
+  {{ .page.Content }}
+</div>
+```
+
+Finally, we will instantiate the widget on the website by creating a Markdown file, `my-widget.md` in `content/home/` and adding the following front matter to the file:
+
+```toml
++++
+widget = "awesome"  # Do not modify this line!
+active = true  # Activate this widget? true/false
+weight = 1  # Order that this section will appear in.
++++
+
+Everything is awesome!
+```
+
+Good luck creating your own widgets and feel free to [share them with the community](http://discuss.gohugo.io). You can also  [open a PR on Github](https://github.com/gcushen/hugo-academic/pulls) for your widget to be considered for integration as a core Academic widget. For inspiration, you can [check out how the in-built widgets were made](https://github.com/gcushen/hugo-academic/tree/master/layouts/partials/widgets).
 
 ## Custom
 
