@@ -1,0 +1,89 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[main]]
+  pre = "<i class=\"fas fa-book\" style=\"color: #00d1b2;\"></i>"
+  name = "Documentation"
+  url = "docs/"
+  weight = 10
+
+[[main]]
+  pre = "<i class=\"fas fa-newspaper\" style=\"color: #00d1b2;\"></i>"
+  name = "Updates"
+  url = "updates/"
+  weight = 20
+
+[[main]]
+  pre = "<i class=\"fas fa-brush\" style=\"color: #00d1b2;\"></i>"
+  name = "Themes"
+  url = "themes/"
+  weight = 30
+
+[[main]]
+  pre = "<i class=\"fas fa-donate\" style=\"color: #00d1b2;\"></i>"
+  name = "Support Academic"
+  url = "#support"
+  weight = 40
+
+#[[main]]
+#  pre = "<i class=\"fas fa-address-card\" style=\"color: #00d1b2;\"></i>"
+#  name = "Widgets"
+#  url = "widgets/"
+#  weight = 40
+
+[[main_right]]
+  name = "<i class=\"fab fa-github-alt\" style=\"color: #333; font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
+  url = "https://github.com/gcushen/hugo-academic"
+  weight = 10
+
+[[main_right]]
+  name = "<i class=\"fab fa-twitter\" style=\"color: #55acee; font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
+  url = "https://twitter.com/GeorgeCushen"
+  weight = 20
+
+[[main_right]]
+  name = "<span class=\"btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3\">Install</span>"
+  post = ""
+  url = "docs/install/"
+  weight = 30
+
+# Documentation 
+
+[[docs]]
+  name = "Overview"
+  weight = 5
+  url = "/docs/"
+
+[[docs]]
+  name = "Setup"
+  weight = 10
+  identifier = "setup"
+
+[[docs]]
+  name = "Your Content"
+  weight = 20
+  identifier = "content"
+
+[[docs]]
+  name = "Deployment"
+  weight = 30
+  identifier = "deploy"
+
+[[docs]]
+  name = "Migrate"
+  identifier = "migrate"
+  weight = 40
+
+[[docs]]
+  name = "Contributing"
+  url = "/docs/contribute/"
+  weight = 50
+
+[[docs]]
+  name = "Troubleshooting"
+  weight = 60
+  url = "/docs/faq/"
