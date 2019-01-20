@@ -2,15 +2,10 @@
 title = "Customization"
 
 date = 2016-04-20
-#lastmod = 2018-01-20
-draft = false
-
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 math = true
-
-aliases = ["post/getting-started/"]
 
 [menu.docs]
     parent = "setup"
@@ -33,39 +28,39 @@ Save your main icon and mobile icon as square PNG images named `icon.png` (32x32
 
 ## Analytics
 
-To enable [Google Analytics](http://www.google.com/analytics), add your tracking code in `config.toml` similarly to `googleAnalytics = "UA-12345678-9"`.
+To enable [Google Analytics](http://www.google.com/analytics), add your tracking code in `config/_default/config.toml` similarly to `googleAnalytics = "UA-12345678-9"`.
 
 ## Comments
 
-The Disqus commenting variable (`disqusShortname`) in `config.toml` can be set to your own [Disqus](https://disqus.com/) shortname to enable visitors to comment on your posts.
+The Disqus commenting variable (`disqusShortname`) in `config/_default/config.toml` can be set to your own [Disqus](https://disqus.com/) shortname to enable visitors to comment on your posts.
 
 ## Add scripts (JS)
 
 To add a **third party script**, create a file named `head_custom.html` in a `layouts/partials/` folder at the root of your website (not in the `themes` folder). Any HTML code added to this file will be included within your website's `<head>`. Therefore, it's suitable for adding custom metadata or third party scripts specified with the *async* attribute.
 
-Whereas for your own **local scripts**, you can link your local JS assets (relative to your root `static/js`) from your `config.toml` using `custom_js  = ["custom.js"]`.
+Whereas for your own **local scripts**, you can link your local JS assets (relative to your root `static/js`) from your `config/_default/params.toml` using `custom_js  = ["custom.js"]`.
 
 ## Permalinks
 
-*Permalinks*, or *permanent links*, are URLs to individual pages and posts on your website. They are permanent web addresses which can be used to link to your content. Using Hugo's *permalinks* option these can be easily customized. For example, the blog post URL can be changed to the form *yourURL/2016/05/01/my-post-slug* by adding the following near the top of your `config.toml` (before `[params]` settings):
+*Permalinks*, or *permanent links*, are URLs to individual pages and posts on your website. They are permanent web addresses which can be used to link to your content. Using Hugo's *permalinks* option these can be easily customized. For example, the blog post URL can be changed to the form *yourURL/2016/05/01/my-post-slug* by adding the following near the top of your `config/_default/config.toml`:
 
     [permalinks]
         post = "/:year/:month/:day/:slug"
 
 Where `:slug` defaults to the filename of the post, excluding the file extension. However, slug may be overridden on a per post basis if desired, simply by setting `slug = "my-short-post-title"` in your post preamble.
 
-**Example 2:** let's consider changing the URL path of posts from `post/` to `blog/`. First, add the following parameters right above the `[params]` section of your `config.toml`:
+**Example 2:** let's consider changing the URL path of posts from `post/` to `blog/`. First, add the following parameters to your `config/_default/config.toml`:
 ```
 [permalinks]
     post = "/blog/:slug"
 ```
-Then add `aliases = ["/blog/"]` to your post archive page `post/_index.md` so that it can be accessed from the */blog/* URL.
+Then add `aliases = ["/blog/"]` to your post archive page at `post/_index.md` so that it can be accessed from the */blog/* URL.
 
 ## Customize style (CSS)
 
-For advanced customization of the style, you can link custom CSS assets (relative to your root `static/css`) from your `config.toml` using `custom_css = ["custom.css"]`.
+For advanced customization of the style, you can link custom CSS assets (relative to your root `static/css`) from your `config/_default/params.toml` using `custom_css = ["custom.css"]`.
 
-For example, let's override some of Academic's default styles. First, define `custom_css = ["override.css"]` in `config.toml`. Then we can create the file `static/css/override.css`, relative to your website root (i.e. **not** in the `themes` directory). Add your custom CSS to this file.
+For example, let's override some of Academic's default styles. First, define `custom_css = ["override.css"]` in `config/_default/params.toml`. Then we can create the file `static/css/override.css`, relative to your website root (i.e. **not** in the `themes` directory). Add your custom CSS to this file.
 
 ## Override a template
 

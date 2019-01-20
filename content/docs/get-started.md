@@ -2,8 +2,6 @@
 title = "Getting started"
 
 date = 2016-04-20
-draft = false
-
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
@@ -85,16 +83,16 @@ The core parameters for the website can be edited in the `config/_default/params
 
 By default, a superuser is created with the username *Admin* and corresponding user profile located at `content/author/admin/_index.md`. Let's open this file in a text editor and edit this file to make it *your* profile:
 
-- Edit your display `name` (typically your full name), your `role`, and write one sentence to describe yourself in `bio`. 
-- Edit the `organizations` that are affiliated with, or just set this to `organizations = []` to hide it
-- List your interests or hobbies in `interests`, or just set this to `interests = []` to hide it
+- Edit your display `name` (typically your full name), your `role`, and write one sentence to describe yourself in `bio`
+- Edit the `organizations` that you are affiliated with, or set this to `organizations = []` to hide it
+- List your interests or hobbies in `interests`, or set this to `interests = []` to hide it
 - List your main qualifications using the `[[education.courses]]` blocks
   - These blocks can be created or deleted as required
   - To hide qualifications, delete these blocks or comment out the lines by prefixing them with a hash (`#`)
 - Add your social or academic networking links
   - These are defined as instances of `[[social]]` and can be created or deleted as required
 
-Now lets add a biography or some fun facts about you after the front matter (i.e. after the last `+++` line). You can utilize [Markdown and shortcodes for formatting]({{< relref "./writing-markdown-latex.md" >}}).
+Now let's add a biography or some fun facts about you after the front matter (i.e. after the last `+++` line). You can utilize [Markdown and shortcodes for formatting]({{< relref "./writing-markdown-latex.md" >}}).
 
 To display an avatar, place a square cropped portrait photo named `avatar` into your profile folder at `content/author/admin/`, overwriting the example image. Alternatively, if you have an existing Gravatar/Wordpress avatar, you can use it by setting `gravatar` to `true` in `config/_default/params.toml` and entering your associated `email` address in `content/author/admin/_index.md`. Note that you can delete the example `avatar` image to disable the avatar feature.
 
