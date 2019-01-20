@@ -2,7 +2,6 @@
 title = "Install"
 
 date = 2016-04-20
-#lastmod = 2018-01-20
 draft = false
 
 toc = true  # Show table of contents? true/false
@@ -20,7 +19,7 @@ You can choose from one of the following four methods to install:
 * install on your computer by downloading the ZIP files
 * install on your computer with RStudio
 
-[Hugo v0.49+](https://gohugo.io/getting-started/installing/) is required if installing on your computer.
+[Hugo v0.53+](https://gohugo.io/getting-started/installing/) is required if installing on your computer.
 
 ## Install with web browser
 
