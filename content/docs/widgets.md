@@ -18,27 +18,24 @@ type = "docs"  # Do not modify.
 Widgets empower you to fully customize your site. They display as sections on the homepage or on widget pages. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:
 
 - [Custom widget]({{< relref "widgets.md#custom" >}}) (add your own content!)
+- Featurette (showcase key features or skills)
+- Recent news/blog posts
+- [Contact]({{< relref "widgets.md#contact" >}})
 - About/biography
+- Projects
 - Featured publications
 - Recent publications
-- Recent news/blog posts
-- Projects
 - Featured talks
 - Recent talks
-- [Contact]({{< relref "widgets.md#contact" >}})
 - Tag cloud
 - Hero (call-to-action)
-- Featurette (showcase key features or skills)
-- Search
 - Carousel
 
 The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don't need and customize the parameters of the widgets you wish to keep.
 
 The parameters for each widget vary. They can be found in the preamble/frontmatter (between the pair of `+++`) for each widget installed in the `content/home/` folder.
 
-{{% alert note %}}
-By default, publications will be displayed in a simple list. If you prefer a more detailed list with abstract and image, you can enable the detailed publication list on the homepage by setting `list_format = 2` in `content/home/publications.md`.
-{{% /alert %}}
+Generally, if you write any text after the widget front matter, your text will appear at the top of the widget. This can be useful for introducing the widget content.
 
 ## Using Widgets
 
@@ -125,4 +122,10 @@ You can choose whether to display simply an email address or a contact form. Thi
 The Netlify option is only available if you are hosting your site with Netlify. In this case, user messages to you will be sent to your Netlify account admin panel. A webhook can be created in your Netlify account if you wish to forward messages to your email address. When using Netlify to provide the contact form, you do not need to provide a value for `email` in `config.toml` since the messages will be delivered to your Netlify admin panel.
 {{% /alert %}}
 
-Otherwise, if set to 3, the widget will display a contact form using the `email` in `config.toml` and will use the [Formspree](https://formspree.io) service for sending the email to you. For this method, simply send yourself a test message after you have configured the contact form. Formspree will then send you an email to verify your new account with them.
+Otherwise, if set to 3, the widget will display a contact form using the `email` in `config.toml` and will use the [Formspree](https://formspree.io) service for sending the email to you. For this method, simply send yourself a test message after you have configured the contact form. Formspree will then send you an email to verify your new account with them. Note that Formspree is usually blocked for Chinese visitors as it uses Google reCAPTCHA (unless you upgrade to Formspree's paid plan in order to disable reCAPTCHA).
+
+### Publications
+
+{{% alert note %}}
+By default, publications will be displayed in a simple list. If you prefer a more detailed list with abstract and image, you can enable the detailed publication list on the homepage by changing the `list_format` in `content/home/publications.md`.
+{{% /alert %}}

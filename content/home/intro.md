@@ -12,7 +12,7 @@ weight = 30
 
 This website is powered by **Academic**, [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/), and can be built in **under 10 minutes**.
 
-Explore the [personal demo](https://themes.gohugo.io/theme/academic/) or project/organization demo (this site), and then consider heading on over to [install]({{< relref "/docs/install.md" >}}) and [customize]({{< relref "/docs/get-started.md" >}}) your own site.
+Explore the [personal demo](https://academic-demo.netlify.com/) or project/organization demo (this site), and then consider heading on over to [install]({{< relref "/docs/install.md" >}}) and [customize]({{< relref "/docs/get-started.md" >}}) your own site.
 
 Key features:
 

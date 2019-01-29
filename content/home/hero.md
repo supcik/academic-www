@@ -27,7 +27,7 @@ img = "screenshot.png"
 +++
 
 The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes :rocket:
-[View the Demo!](https://themes.gohugo.io/theme/academic/)
+[View the Demo!](https://academic-demo.netlify.com/)
 
 <div style="margin-top: -0.5rem;">
   <a id="academic-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">

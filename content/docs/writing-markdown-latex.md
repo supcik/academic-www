@@ -2,14 +2,10 @@
 title = "Writing content with Markdown, LaTeX, and Shortcodes"
 
 date = 2016-04-17
-#lastmod = 2018-01-13
-draft = false
-
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 math = true
-aliases = ["post/writing-markdown-latex/"]
 
 linktitle = "Writing content"
 [menu.docs]
@@ -180,10 +176,6 @@ To embed **Google Documents** (e.g. slide deck), click *File > Publish to web > 
 
     {{</* gdocs src="https://docs.google.com/..." */>}}
 
-**Speaker Deck**:
-
-    {{</* speakerdeck 4e8126e72d853c0060001f97 */>}}
-
 ## Code highlighting
 
 Pass the *language* of the code, such as `python`, as a parameter after three backticks:
@@ -216,9 +208,9 @@ option                | type    | description                     | config.toml 
 
 #### Option `highlight`
 
-The `highlight` option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified `highlight = true`. That is, the highlight.js javascript and css files will be included in every page. If you'd like to only include highlight.js files on pages that actually require source code highlighting, you can set `highlight = false` in `config.toml`, and then override it by setting `highlight = true` in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of `highlight` set in `config.toml` and/or the page's preamble.
+The `highlight` option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified `highlight = true`. That is, the highlight.js javascript and css files will be included in every page. If you'd like to only include highlight.js files on pages that actually require source code highlighting, you can set `highlight = false` in `params.toml`, and then override it by setting `highlight = true` in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of `highlight` set in `params.toml` and/or the page's preamble.
 
-config.toml   | page preamble  | highlighting enabled for page?
+config.toml   | page front matter  | highlighting enabled for page?
 --------------|----------------|-------------------------------
 unset or true | unset or true  | yes
 unset or true | false          | no
@@ -227,9 +219,9 @@ false         | true           | yes
 
 #### Option `highlight_languages`
 
-The `highlight_languages` option allows you to specify additional languages that are supported by highlight.js, but are not considered "common" and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set `highlight_languages = ["go", "clojure"]` in `config.toml`. If, on the other hand, you want to enable a language only for a specific page, you can set `highlight_languages` in that page's preamble.
+The `highlight_languages` option allows you to specify additional languages that are supported by highlight.js, but are not considered "common" and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set `highlight_languages = ["go", "clojure"]` in `params.toml`. If, on the other hand, you want to enable a language only for a specific page, you can set `highlight_languages` in that page's preamble.
 
-The `highlight_languages` options specified in `config.toml` and in a page's preamble are additive. That is, if `config.toml` contains, `highlight_languages = ["go"]` and the page's preamble contains `highlight_languages = ["ocaml"]`, then javascript files for *both* go and ocaml will be included for that page.
+The `highlight_languages` options specified in `config.toml` and in a page's preamble are additive. That is, if `params.toml` contains, `highlight_languages = ["go"]` and the page's preamble contains `highlight_languages = ["ocaml"]`, then javascript files for *both* go and ocaml will be included for that page.
 
 If the `highlight_languages` option is set, then the corresponding javascript files will be served from the [cdnjs server](https://cdnjs.com/libraries/highlight.js/). To see a list of available languages, visit the [cdnjs page](https://cdnjs.com/libraries/highlight.js/) and search for links with the word "languages".
 
@@ -237,7 +229,7 @@ The `highlight_languages` option provides an easy and convenient way to include 
 
 #### Option `highlight_style`
 
-The `highlight_style` option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set `highlight_style = "solarized-dark"` in `config.toml`.
+The `highlight_style` option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set `highlight_style = "solarized-dark"` in `params.toml`.
 
 If the `highlight_style` option is unset, the default is to use the file `/css/highlight.min.css`, either the one provided by the Academic theme, or else the one in your local `static` directory.  The `/css/highlight.min.css` file provided by Academic is equivalent to the `github` style from highlight.js.
 
@@ -250,10 +242,10 @@ Not all styles listed on the [highlight.js demo page](https://highlightjs.org/st
 {{% /alert %}}
 
 {{% alert note %}}
-If you don't want to change the default style that ships with Academic but you do want the style file served from the [cdnjs server](https://cdnjs.com/libraries/highlight.js/), set `highlight_style = "github"` in `config.toml`.
+If you don't want to change the default style that ships with Academic but you do want the style file served from the [cdnjs server](https://cdnjs.com/libraries/highlight.js/), set `highlight_style = "github"` in `params.toml`.
 {{% /alert %}}
 
-The `highlight_style` option is only recognized when set in `config.toml`. Setting `highlight_style` in your page's preamble has no effect.
+The `highlight_style` option is only recognized when set in `params.toml`. Setting `highlight_style` in your page's preamble has no effect.
 
 ## Twitter tweet
 
