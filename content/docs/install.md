@@ -2,7 +2,6 @@
 title = "Install"
 
 date = 2016-04-20
-draft = false
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
@@ -14,26 +13,29 @@ type = "docs"  # Do not modify.
 
 You can choose from one of the following four methods to install:
 
-* one-click install using your web browser (recommended)
-* install on your computer using Git with the Command Prompt/Terminal app
-* install on your computer by downloading the ZIP files
-* install on your computer with RStudio
+* [**one-click install** using your web browser](#install-with-web-browser) **(recommended)**
+* [install on your computer using **Git**](#install-with-git) with the Command Prompt/Terminal app
+* [install on your computer by **downloading the ZIP** files](#install-with-zip)
+* [install on your computer with **RStudio**](#install-with-rstudio)
 
-[Hugo v0.53+](https://gohugo.io/getting-started/installing/) is required if installing on your computer.
+[After installing, check out the guide to personalizing your site]({{< relref "get-started.md" >}}).
 
 ## Install with web browser
 
 1. [Install Academic with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
     * Netlify will provide you with a customizable URL to access your new site
-2. On GitHub, go to your newly created `academic-kickstart` repository and edit `config.toml` to personalize your site. Shortly after saving the file, your site will automatically update
-3. Read the [Quick Start Guide]({{< relref "get-started.md" >}}) to learn how to add Markdown content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
+2. On GitHub, go to your newly created `academic-kickstart` repository and [personalize your site by editing the files in]({{< relref "get-started.md" >}}) `config/_default/`
+   - Shortly after saving (i.e. *committing* a file), your site will automatically update
+3. Read the [Widgets]({{< relref "widgets.md" >}}) and [Content]({{< relref "managing-content.md" >}}) guides to learn how to add widgets and content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
 
 ## Install with Git
 
 Prerequisites:
 
 * [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo v0.53+](https://gohugo.io/getting-started/installing/#quick-install)
+
+Install:
 
 1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository and clone your fork with Git: 
 
@@ -46,32 +48,43 @@ Prerequisites:
         cd My_Website
         git submodule update --init --recursive
 
+Now you're ready to [personalize and view your site]({{< relref "get-started.md" >}}).
+
 ## Install with ZIP
+
+Prerequisites:
+
+* [Download and install Hugo v0.53+](https://gohugo.io/getting-started/installing/#quick-install)
+
+Install:
 
 1. [Download](https://github.com/sourcethemes/academic-kickstart/archive/master.zip) and extract *Academic Kickstart*
 2. [Download](https://github.com/gcushen/hugo-academic/archive/master.zip) and extract the *Academic theme* to the `themes/academic/` folder from the above step
 
+Now you're ready to [personalize and view your site]({{< relref "get-started.md" >}}).
+
 ## Install with RStudio
 
-In RStudio IDE, install the *Blogdown (v0.2+)* and *Hugo* dependencies:
+1. Follow the [Install with Git](#install-with-git) instructions above if you are confident with Git, or otherwise [Install with ZIP](#install-with-zip).
+   - Skip the *Install Hugo* step as we'll use RStudio to install Hugo
+2. Open [RStudio](https://www.rstudio.com/products/rstudio/), installing the *Blogdown* and *Hugo* dependencies:
 
-```r
-install.packages("blogdown")
-blogdown::install_hugo()
-```
+    ```r
+    install.packages("blogdown")
+    blogdown::install_hugo()
+    ```
 
-Now restart RStudio and you can create an Academic project directly from the menu `File -> New Project -> New Directory` - see Figures 1 and 2 below:
+3. Open `academic.Rproj` from the *Academic Kickstart* folder in *Step 1*
 
-{{< figure library="1" src="docs/rstudio-create-project.png" title="Create project" >}}
-{{< figure library="1" src="docs/rstudio-project-type.png" title="Choose *website using Blogdown* as the project type" >}}
+4. Workaround a [Blogdown bug](https://github.com/rstudio/blogdown/issues/359) by moving `config/_default/config.toml` to `config.toml` at your project root
 
-Enter `gcushen/hugo-academic` as the theme:
+5. In the RStudio menu bar, choose **Addins > Serve Site** (clicking this button will call `blogdown:::serve_site()`)
+   - Paste the local URL which RStudio provides (e.g. http://127.0.0.1:4321) into your web browser to preview your new site
+   - Avoid using the integrated RStudio web browser as it is very outdated and buggy
 
-{{< figure library="1" src="docs/rstudio-theme.png" title="Choose the Academic theme" >}}
+Now you're ready to [personalize your site]({{< relref "get-started.md" >}}).
 
-Then you will see a panel in RStudio named *Build* containing a *Build Website* button. When you click this button, RStudio will call `blogdown::build_site()` to build the website, automatically generating files in the `public/` folder.
-
-Use `blogdown::serve_site()` to preview your site in your web browser. We recommend previewing your site in your normal web browser as the in-built RStudio web browser is very outdated and buggy.
+Note that **R content should be saved with the `.Rmarkdown` file extension** rather than `.Rmd`.
 
 ## Demo content
 
