@@ -38,7 +38,7 @@ The Disqus commenting variable (`disqusShortname`) in `config/_default/config.to
 
 To add a **third party script**, create a file named `head_custom.html` in a `layouts/partials/` folder at the root of your website (not in the `themes` folder). Any HTML code added to this file will be included within your website's `<head>`. Therefore, it's suitable for adding custom metadata or third party scripts specified with the *async* attribute.
 
-Whereas for your own **local scripts**, you can link your local JS assets (relative to your root `static/js`) from your `config/_default/params.toml` using `custom_js  = ["custom.js"]`.
+Whereas for your own **local scripts**, let's say that you have a JS file named `custom.js`. We can place your file in  `assets/js/` (create the folders within your website root if they don't exist). Then open your `config/_default/params.toml` and set `plugins_js = ["custom"]`, where *custom* is your JS filename without its extension.
 
 ## Permalinks
 
@@ -58,9 +58,13 @@ Then add `aliases = ["/blog/"]` to your post archive page at `post/_index.md` so
 
 ## Customize style (CSS)
 
-For advanced customization of the style, you can link custom CSS assets (relative to your root `static/css`) from your `config/_default/params.toml` using `custom_css = ["custom.css"]`.
+To personalize Academic, you can **choose a colour theme and font theme** in `config.toml`.
 
-For example, let's override some of Academic's default styles. First, define `custom_css = ["override.css"]` in `config/_default/params.toml`. Then we can create the file `static/css/override.css`, relative to your website root (i.e. **not** in the `themes` directory). Add your custom CSS to this file.
+For further personalization, you can [**create your own colour theme and font theme**](#custom-theme).
+
+If advanced style customization is required, **CSS code** can be written to override or enhance the existing styles.
+
+Given some custom CSS named `custom.css`, we can place it in `assets/css/` (create the folders within your website root if they don't exist). Then open your `config/_default/params.toml` and set `plugins_css = ["custom"]`, where *custom* is your CSS filename without its extension.
 
 ## Override a template
 
