@@ -247,6 +247,28 @@ If you don't want to change the default style that ships with Academic but you d
 
 The `highlight_style` option is only recognized when set in `params.toml`. Setting `highlight_style` in your page's preamble has no effect.
 
+## Jupyter Notebook
+
+A Jupyter notebook can be embedded in a page by following one of the approaches below:
+
+1. Upload your notebook as a [GitHub Gist](https://gist.github.com) and click *Embed* to copy and paste your hosted notebook into the body of content in Academic
+
+2. [Convert your notebook to HTML](
+https://nbconvert.readthedocs.io/) using `nbconvert --to html <NOTEBOOK_NAME>.ipynb`. Then move the resulting HTML file to your page's folder and embed it into the body of the page's Markdown file using:
+
+      ```html
+      <iframe
+            src="./<CONVERTED_NOTEBOOK_FILENAME>"
+            width="90%"
+            height="1000px"
+            style="border:none;">
+          </iframe>
+      ```
+
+3. Upload your notebook to a cloud notebook service such as [Microsoft Azure](https://notebooks.azure.com/), [Google Cloud Datalab](https://cloud.google.com/datalab/) or [Kyso](https://kyso.io). Then click their *Embed* button, pasting their custom embedding code into the body of your page's Markdown file
+
+4. Copy snippets of code from your notebook and paste them into the body of your page using [Academic's code highlighting](https://sourcethemes.com/academic/docs/writing-markdown-latex/#code-highlighting)
+
 ## Twitter tweet
 
 To include a single tweet, pass the tweet’s ID from the tweet's URL as parameter to the shortcode:

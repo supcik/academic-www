@@ -72,7 +72,7 @@ Hugo uses a [template lookup](https://gohugo.io/templates/lookup-order/) which e
 
 To override a template in the theme, you simply copy the file you are interested in from `themes/academic/` and paste it in your site folder using a similar path. To understand how this works, you should familiarize yourself with template lookup. Finally, when you update Academic, remember to compare your version of the file against Academic's one, in case you need to propagate any changes across.
 
-For example, say we wish to add some HTML code to the navigation bar. Let's copy the relevant file `themes/academic/layout/partials/navbar.html` to `layout/partials/navbar.html` (at the root of your site, **not** in `themes/academic/`), creating the `layout/partials/` folders if they do not already exist. Now you can add the HTML code you want to your copy of the file, which will override Academic's version.
+For example, say we wish to add some HTML code to the navigation bar. Let's copy the relevant file `themes/academic/layouts/partials/navbar.html` to `layouts/partials/navbar.html` (at the root of your site, **not** in `themes/academic/`), creating the `layouts/partials/` folders if they do not already exist. Now you can add the HTML code you want to your copy of the file, which will override Academic's version.
 
 ## Date Format
 

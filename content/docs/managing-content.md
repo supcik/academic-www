@@ -1,8 +1,6 @@
 +++
 date = 2016-04-18
-draft = false
 title = "Managing content"
-math = false
 aliases = ["post/managing-content/"]
 
 toc = true  # Show table of contents? true/false
@@ -135,6 +133,13 @@ url_custom = [{name = "Custom Link 1", url = "http://example.org"},
 {{% alert warning %}}
 Any double quotes (`"`) or backslashes (e.g. LaTeX `\times`) occurring within the value of any frontmatter parameter (such as the *abstract*) should be escaped with a backslash (`\`). For example, the symbol `"` and LaTeX text `\times` become `\"` and `\\times`, respectively. Refer to the [TOML documentation](https://github.com/toml-lang/toml#user-content-string) for more info.
 {{% /alert %}}
+
+**Modifying Publication Types**
+
+To rename publication types in v4+, [edit the associated `pub_*` values in your language pack]({{< relref "language.md" >}}). These values can be found in the default [English language pack](
+https://github.com/gcushen/hugo-academic/blob/master/i18n/en.yaml) but may not have been translated to all of the other languages packs yet.
+
+To add or remove publication types in v4+, [override]({{< relref "customization.md#override-a-template" >}}) the [layouts/partials/pub_types.html](https://github.com/gcushen/hugo-academic/blob/master/layouts/partials/pub_types.html) file with your own array using the Go templating language.
 
 ## Create a blog post
 

@@ -1,10 +1,6 @@
 +++
 title = "Widgets"
-
 date = 2016-04-19
-# lastmod = 2018-01-20
-draft = false
-
 aliases = ["widgets/"]
 
 toc = true  # Show table of contents? true/false
@@ -34,15 +30,11 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - Hero (call-to-action)
 - Carousel
 
+## Using Widgets
+
 Academic Kickstart includes instances of all the built-in widgets. Delete the widgets in `content/home/` that you don't need (or set `active = false` in their front matter) and personalize the front matter options of the widgets you wish to keep by opening them in a text editor.
 
-The parameters for each widget vary. They can be found in the front matter (between the pair of `+++`) for each widget installed in the `content/home/` folder.
-
-Generally, if you write any text in the file body after a widget's front matter, your text will appear at the top of the widget. This can be useful for introducing the widget content.
-
 The widget instances in your `home/` folder can be renamed to anything you like (but use hyphens instead of spaces). Just remember to update your main menu in `config/_default/menus.toml` if you have a link to the widget instance.
-
-## Using Widgets
 
 ### Add a widget to the homepage
 
@@ -92,6 +84,44 @@ Everything is awesome!
 
 Good luck creating your own widgets and feel free to [share them with the community](http://discuss.gohugo.io). You can also  [open a PR on Github](https://github.com/gcushen/hugo-academic/pulls) for your widget to be considered for integration as a core Academic widget. For inspiration, you can [check out how the in-built widgets were made](https://github.com/gcushen/hugo-academic/tree/master/layouts/partials/widgets).
 
+## Personalizing Widgets
+
+The parameters for each widget vary. When you open a widget installed in the `content/home/` folder in a text editor, the available options will be displayed in the front matter (between the pair of `+++`).
+
+Generally, if you write any text in the file body after a widget's front matter, your text will appear at the top of the widget. This can be useful for introducing the widget content.
+
+A title and subtitle can be set for most widgets using the `title` and `subtitle` options respectively.
+
+### View
+
+Several widgets have a `view` option to let you choose the layout of the widget. The following layouts are available: 
+
+- 1 = List (previously Simple)
+- 2 = Compact (previously Stream)
+- 3 = Card (previously Detailed)
+- 4 = Citation (previously APA and MLA), only available for publications
+  - Optionally, edit the value of `citation_style` in `params.toml` to APA or MLA
+- 5 = Showcase (large images), only available for projects
+
+### Icons
+
+Academic enables you to use a wide range of icons from [Font Awesome](https://fontawesome.com/icons?d=gallery) and [Academicons](https://jpswalsh.github.io/academicons/).
+
+Icon pack "fab" includes the following **brand** icons:
+
+- twitter, weixin, weibo, linkedin, github, facebook, pinterest, twitch, youtube, instagram, soundcloud
+- [See all icons](https://fontawesome.com/icons?d=gallery&s=brands)
+
+Icon packs "fas" and "far" include the following **general** icons:
+
+- fax, envelope (for email), comments (for discussion forum)
+- [See all icons](https://fontawesome.com/icons?d=gallery&s=regular,solid)
+
+Icon pack "ai" includes the following **academic** icons:
+
+- cv, google-scholar, arxiv, orcid, researchgate, mendeley
+- [See all icons](https://jpswalsh.github.io/academicons/)
+
 ## Custom
 
 You can use the custom widget to create your own home page sections.
@@ -129,22 +159,7 @@ The contact widget will automatically display the following information accordin
 
 ### Contact links
 
-Academic enables you to use a wide range of icons from [Font Awesome](https://fontawesome.com/icons?d=gallery) and [Academicons](https://jpswalsh.github.io/academicons/).
-
-Icon pack "fab" includes the following **brand** icons:
-
-- twitter, weixin, weibo, linkedin, github, facebook, pinterest, twitch, youtube, instagram, soundcloud
-- [See all icons](https://fontawesome.com/icons?d=gallery&s=brands)
-
-Icon packs "fas" and "far" include the following **general** icons:
-
-- fax, envelope (for email), comments (for discussion forum)
-- [See all icons](https://fontawesome.com/icons?d=gallery&s=regular,solid)
-
-Icon pack "ai" includes the following **academic** icons:
-
-- cv, google-scholar, arxiv, orcid, researchgate, mendeley
-- [See all icons](https://jpswalsh.github.io/academicons/)
+Academic enables you to use a wide range of icons in your contact links. [Learn more about icons](#icons).
 
 ### Contact form
 
@@ -178,10 +193,4 @@ List your recent or featured publications.
 
 {{< figure library="1" src="docs/widget-publications.png" title="List your recent or featured publications." >}}
 
-Edit the front matter of `home/publications.md` to personalize the layout. Choose from the following layouts:
-
-- Simple
-- Detailed
-- APA citation style
-- MLA citation style
-- Stream (as pictured in the above screenshot)
+Edit the front matter of `home/publications.md` to personalize the [view](#view).
