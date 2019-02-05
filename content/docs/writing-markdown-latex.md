@@ -249,7 +249,9 @@ The `highlight_style` option is only recognized when set in `params.toml`. Setti
 
 ## Jupyter Notebook
 
-A Jupyter notebook can be embedded in a page by following one of the approaches below:
+[**View the guide to blogging with Jupyter Notebooks**](https://academic-demo.netlify.com/post/jupyter/).
+
+Alternatively, a Jupyter notebook can be embedded in a page by following one of the approaches below:
 
 1. Upload your notebook as a [GitHub Gist](https://gist.github.com) and click *Embed* to copy and paste your hosted notebook into the body of content in Academic
 
