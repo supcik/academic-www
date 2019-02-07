@@ -36,7 +36,7 @@ The following font styles are also available and can be set by the `font` option
 - classic (original Academic v1 style)
 - playfair (traditional serif)
 
-Don't worry if you are not 100% happy with the colors or font yet, as these can be fully customized later on.
+Don't worry if you are not 100% happy with the colors or font yet, as these can be fully customized [later on]({{< relref "customization.md" >}}).
 
 ## Choose the right layout for you
 

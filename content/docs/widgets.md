@@ -28,6 +28,7 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - Recent talks
 - Tag cloud
 - Hero (call-to-action)
+- People
 - Carousel
 
 ## Using Widgets
@@ -121,6 +122,14 @@ Icon pack "ai" includes the following **academic** icons:
 
 - cv, google-scholar, arxiv, orcid, researchgate, mendeley
 - [See all icons](https://jpswalsh.github.io/academicons/)
+
+### Style
+
+It's possible to customize the style of a specific instance of a widget. For example, the background of a widget may be changed to an image or color gradient.
+
+First, define your custom style in CSS using the [CSS Plugin]({{< relref "customization.md#customize-style-css" >}}) feature.
+
+To apply your new style to a widget, set `css_class` in a widget's front matter. For example `css_class = "MY_CSS_CLASS"`, where `MY_CSS_CLASS` is the name of the CSS class which you defined in the previous step.
 
 ## Custom
 
