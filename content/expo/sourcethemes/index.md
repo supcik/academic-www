@@ -4,10 +4,10 @@ date = 2016-04-27T00:00:00
 layout = "project"
 
 # Project title.
-title = "Source Themes"
+title = "Source Themes (this site)"
 
 # Project summary to display on homepage.
-summary = "An example of a project/organization site."
+summary = "This project landing page and software documentation site are made with Academic."
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
