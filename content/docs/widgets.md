@@ -152,7 +152,7 @@ As an individual, use the Featurette widget to showcase your skills and expertis
 
 {{< figure library="1" src="docs/widget-featurette.png" title="Showcase personal skills or product features with the Featurette widget." >}}
 
-Edit the front matter of `home/skills.md` to add your skills/features.
+Edit the front matter of `home/skills.md` to add your skills/features. [Choose from a large range of icons to depict the skills/features](#icons).
 
 ## Contact
 

@@ -45,6 +45,10 @@ filter_default = 0
   tag = "Personal"
 
 [[filter]]
+  name = "Research Group"
+  tag = "Research Group"
+
+[[filter]]
   name = "Project/Organization"
   tag = "Project"
 
