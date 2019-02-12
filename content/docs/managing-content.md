@@ -11,13 +11,28 @@ type = "docs"  # Do not modify.
   weight = 20
 +++
 
-This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
+This is a brief guide to managing content with the Academic framework. Content can include news/blog posts, publications, projects, talks, widget pages, and much more. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
 {{% alert warning %}}
 Hugo **v0.49** has a bug affecting the `hugo new ...` commands on this page. Please update Hugo to **v0.50+**.
 {{% /alert %}}
 
-## Featured image
+## Introduction
+
+The following core metadata can be added to the [front matter]({{< relref "front-matter.md" >}}) of most types of page in Academic:
+
+- **title**: the title of your page
+- **subtitle**: an optional subtitle that will be displayed under the title
+- **summary**: a one-sentence summary of the content on your page. The summary can be shown on the homepage and can also benefit your search engine ranking.
+- **date**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was published. You can schedule a date by setting the date in the future. If you use the `hugo new ...` commands described on this page, the date will be filled automatically when you create a page.
+- **lastmod**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was last modified. If using Git, enable `enableGitInfo` in `config.toml` to have this automatically updated.
+- **draft**: by setting `draft = true`, only you will see your page when you run Academic/Hugo locally
+- **authors**: display the authors of the page and link to their user profiles if they exist. To link to a user profile, [create a user]({{< relref "/docs/get-started.md#introduce-yourself" >}}) based on the [*admin* template](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/author) and reference their username (name of a user in your `author` folder) in the `authors` field, e.g. `authors = ["admin"]`.
+- **featured**: by setting `featured = true`, a talk or publication can be displayed in the [featured talk/publication widget]({{< relref "widgets.md" >}}).
+- **tags**: tagging your content helps users to discover similar content on your site. Tags can improve search relevancy and are displayed after the page content and also in the [Tag Cloud widget]({{< relref "widgets.md" >}}). E.g. `tags = ["Electronics", "Diodes"]`.
+- **categories**: categorizing your content helps users to discover similar content on your site. Categories can improve search relevancy and display at the top of a page alongside a page's metadata. E.g. `categories = ["Art"]`.
+
+### Featured image
 
 To display a **featured image** in content pages, simply drag an image named `featured.*` (e.g. `featured.jpg`) into your page's folder.
 
@@ -36,37 +51,37 @@ Want to caption the image or set a focal point to influence how the image is cro
 
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-  focal_point = "Smart"
+  focal_point = "Center"
   
   # Show image only in page previews?
   preview_only = false
 ```
 
-## Header image
+### Page features
 
-To display a full width **header image** in archive pages (e.g. `YOUR_URL/post/`), the header parameters below can be inserted towards the end of a page's `+++` preamble. It is assumed that the image is located in your `static/img/` media library, so the full path in the example below will be `static/img/header.png`. The `caption` parameter supports Markdown and can be used to write an image caption or credit. 
-
-```toml
-[header]
-  image = "header.png"
-  caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
-```
-
-## Math and Code
-
-To enable **LaTeX math** rendering for a page, you should include `math = true` in the page's `+++` preamble, as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config.toml`.
-
-To disable **source code highlighting** for all pages, set `highlight = false` in `config.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's preamble. See the [code-highlighting docs]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for more details.
-
-## Page features
-
-The following parameters can be added to the front matter of a page to control its features:
+The following parameters can be added to the front matter of a page (such as a blog post) to control its features:
 
 ```toml
 reading_time = false  # Show estimated reading time?
 share = false  # Show social sharing links?
 profile = false  # Show author profile?
 comments = false  # Show comments?
+```
+
+### Math and Code
+
+To enable **LaTeX math** rendering for a page, you should include `math = true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `params.toml`.
+
+To disable **source code highlighting** for all pages, set `highlight = false` in `params.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's [front matter]({{< relref "front-matter.md" >}}). See the [code highlighting guide]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for further details.
+
+### Header image
+
+To display a full width **header image**, the header parameters below can be inserted towards the end of a page's [front matter]({{< relref "front-matter.md" >}}). It is assumed that the image is located in your `static/img/` media library, so the full path in the example below will be `static/img/header.png`. The `caption` parameter supports Markdown and can be used to write an image caption or credit. This option can be particularly useful for adding to an archive page's `_index.md` (e.g. to display at `YOUR_URL/post/` for the blog post archive).
+
+```toml
+[header]
+  image = "header.png"
+  caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 ```
 
 ## Create a publication
@@ -93,7 +108,7 @@ Then import your publications with:
 academic import --bibtex <path_to_your/publications.bib>
 ```
 
-The tool is in *beta* status and intended purely to help assist you, so the generated output in the `publications` folder should be reviewed prior to publishing your site. You can also consider enhancing the output by taking a look at the front matter parameters in the files alongside the details in the *Manually* section below.
+The tool is in *beta* status and intended purely to help assist you, so the generated output in the `publication` folder should be reviewed prior to publishing your site. You can also consider enhancing the output by taking a look at the front matter parameters in the files alongside the details in the *Manually* section below.
 
 To contribute to the tool or submit feature requests and bug report, please check out the [**Academic admin tool on GitHub**](https://github.com/sourcethemes/academic-admin). 
 

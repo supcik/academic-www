@@ -17,4 +17,4 @@ Academic is an MIT licensed open source project and completely free to use. Howe
 - [Decorate your laptop or journal with an Academic sticker](https://www.redbubble.com/people/neutreno/works/34387919-academic)
 - [Wear the T-shirt](https://academic.threadless.com/)
 - Spread the word - Tweet/blog/vlog about your Academic experience
-- Assist on Github by regularly responding to issues, reviewing code, and submitting pull requests
+- Assist on GitHub by responding to issues, reviewing code, and submitting pull requests
