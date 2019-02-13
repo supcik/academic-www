@@ -19,7 +19,7 @@ title = "My first blog post"
 +++
 ```
 
-Each configuration section (referred to as a *table* in TOML) is defined by a name in square brackets (e.g. `[image]`). If you are adding new parameters to a file, consider which configuration section they should belong to. Often the first configuration section in front matter will not be explicitly defined, but can be thought of as the *root* or *main* section.
+Each configuration section (referred to as a *table* in TOML) is defined by a name in square brackets (e.g. `[image]`). If you are adding new parameters to a file, consider which configuration section they should belong to. Often the first configuration section in front matter will not be explicitly defined, but can be thought of as the *root* or *main* section. If you are **adding parameters to a file**, they **should always be added to the root section** at the top of the file unless they define their own configuration section, in which case they can be placed at the end of the front matter. Otherwise, you may see strange behavior such as your new parameters having no effect.
 
 TOML aims to be simpler and more human friendly than other popular configuration formats that are designed more for machines, such as YAML. Thus, managing your site configuration is designed to be as easy as possible.
 

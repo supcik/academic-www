@@ -57,6 +57,27 @@ Want to caption the image or set a focal point to influence how the image is cro
   preview_only = false
 ```
 
+### Page resources
+
+Buttons can be generated in the page header to link to associated resources.
+
+The example below shows how to create a Twitter link for a project and how to create a link to a post that was originally published on Medium:
+
+```toml
+links = [{icon_pack="fab", icon="twitter", name="Follow", url="https://twitter.com/Twitter"},
+         {icon_pack="fab", icon="medium", name="Originally published on Medium", url="https://medium.com"}]
+```
+
+The only required option is `url`, giving you the option to show a *text button*, an *icon button*, or a *combination of both*. [Learn more about icons]({{< relref "widgets.md#icons" >}}). 
+
+{{% alert warning %}}
+Prior to 13th February 2019, `links` was known as `url_custom`.
+{{% /alert %}}
+
+To generate a **PDF button**, add a PDF file with the same name as your page's own folder to your page's folder and a PDF link will be automatically generated. For example, if your page is located at `publication/photons/index.md`, place a PDF at `publication/photons/photons.pdf`. This can be useful for talks and publications.
+
+There are also several special built-in buttons that can be setup using `url_...` options in the front matter of some content types.
+
 ### Page features
 
 The following parameters can be added to the front matter of a page (such as a blog post) to control its features:
@@ -138,12 +159,7 @@ To enable visitors to easily cite your work, export a BibTeX citation file named
 
 The `url_` links can either point to local or web content. Associated local publication content, may be copied to the publication's folder and referenced like `url_code = "code.zip"`.
 
-You can also associate custom link buttons with the publication by adding the following block within the front matter:
-
-```
-url_custom = [{name = "Custom Link 1", url = "http://example.org"},
-              {name = "Custom Link 2", url = "http://example.org"}]
-```
+You can also [associate custom link buttons with the publication](#page-resources).
 
 {{% alert warning %}}
 Any double quotes (`"`) or backslashes (e.g. LaTeX `\times`) occurring within the value of any frontmatter parameter (such as the *abstract*) should be escaped with a backslash (`\`). For example, the symbol `"` and LaTeX text `\times` become `\"` and `\\times`, respectively. Refer to the [TOML documentation](https://github.com/toml-lang/toml#user-content-string) for more info.
