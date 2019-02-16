@@ -9,7 +9,8 @@ figure {
   padding: 60px 0 60px 0;
 }
 
-/* Clean, minimal style for Hero widget. */
+/* HERO LIGHT: Clean, minimal style for Hero widget. */
+/*
 .hero-overlay .hero-title,
 .hero-overlay .hero-lead {
   color: #000;
@@ -33,6 +34,7 @@ figure {
 .hero-overlay a {
   color: #3273dc;
 }
+*/
 
 /* Normal font weight for menu. */
 
