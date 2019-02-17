@@ -22,25 +22,25 @@ It's possible to **customize the search system** to your needs. The search featu
 
 ### Built-in
 
-Academic comes with its own integrated search engine. If it's not already enabled, it can be enabled by setting `engine = 1` under `[params.search]` in `config.toml`.
+Academic comes with its own integrated search engine. If it's not already enabled, it can be enabled by setting `engine = 1` under `[search]` in `config/_default/params.toml`.
 
 Note that this search engine runs entirely in the web browser on the visitor's device. Thus, it is not scalable to an extremely large number of pages. If you have a very large amount of content and find the search running slowly, we recommend opting for a server side search engine such as Algolia or Google (see below).
 
 ### Algolia
 
-1. Under `[params.search]` in `config.toml` set `engine = 2`
+1. Under `[search]` in `config/_default/params.toml` set `engine = 2`
 1. Register a **free** [Algolia](https://www.algolia.com) account and follow their wizard to create a new search app 
 1. Build your site by running the `hugo` command in Terminal or Command Prompt
 1. Upload the generated `public/index.json` file to the *Indicies* page in your Algolia dashboard
-1. Paste the Algolia *App ID*, *API Key*, and *Index Name* from the *Indicies* and *API Keys* pages of your Algolia Dashboard into the `[params.search.algolia]` section in `config.toml`
-1. Under `[params.search]` in `config.toml`, set `engine = 2` to activate the Algolia search engine
+1. Paste the Algolia *App ID*, *API Key*, and *Index Name* from the *Indicies* and *API Keys* pages of your Algolia Dashboard into the `[search.algolia]` section in `config/_default/params.toml`
+1. Under `[search]` in `config/_default/params.toml`, set `engine = 2` to activate the Algolia search engine
 1. Serve (or build and upload) your site and test out the shiny new search widget on your home page :smile:
 
 Note that whenever your content changes (e.g. you add a new page), you will need to re-build and re-upload the search index to Algolia.
 
 ## Disable
 
-To disable searching, open `config.toml` and set `engine = 0` in the `[params.search]` section.  
+To disable searching, open `config/_default/params.toml` and set `engine = 0` in the `[search]` section.  
 
 ## Alternatives
 

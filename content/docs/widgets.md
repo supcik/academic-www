@@ -41,7 +41,7 @@ The widget instances in your `home/` folder can be renamed to anything you like 
 
 To add a widget manually, copy the relevant widget from `themes/academic/exampleSite/content/home/` to your `content/home/` folder. 
 
-Widget identifiers are set to their respective filenames, so a `content/home/about.md` widget can be linked from the navigation bar by setting the relevant URL as `"#about"` in `config.toml`.
+Widget identifiers are set to their respective filenames, so a `content/home/about.md` widget can be linked from the navigation bar by setting the relevant URL as `"#about"` in `config/_default/menu.toml`.
 
 This means that if you want to use multiple instances of a widget, each widget will be assigned a unique ID based on the filename that you set. You can then use that ID for linking, like in the above example.
 
@@ -49,7 +49,7 @@ This means that if you want to use multiple instances of a widget, each widget w
 
 If you do not require a particular widget, you can simply delete any associated files from the `content/home/` folder.
 
-To remove a navigation link from the top of the page, remove the associated `[[menu.main]]` entry in `config.toml`.
+To remove a navigation link from the top of the page, remove the associated `[[main]]` entry in `config/_default/menu.toml`.
 
 ### Position widgets
 
@@ -137,9 +137,9 @@ You can use the custom widget to create your own home page sections.
 
 Simply duplicate (copy/paste) and rename the example *teaching* file at `content/home/teaching.md`. Then edit the section title, weight (refer to *Ordering sections* below), and content as desired. You may write your widget content in Markdown, shortcodes, or even HTML.
 
-You may also wish to add a navigation link to the top of the page that points to the new section. This can be achieved by adding something similar to the following lines to your `config.toml`, where the URL will consist of the first title word in lowercase:
+You may also wish to add a navigation link to the top of the page that points to the new section. This can be achieved by adding something similar to the following lines to your `content/_default/menu.toml`, where the URL will consist of the first title word in lowercase:
 
-    [[menu.main]]
+    [[main]]
         name = "Research"
         url = "#research"
         weight = 10
