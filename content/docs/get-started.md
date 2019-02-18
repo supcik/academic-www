@@ -81,7 +81,7 @@ The core parameters for the website can be edited in the `config/_default/params
 
 ### Introduce yourself
 
-By default, a superuser is created with the username *Admin* and corresponding user profile located at `content/author/admin/_index.md`. Let's open this file in a text editor and edit this file to make it *your* profile:
+By default, a superuser is created with the username *admin* and corresponding user profile located at `content/author/admin/_index.md`. Let's open this file in a text editor and edit this file to make it *your* profile:
 
 - Edit your display `name` (typically your full name), your `role`, and write one sentence to describe yourself in `bio`
 - Edit the `organizations` that you are affiliated with, or set this to `organizations = []` to hide it
@@ -96,8 +96,10 @@ Now let's add a biography or some fun facts about you after the front matter (i.
 
 To display an avatar, place a square cropped portrait photo named `avatar` into your profile folder at `content/author/admin/`, overwriting the example image. Alternatively, if you have an existing Gravatar/Wordpress avatar, you can use it by setting `gravatar` to `true` in `config/_default/params.toml` and entering your associated `email` address in `content/author/admin/_index.md`. Note that you can delete the example `avatar` image to disable the avatar feature.
 
+Once you have setup your account, your username can be referenced in the `authors` field of content, as per the demo post.
+
 {{% alert note %}}
-The superuser username can be changed from *Admin* by renaming the `admin` folder. Note that the username folder name should be lowercase with any spaces replaced with hyphens (`-`). The username can then be referenced in the `authors` field of posts, as per the example post.
+The superuser username can be changed from *admin* by renaming the `admin` folder. Usernames must be lowercase with any spaces replaced with hyphens (`-`). The [ASCII](https://www.w3schools.com/charsets/ref_html_ascii.asp) alphanumeric character set is recommended.
 {{% /alert %}}
 
 {{% alert warning %}}

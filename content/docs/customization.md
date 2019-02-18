@@ -91,7 +91,7 @@ Academic uses the following constants to format dates and times:
 | Timezone | `MST` |
 | Offset   | `-0700`   `-07`   `-07:00`   `Z0700`   `Z07:00` |
 
-To modify the format, edit `date_format` and `time_format` in `config.toml` using the above constants. For example, some common formats are:
+To modify the format, edit `date_format` and `time_format` in `config/_default/params.toml` using the above constants. For example, some common formats are:
 
 | Format                            | Type              |
 |-----------------------------------|-------------------|
