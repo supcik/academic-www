@@ -15,21 +15,21 @@ Widgets empower you to fully customize your site. They display as sections on th
 
 Academic comes with the following widgets built-in. Additionally, third-party widgets can also be [developed](#develop-a-new-widget) and installed.
 
-- [Custom widget](#custom) - add your own content!
+- [Custom widget](#custom) - add your own content such as an image gallery!
 - [Featurette](#featurette) - showcase skills or key features of a product
 - [Accomplishments](#accomplishments) - showcase your (online learning) certificates and other achievements
 - Recent news/blog posts
-- [Contact](#contact)
+- [Contact](#contact) - can include a contact form and map
 - [About](#about) - introduce yourself
-- Projects
+- Projects - a filterable portfolio
 - Featured publications
 - [Recent publications](#publications) - for academics, researchers, and publishers
 - Featured talks
-- Recent talks
-- Tag cloud
-- Hero (call-to-action)
-- People
-- Carousel
+- Recent talks - list recent and upcoming talks
+- Tag cloud - link popular topics
+- Hero - encourage visitors to perform an action (CTA)
+- People - introduce your team members
+- Slider - swipe images (i.e. a carousel)
 
 ## Using Widgets
 
