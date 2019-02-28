@@ -10,8 +10,8 @@ type = "docs"  # Do not modify.
 math = false
 
 [menu.docs]
-    parent = "setup"
-    weight = 40
+    parent = "features"
+    weight = 10
 +++
 
 Both the **interface** and **content** language can be changed to suit your needs.

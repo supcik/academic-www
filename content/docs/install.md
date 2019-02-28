@@ -2,7 +2,6 @@
 title = "Install"
 
 date = 2016-04-20
-
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
@@ -26,7 +25,7 @@ You can choose from one of the following four methods to install:
     * Netlify will provide you with a customizable URL to access your new site
 2. On GitHub, go to your newly created `academic-kickstart` repository and [personalize your site by editing the files in]({{< relref "get-started.md" >}}) `config/_default/`
    - Shortly after saving (i.e. *committing* a file), your site will automatically update
-3. Read the [Widgets]({{< relref "widgets.md" >}}) and [Content]({{< relref "managing-content.md" >}}) guides to learn how to add widgets and content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
+3. Read the [Widgets]({{< relref "page-builder.md" >}}) and [Content]({{< relref "managing-content.md" >}}) guides to learn how to add widgets and content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
 
 ## Install with Git
 

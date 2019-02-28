@@ -6,8 +6,8 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 [menu.docs]
-  parent = "setup"
-  weight = 50
+  parent = "features"
+  weight = 20
 +++
 
 **Empower your users** to search your website content for keywords so that they can quickly discover relevant content.
@@ -46,6 +46,6 @@ To disable searching, open `config/_default/params.toml` and set `engine = 0` in
 
 Alternative search providers, such as Google search, are not integrated with Academic, but can be implemented by creating your own custom widget. For example,
 
-1. Create a [custom widget]({{< relref "/widgets.md" >}}) in your `/content/home/` folder
+1. Create a [custom widget]({{< relref "/page-builder.md" >}}) in your `/content/home/` folder
 1. Signup for [Google Custom Search Engine](https://cse.google.com/cse/)
 1. Paste the HTML which Google provide into the body of your custom widget

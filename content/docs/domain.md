@@ -1,8 +1,7 @@
 +++
-title = "Domain Name"
-date = 2017-12-24
-draft = false
+title = "Get Your Own Domain Name"
 
+date = 2017-12-24
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 

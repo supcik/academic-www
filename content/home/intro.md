@@ -17,7 +17,7 @@ Explore the [personal demo](https://academic-demo.netlify.com/) or project/organ
 Key features:
 
 - Easily manage your content including homepage, blog posts, publications, talks, and projects
-- Configurable [widgets]({{< relref "/widgets.md" >}}) available
+- Configurable [widgets]({{< relref "/page-builder.md" >}}) available
 - Customize your site with [themes]({{< relref "/themes.md" >}})
 - Can't find the widget you want? Use the Custom widget!
 - Write in [Markdown]({{< relref "/docs/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions

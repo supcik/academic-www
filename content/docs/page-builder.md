@@ -1,41 +1,43 @@
 +++
-title = "Widgets"
+title = "Getting Started With the Page Builder"
 date = 2016-04-19
-aliases = ["widgets/"]
+aliases = ["/docs/widgets/"]
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
+linktitle = "Build your homepage"
 [menu.docs]
   parent = "setup"
   weight = 35
 +++
 
+Building beautiful pages is easy with Academic's widget system. No programming is required!
+
+Loading pre-made layouts is a great way to *kickstart* your new homepage. [Academic Kickstart]({{< relref "get-started.md" >}}) comes with some popular **Sections** preconfigured for this purpose. A **Widget** can be added inside each Section. Hence, you can have multiple instances of widgets, such as listing recent pages of different content types or categories.
+
 Widgets empower you to fully customize your site. They display as sections on the homepage or on [widget pages]({{< relref "managing-content.md" >}}). They can be enabled or disabled and configured as desired.
 
 Academic comes with the following widgets built-in. Additionally, third-party widgets can also be [developed](#develop-a-new-widget) and installed.
 
-- [Custom widget](#custom) - add your own content such as an image gallery!
+- [Blank](#blank) - add [any elements]({{< relref "writing-markdown-latex.md" >}}) such as an image gallery
+- Hero - encourage visitors to perform an action (CTA)
+- [About](#about) - introduce yourself
 - [Featurette](#featurette) - showcase skills or key features of a product
 - [Accomplishments](#accomplishments) - showcase your (online learning) certificates and other achievements
-- Recent news/blog posts
+- [Pages](#pages) - display recent blog posts, talks, and publications
+- Featured - display featured (i.e. *sticky*) blog posts, talks, and publications
 - [Contact](#contact) - can include a contact form and map
-- [About](#about) - introduce yourself
-- Projects - a filterable portfolio
-- Featured publications
-- [Recent publications](#publications) - for academics, researchers, and publishers
-- Featured talks
-- Recent talks - list recent and upcoming talks
-- Tag cloud - link popular topics
-- Hero - encourage visitors to perform an action (CTA)
+- Portfolio - a filterable portfolio
+- Tag cloud - enable visitors to discover popular topics
 - People - introduce your team members
-- Slider - swipe images (i.e. a carousel)
+- Slider (carousel) - promote a lot of content in a small space
 
 ## Using Widgets
 
-Academic Kickstart includes instances of all the built-in widgets. Delete the widgets in `content/home/` that you don't need (or set `active = false` in their front matter) and personalize the front matter options of the widgets you wish to keep by opening them in a text editor.
+Academic Kickstart includes instances of all the built-in widgets. Delete the sections in `content/home/` that you don't need (or set `active = false` in their front matter) and personalize the front matter options of the sections that you wish to keep by opening them in a text editor.
 
-The widget instances in your `home/` folder can be renamed to anything you like (but use hyphens instead of spaces). Just remember to update your main menu in `config/_default/menus.toml` if you have a link to the widget instance.
+The sections (widget instances) in your `home/` folder can be renamed to anything you like (but use hyphens instead of spaces). Just remember to update your main menu in `config/_default/menus.toml` if you have a link to the widget instance.
 
 ### Add a widget to the homepage
 
@@ -51,13 +53,13 @@ If you do not require a particular widget, you can simply delete any associated 
 
 To remove a navigation link from the top of the page, remove the associated `[[main]]` entry in `config/_default/menu.toml`.
 
-### Position widgets
+### Position sections
 
 The order that the homepage widgets are displayed in is defined by the `weight` parameter in each of the files in the `content/home/` directory. The widgets are displayed in ascending order of their `weight`, so you can simply edit the `weight` parameters as desired.
 
 ### Develop a new widget
 
-This section guides developers to create custom widgets using HTML and CSS. You may also be interested in the [custom widget]({{< relref "widgets.md#custom" >}}).
+This section guides developers to create custom widgets using HTML and CSS. You may also be interested in the [Blank widget]({{< relref "page-builder.md#blank" >}}).
 
 Let's create a new widget, the *Awesome* widget. First create the `layouts/partials/widgets/` folder structure in the root of your site (**not in** `themes/academic/`).
 
@@ -87,11 +89,26 @@ Good luck creating your own widgets and feel free to [share them with the commun
 
 ## Personalizing Widgets
 
-The parameters for each widget vary. When you open a widget installed in the `content/home/` folder in a text editor, the available options will be displayed in the front matter (between the pair of `+++`).
+The parameters for each section consist of general options in addition to widget-specific options. When you open a section installed in the `content/home/` folder in a text editor, the available options will be displayed in the front matter (between the pair of `+++`).
 
 Generally, if you write any text in the file body after a widget's front matter, your text will appear at the top of the widget. This can be useful for introducing the widget content.
 
 A title and subtitle can be set for most widgets using the `title` and `subtitle` options respectively.
+
+### Columns
+
+The number of columns in a section can be configured for the **Blank** and **Portfolio** widgets. Valid options are:
+
+- `"1"`: a single full-width column with the section content appearing directly underneath the section title (if set)
+- `"2"`: two columns in the classic Academic layout with the the section title appearing on the left and the section content appearing on the right
+
+For example:
+
+```toml
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "1"
+```
 
 ### View
 
@@ -123,6 +140,31 @@ Icon pack "ai" includes the following **academic** icons:
 - cv, google-scholar, arxiv, orcid, researchgate, mendeley
 - [See all icons](https://jpswalsh.github.io/academicons/)
 
+### Background
+
+A background can easily be applied to any homepage section. Choose from a range of background options including **color, gradient, and image**. Then choose either a dark or light text color, by setting `text_color_light`.
+
+Once you have chosen the type of background, delete or comment out (by prefixing `#`) any unused options. For example, if you choose an image background, set the `image*` and `text_color_light` options and delete the rest (delete `color` and `gradient*`). For colors, any [HTML color name](https://html-color-codes.info/color-names/) or [Hex value](https://html-color-codes.info) is valid.
+
+The following excerpt shows the front matter structure for defining a background:
+
+```toml
+[background]
+  # Background color.
+  color = "navy"
+  
+  # Background gradient.
+  gradient_start = "#4bb4e3"
+  gradient_end = "#2b94c3"
+  
+  # Background image.
+  image = "background.jpg"  # Name of image in `static/img/`.
+  image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  text_color_light = true
+```
+
 ### Style
 
 It's possible to customize the style of a specific instance of a widget. For example, the background of a widget may be changed to an image or color gradient.
@@ -131,11 +173,22 @@ First, define your custom style in CSS using the [CSS Plugin]({{< relref "custom
 
 To apply your new style to a widget, set `css_class` in a widget's front matter. For example `css_class = "MY_CSS_CLASS"`, where `MY_CSS_CLASS` is the name of the CSS class which you defined in the previous step.
 
-## Custom
+Custom CSS code can also be directly applied to a section using the `css_style` option.
 
-You can use the custom widget to create your own home page sections.
+```toml
+[advanced]
+ # Custom CSS. 
+ css_style = ""
+ 
+ # CSS class.
+ css_class = ""
+```
 
-Simply duplicate (copy/paste) and rename the example *teaching* file at `content/home/teaching.md`. Then edit the section title, weight (refer to *Ordering sections* below), and content as desired. You may write your widget content in Markdown, shortcodes, or even HTML.
+## Blank
+
+You can use the Blank widget to create your own home page sections.
+
+Simply duplicate (copy/paste) and rename the example *Demo* file at `content/home/demo.md`. Then edit the section title, weight (refer to *Position Sections*), and content as desired. You may write your widget content in Markdown, shortcodes, or even HTML.
 
 You may also wish to add a navigation link to the top of the page that points to the new section. This can be achieved by adding something similar to the following lines to your `content/_default/menu.toml`, where the URL will consist of the first title word in lowercase:
 
@@ -196,10 +249,48 @@ List your accomplishments including certificates and courses attended.
 
 Add your accomplishments by editing the front matter of `home/accomplishments.md`.
 
-## Publications
+## Pages
 
-List your recent or featured publications.
+List your recently published pages such as blog posts, talks, and publications.
 
-{{< figure library="1" src="docs/widget-publications.png" title="List your recent or featured publications." >}}
+{{< figure library="1" src="docs/widget-publications.png" title="List your recent pages." >}}
 
-Edit the front matter of `home/publications.md` to personalize the [view](#view).
+There are three sections in the demo that use the *Pages* widget. These include `home/posts.md`, `home/talks.md`, and `home/publications.md`.
+
+Edit the front matter of a section to personalize the [view](#view) and other options shown below:
+
+```toml
+widget = "pages"  # Use the Pages widget
+
+# ... Section Options Here ...
+
+[content]
+  # Page type to display. E.g. post, talk, or publication.
+  page_type = "post"
+  
+  # Choose how much pages you would like to display (0 = all pages)
+  count = 5
+  
+  # Choose how many pages you would like to offset by
+  offset = 0
+
+  # Page order. Descending (desc) or ascending (asc) date.
+  order = "desc"
+
+  # Filter posts by a taxonomy term.
+  [content.filters]
+    tag = ""
+    category = ""
+    publication_type = ""
+    exclude_featured = false
+    exclude_past = false
+    exclude_future = false
+    
+[design]
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 2
+```

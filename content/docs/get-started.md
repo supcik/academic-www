@@ -54,7 +54,7 @@ What kind of content would you like to publish? Academic supports:
 - **Slides**: write slides very efficiently with Markdown, present them at your talk, and share them online
 - **Publications**: import your research publications from BibTeX
 
-Once you have decided on the type of content that you would like to publish, take a look at the [available homepage widgets]({{< relref "widgets.md" >}}) and consider which ones would be most relevant to you.
+Once you have decided on the type of content that you would like to publish, take a look at the [available homepage widgets]({{< relref "page-builder.md" >}}) and consider which ones would be most relevant to you.
 
 Then, open your `content/home/` folder and set the `active` parameter to either `true` or `false` for each widget depending on if you wish to display it or not. Widgets that you don't need can alternatively be deleted rather than setting `active` to `false`.
 
@@ -75,7 +75,7 @@ The core parameters for the website can be edited in the `config/_default/params
 - Edit your personal/business details under the *Contact Widget* section
   - Any details entered here will be displayed in the *Contact* widget (if used)
   - To hide a contact field, simply clear the value to `""` or comment the line out by prefixing it with a hash (`#`) 
-  - The [contact form can be configured]({{< relref "widgets.md#contact" >}}) separately in the front matter of the *Contact* widget itself
+  - The [contact form can be configured]({{< relref "page-builder.md#contact" >}}) separately in the front matter of the *Contact* widget itself
 - If you write technical content, consider setting `highlight = true` and/or `math = true`, otherwise set them to `false`
   - If you write *R* code, uncomment `highlight_languages` (remove the `#` line prefix) so that `highlight_languages = ["r"]`
 

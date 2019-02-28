@@ -8,8 +8,8 @@ type = "docs"  # Do not modify.
 math = true
 
 [menu.docs]
-    parent = "setup"
-    weight = 30
+    parent = "features"
+    weight = 5
 +++
 
 It is possible to carry out many customizations *without* editing any code in the `themes/academic/` folder, making it easier to update the framework in the future.

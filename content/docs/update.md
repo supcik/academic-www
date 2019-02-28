@@ -1,16 +1,13 @@
 +++
 title = "Update"
-
 date = 2016-04-20
-# lastmod = 2017-12-26
-draft = false
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 [menu.docs]
     parent = "setup"
-    weight = 11
+    weight = 99
 +++
 
 The update process consists of:

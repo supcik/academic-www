@@ -28,8 +28,8 @@ The following core metadata can be added to the [front matter]({{< relref "front
 - **lastmod**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was last modified. If using Git, enable `enableGitInfo` in `config.toml` to have this automatically updated.
 - **draft**: by setting `draft = true`, only you will see your page when you run Academic/Hugo locally
 - **authors**: display the authors of the page and link to their user profiles if they exist. To link to a user profile, [create a user]({{< relref "/docs/get-started.md#introduce-yourself" >}}) based on the [*admin* template](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/author) and reference their username (name of a user in your `author` folder) in the `authors` field, e.g. `authors = ["admin"]`.
-- **featured**: by setting `featured = true`, a talk or publication can be displayed in the [featured talk/publication widget]({{< relref "widgets.md" >}}).
-- **tags**: tagging your content helps users to discover similar content on your site. Tags can improve search relevancy and are displayed after the page content and also in the [Tag Cloud widget]({{< relref "widgets.md" >}}). E.g. `tags = ["Electronics", "Diodes"]`.
+- **featured**: by setting `featured = true`, a talk or publication can be displayed in the [featured talk/publication widget]({{< relref "page-builder.md" >}}).
+- **tags**: tagging your content helps users to discover similar content on your site. Tags can improve search relevancy and are displayed after the page content and also in the [Tag Cloud widget]({{< relref "page-builder.md" >}}). E.g. `tags = ["Electronics", "Diodes"]`.
 - **categories**: categorizing your content helps users to discover similar content on your site. Categories can improve search relevancy and display at the top of a page alongside a page's metadata. E.g. `categories = ["Art"]`.
 
 ### Featured image
@@ -68,7 +68,7 @@ links = [{icon_pack="fab", icon="twitter", name="Follow", url="https://twitter.c
          {icon_pack="fab", icon="medium", name="Originally published on Medium", url="https://medium.com"}]
 ```
 
-The only required option is `url`, giving you the option to show a *text button*, an *icon button*, or a *combination of both*. [Learn more about icons]({{< relref "widgets.md#icons" >}}). 
+The only required option is `url`, giving you the option to show a *text button*, an *icon button*, or a *combination of both*. [Learn more about icons]({{< relref "page-builder.md#icons" >}}). 
 
 {{% alert warning %}}
 Prior to 13th February 2019, `links` was known as `url_custom`.
