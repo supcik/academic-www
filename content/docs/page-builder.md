@@ -12,22 +12,22 @@ linktitle = "Build your homepage"
   weight = 35
 +++
 
-Building beautiful pages is easy with Academic's widget system. No programming is required!
+**Building beautiful pages is easy with Academic's widget system. No programming is required!**
 
-Loading pre-made layouts is a great way to *kickstart* your new homepage. [Academic Kickstart]({{< relref "get-started.md" >}}) comes with some popular **Sections** preconfigured for this purpose. A **Widget** can be added inside each Section. Hence, you can have multiple instances of widgets, such as listing recent pages of different content types or categories.
+Loading pre-made layouts is a great way to *kickstart* your new homepage. [Academic Kickstart]({{< relref "install.md" >}}) comes with some popular **Sections** preconfigured for this purpose. A **Widget** can be added inside each Section. Hence, you can have multiple instances of widgets, such as listing recent pages of different content types or categories.
 
-Widgets empower you to fully customize your site. They display as sections on the homepage or on [widget pages]({{< relref "managing-content.md" >}}). They can be enabled or disabled and configured as desired.
+Widgets empower you to fully customize your site. They display as sections on the homepage or on [widget pages]({{< relref "managing-content.md" >}}). They can be added, removed, and positioned as desired.
 
 Academic comes with the following widgets built-in. Additionally, third-party widgets can also be [developed](#develop-a-new-widget) and installed.
 
 - [Blank](#blank) - add [any elements]({{< relref "writing-markdown-latex.md" >}}) such as an image gallery
-- Hero - encourage visitors to perform an action (CTA)
+- [Hero](#hero) - encourage visitors to perform an action (CTA)
 - [About](#about) - introduce yourself
 - [Featurette](#featurette) - showcase skills or key features of a product
 - [Accomplishments](#accomplishments) - showcase your (online learning) certificates and other achievements
 - [Pages](#pages) - display recent blog posts, talks, and publications
 - Featured - display featured (i.e. *sticky*) blog posts, talks, and publications
-- [Contact](#contact) - can include a contact form and map
+- [Contact](#contact) - display your contact details, including an optional contact form and map
 - Portfolio - a filterable portfolio
 - Tag cloud - enable visitors to discover popular topics
 - People - introduce your team members
@@ -199,6 +199,46 @@ You may also wish to add a navigation link to the top of the page that points to
 
 You may also be interested in the [developing widgets](#develop-a-new-widget).
 
+## Hero
+
+The Hero widget can be used to encourage visitors to perform an action (CTA). It's the first thing that visitors see when they visit your website, and it influences the way your visitors feel and behave on your site.
+
+Typically, the Hero widget is configured to include a hero image, a tagline and a call to action (CTA). There are other possibilities as well though, such as including a secondary action, note, and [background](#background).
+
+{{< figure library="1" src="docs/widget-hero.png" title="The Hero widget can be used to encourage visitors to perform an action (CTA)." >}}
+
+Edit the front matter of `home/hero.md` to add the primary action that you would like your visitors to perform.
+
+For example, the following options can be added to your section front matter in order to include the Hero widget: 
+
+```toml
+widget = "hero"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Hero image (optional). Enter filename of an image in the `static/img/` folder.
+hero_media = ""
+
+# Call to action links (optional).
+#   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
+#   Remove a link/note by deleting a cta/note block.
+[cta]
+  url = "https://sourcethemes.com/academic/docs/install"
+  label = "Get Started"
+  icon_pack = "fas"
+  icon = "download"
+  
+[cta_alt]
+  url = "https://sourcethemes.com/academic/"
+  label = "View Documentation"
+
+# Note. An optional note to show underneath the links.
+[cta_note]
+  label = ""
+```
+
+In this example, we have [associated an icon](#icons) with the action (`[cta]` option).
+
 ## Featurette
 
 As an individual, use the Featurette widget to showcase your skills and expertise. As an organization, use the widget to highlight the key features of your product or service.
@@ -206,6 +246,35 @@ As an individual, use the Featurette widget to showcase your skills and expertis
 {{< figure library="1" src="docs/widget-featurette.png" title="Showcase personal skills or product features with the Featurette widget." >}}
 
 Edit the front matter of `home/skills.md` to add your skills/features. [Choose from a large range of icons to depict the skills/features](#icons).
+
+For example, the following options can be added to your section front matter in order to include the Featurette widget: 
+
+```toml
+widget = "featurette"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Showcase personal skills or business features.
+# Add/remove as many `[[feature]]` blocks below as you like.
+# For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
+[[feature]]
+  icon = "r-project"
+  icon_pack = "fab"
+  name = "R"
+  description = "90%"
+  
+[[feature]]
+  icon = "chart-line"
+  icon_pack = "fas"
+  name = "Statistics"
+  description = "100%"  
+  
+[[feature]]
+  icon = "camera-retro"
+  icon_pack = "fas"
+  name = "Photography"
+  description = "10%"
+```
 
 ## Contact
 
@@ -218,6 +287,23 @@ The contact widget will automatically display the following information accordin
 - office hours
 - appointment booking link
 - map
+
+For example, the following options can be added to your section front matter in order to include the Contact widget: 
+
+```toml
+widget = "contact"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Automatically link email and phone?
+autolink = true
+
+# Email form provider
+#   0: Disable email form
+#   1: Netlify (requires that the site is hosted by Netlify)
+#   2: formspree.io
+email_form = 2
+```
 
 ### Contact links
 
@@ -241,13 +327,71 @@ Introduce yourself to your readers.
 
 [Setup a user profile]({{< relref "get-started.md" >}}) and then edit the front matter of `home/about.md` to associate the About widget with your username (name of the folder your created in `authors/`).
 
+For example, the following options can be added to your section front matter in order to include the About widget: 
+
+```toml
+widget = "about"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Choose the user profile to display
+# This should be the username of a profile in your `content/author/` folder.
+author = "admin"
+```
+
 ## Accomplishments
 
 List your accomplishments including certificates and courses attended.
 
 {{< figure library="1" src="docs/widget-accomplishments.png" title="List your accomplishments including certificates and courses attended." >}}
 
-Add your accomplishments by editing the front matter of `home/accomplishments.md`.
+Add your accomplishments by editing the front matter of `home/accomplishments.md`. For example:
+
+```toml
+widget = "accomplishments"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Date format
+#   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+date_format = "Jan 2006"
+
+# Accomplishments.
+#   Add/remove as many `[[item]]` blocks below as you like.
+#   `title`, `organization` and `date_start` are the required parameters.
+#   Leave other parameters empty if not required.
+#   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[item]]
+  organization = "Coursera"
+  organization_url = "https://www.coursera.org"
+  title = "Neural Networks and Deep Learning"
+  url = ""
+  certificate_url = "https://www.coursera.org"
+  date_start = "2018-10-01"
+  date_end = ""
+  description = ""
+
+[[item]]
+  organization = "edX"
+  organization_url = "https://www.edx.org"
+  title = "Blockchain Fundamentals"
+  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
+  certificate_url = "https://www.edx.org"
+  date_start = "2018-03-01"
+  date_end = ""
+  description = "Formulated informed blockchain models, hypotheses, and use cases."
+  
+[[item]]
+  organization = "DataCamp"
+  organization_url = "https://www.datacamp.com"
+  title = "Object-Oriented Programming in R: S3 and R6 Course"
+  url = ""
+  certificate_url = "https://www.datacamp.com"
+  date_start = "2017-07-01"
+  date_end = "2017-12-21"
+  description = ""
+```
 
 ## Pages
 
@@ -262,7 +406,7 @@ Edit the front matter of a section to personalize the [view](#view) and other op
 ```toml
 widget = "pages"  # Use the Pages widget
 
-# ... Section Options Here ...
+# ... Put Your Section Options Here (title etc.) ...
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
