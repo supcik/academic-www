@@ -28,8 +28,8 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - [Pages](#pages) - display recent blog posts, talks, and publications
 - Featured - display featured (i.e. *sticky*) blog posts, talks, and publications
 - [Contact](#contact) - display your contact details, including an optional contact form and map
-- Portfolio - a filterable portfolio
-- Tag cloud - enable visitors to discover popular topics
+- [Portfolio](#portfolio) - showcase your work or product features in a filterable portfolio
+- [Tag cloud](#tag-cloud) - enable visitors to discover popular topics
 - People - introduce your team members
 - Slider (carousel) - promote a lot of content in a small space
 
@@ -437,4 +437,80 @@ widget = "pages"  # Use the Pages widget
   #   3 = Card
   #   4 = Citation (publication only)
   view = 2
+```
+
+## Portfolio
+
+With the Portfolio widget you can showcase your work and optionally enable visitors to filter the items. 
+
+{{< figure library="1" src="docs/widget-portfolio-card.png" title="Visitors can easily discover popular topics with the Tag Cloud widget." >}}
+
+Different [views](#view) are available for the content. The default view is a masonry card view made famous by Pinterest.com. Other views include a large image showcase view, and a simple list view. For the *showcase* view, the `flip_alt_rows` option can be set to `true` to horizontally flip alternate rows - a style which is commonly seen on many popular sites and landing pages, such as using large images to showcase product features.
+
+The widget is configurable in a one or two column structure by setting the `columns` option.
+
+Associate your pages with tags by placing the tags option in the front matter of your pages (e.g. `tags = ["A Tag", "Another Tag"]`). The Portfolio widget can then be configured to let visitors filter results by tags. To add a filter button, add or edit a `[[content.filter_button]]` option (see below).
+
+The `projects.md` section in the demo uses the *Portfolio* widget.
+
+To show the widget in a section, reference it in your section's front matter:
+
+```toml
+widget = "portfolio"  # Use the Portfolio widget
+
+# ... Put Your Section Options Here (title etc.) ...
+
+[content]
+  # Page type to display. E.g. project.
+  page_type = "project"
+  
+  # Filter toolbar (optional).
+  # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
+  # To show all items, set `tag` to "*".
+  # To filter by a specific tag, set `tag` to an existing tag name.
+  # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
+  
+  # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
+  filter_default = 0
+  
+  [[content.filter_button]]
+    name = "All"
+    tag = "*"
+  
+  [[content.filter_button]]
+    name = "Deep Learning"
+    tag = "Deep Learning"
+  
+  [[content.filter_button]]
+    name = "Other"
+    tag = "Demo"
+
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "2"
+
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   3 = Card
+  #   5 = Showcase
+  view = 3
+
+  # For Showcase view, flip alternate rows?
+  flip_alt_rows = false
+```
+
+## Tag Cloud
+
+Enable visitors to easily discover popular topics.
+
+{{< figure library="1" src="docs/widget-tags.png" title="Visitors can easily discover popular topics with the Tag Cloud widget." >}}
+
+Associate your pages with tags by placing the tags option in the front matter of your pages (e.g. `tags = ["A Tag", "Another Tag"]`). The Tag Cloud widget will then display your tags. The more popular a tag is, the larger its font.
+
+The `tags.md` section in the demo uses the *Tag Cloud* widget.
+
+To show the widget in a section, reference it in your section's front matter:
+
+```toml
+widget = "tag_cloud"  # Use the Tag Cloud widget
 ```
