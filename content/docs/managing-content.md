@@ -226,20 +226,20 @@ If you are a data analyst/scientist using the **R** language (e.g. *RStudio* and
 
 So you would like to create a page which utilizes Academic's widget system, similar to the homepage?
 
-Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *tutorials* page by creating a `content/tutorials/` folder.
+Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *landing* page by creating a `content/landing/` folder to contain our new sections (widget instances).
 
-Within your new `content/tutorials/` folder, create a file named `_index.md` containing the following parameters:
+Within your new `content/landing/` folder, create a file named `_index.md` containing the following parameters:
 
 ```
 +++
-title = "Tutorials"  # Add a page title.
+title = "Landing Page"  # Add a page title.
 date = 2017-01-01T00:00:00  # Add today's date.
 widgets = true  # Page type is a Widget Page.
 summary = ""  # Add a page description.
 +++
 ```
 
-Install widgets into your `content/tutorials/` folder. To achieve this, widgets can be copied from your `content/home/` folder or downloaded from [Github](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/home).
+Install widgets into your `content/landing/` folder. To achieve this, widgets can be copied from either your `content/home/` or `themes/academic/exampleSite/content/home/` folder.
 
 ## Create other pages (e.g. CV)
 
@@ -261,7 +261,9 @@ Then edit the `title` parameter in each `_index.md` as desired and add any conte
 
 ## Removing content
 
-Generally, to remove content, simply delete the relevant page file/folder from your `content/post`, `content/publication`, `content/project`, or `content/talk` folder.
+To remove content permanently, simply delete the relevant page file/folder within your `content/` folder.
+
+To temporarily unpublish content, set `draft = true` at the top of a page's front matter.
 
 ## View your updated site
 

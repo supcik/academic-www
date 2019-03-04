@@ -146,3 +146,9 @@ Before deploying your site, there are some final options we can set in `config/_
 - Set `baseurl` to your website URL (this will be provided by your host such as [Netlify]({{< relref "deployment.md" >}})) - **come back to this option later if you don't have your URL/domain yet**
 
 Publish your site to the world by following the [deployment steps]({{< relref "deployment.md" >}}).
+
+## Support Academic
+
+**Has Academic helped you?**
+
+**Academic is a free open source platform. [Please kindly consider supporting further development.]({{< relref "/#support" >}})**

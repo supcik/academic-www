@@ -26,6 +26,7 @@ weight = 30
 - **Multi-user** - Each author gets their own profile page
 - **Privacy Pack** - Assists with GDPR
 - **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
+- **One-Click Deployment** - No servers. No databases. Only files.
 
 This website is powered by **Academic**, [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/), and can be built in **under 10 minutes for free**.
 

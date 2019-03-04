@@ -25,7 +25,7 @@ Before updating Academic, it is strongly recommended to make a full **backup** o
 Then, **record your current version**, so that after you update Academic, you can apply any relevant breaking changes to the TOML/YAML site configuration and front matter in your `content/` folder. To find your current version, look in `themes/academic/data/academic.toml`. Note that if you installed the *master* version rather than a specific release, then extra care should be taken (such as by checking the git log if you installed with git) as you may be in-between versions.
 
 {{% alert note %}}
-Academic Kickstart comes with an [update script](https://github.com/sourcethemes/academic-kickstart/blob/master/update_academic.sh) to check for available updates - just remember to temporarily comment out the last line so that you can view the list of available updates first without actually performing the update.
+Academic Kickstart comes with an [update script](https://github.com/sourcethemes/academic-kickstart/blob/master/update_academic.sh) to check for available updates.
 {{% /alert %}}
 
 ## Update Academic
@@ -65,9 +65,9 @@ Uninstall your current version of Academic by deleting the contents of `themes/a
 
 When you update Academic itself, you can jump straight to the latest and greatest version. However, content migration requires consecutively applying any relevant steps from each release.
 
-To migrate your TOML/YAML front matter and configuration, apply any relevant steps from the *Breaking Changes* section of each consecutive [release note](/academic/updates/) since the version you were originally on. If a release has no *Breaking Changes* section, then no changes are required.
+To migrate your TOML/YAML front matter and configuration, apply any relevant steps from the *Breaking Changes* section of each **consecutive [release note](/academic/updates/)** since the version you were originally on. If a release has no *Breaking Changes* section, then no changes are required.
  
-For example, if your site was previously on *v2.4.0*, then apply the breaking changes for the consecutive releases since v2.4.0, i.e. [v3.0.0]({{< relref "/updates/v3.0.0.md#breaking-changes" >}}) and [v3.1.0]({{< relref "/updates/v3.1.0.md#breaking-changes" >}}).
+For example, if you are updating from *v2.4.0* to *v3.1.0*, then [apply the breaking changes](/academic/updates/) for the relevant **consecutive** releases. In this case, that would require **first** applying the breaking changes from [v3.0.0]({{< relref "/updates/v3.0.0.md#breaking-changes" >}}) **and then** applying the breaking changes from [v3.1.0]({{< relref "/updates/v3.1.0.md#breaking-changes" >}}).
 
 To help migrate content to be compatible with new versions of Academic, there are some tools available in the **[Academic Scripts](https://github.com/sourcethemes/academic-scripts)** repository.
 
