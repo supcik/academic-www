@@ -278,6 +278,10 @@ widget = "featurette"
 
 ## Contact
 
+Communication is the cornerstone of almost any website, especially business sites. With Academic, you can easily add communicate elements including a contact form, social messaging links, appointment booking, and a map to your website. A well designed contact section is essential to network with other people, spark new business, and increase conversions.
+
+{{< figure library="1" src="docs/widget-contact.png" title="With the Contact widget, you can add elements such as a contact form, social messaging links, appointment booking, and a map to your website." >}}
+
 The contact widget will automatically display the following information according to what you entered in `config/_default/params.toml`:
 
 - [contact form](#contact-form) or an email link (see section below)
