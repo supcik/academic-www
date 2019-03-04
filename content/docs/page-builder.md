@@ -24,6 +24,7 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - [Hero](#hero) - encourage visitors to perform an action (CTA)
 - [About](#about) - introduce yourself
 - [Featurette](#featurette) - showcase skills or key features of a product
+- [Experience](#experience) - list your professional experience on a timeline
 - [Accomplishments](#accomplishments) - showcase your (online learning) certificates and other achievements
 - [Pages](#pages) - display recent blog posts, talks, and publications
 - [Featured](#featured) - display featured (*sticky*) blog posts, talks, and publications
@@ -276,53 +277,6 @@ widget = "featurette"
   description = "10%"
 ```
 
-## Contact
-
-Communication is the cornerstone of almost any website, especially business sites. With Academic, you can easily add communicate elements including a contact form, social messaging links, appointment booking, and a map to your website. A well designed contact section is essential to network with other people, spark new business, and increase conversions.
-
-{{< figure library="1" src="docs/widget-contact.png" title="With the Contact widget, you can add elements such as a contact form, social messaging links, appointment booking, and a map to your website." >}}
-
-The contact widget will automatically display the following information according to what you entered in `config/_default/params.toml`:
-
-- [contact form](#contact-form) or an email link (see section below)
-- [contact links](#contact-links) such as for Twitter, Skype, Weixin, Weibo, Discussion Forums, etc.
-- phone number
-- address
-- office hours
-- appointment booking link
-- map
-
-For example, the following options can be added to your section front matter in order to include the Contact widget: 
-
-```toml
-widget = "contact"
-
-# ... Put Your Section Options Here (title etc.) ...
-
-# Automatically link email and phone?
-autolink = true
-
-# Email form provider
-#   0: Disable email form
-#   1: Netlify (requires that the site is hosted by Netlify)
-#   2: formspree.io
-email_form = 2
-```
-
-### Contact links
-
-Academic enables you to use a wide range of icons in your contact links. [Learn more about icons](#icons).
-
-### Contact form
-
-You can choose whether to display simply an email address or a contact form. This can be chosen in `content/home/contact.md` by setting the `email_form` option. If set to 0, it will display your email address as a link, based on the value of `email` that you entered in `config/_default/params.toml`. If set to 1, it will use [Netlify](https://www.netlify.com/docs/form-handling/) to add a contact form with a captcha test so that visitors can send you email and spam from bots is prevented.
-
-{{% alert note %}}
-The Netlify option is only available if you are hosting your site with Netlify. In this case, user messages to you will be sent to your Netlify account admin panel. A webhook can be created in your Netlify account if you wish to forward messages to your email address. When using Netlify to provide the contact form, you do not need to provide a value for `email` in `config/_default/params.toml` since the messages will be delivered to your Netlify admin panel.
-{{% /alert %}}
-
-Otherwise, if set to 3, the widget will display a contact form using the `email` in `config/_default/params.toml` and will use the [Formspree](https://formspree.io) service for sending the email to you. For this method, simply send yourself a test message after you have configured the contact form. Formspree will then send you an email to verify your new account with them. Note that **Formspree is usually blocked for Chinese visitors** as it uses Google reCAPTCHA (unless you upgrade to Formspree's paid plan in order to disable reCAPTCHA).
-
 ## About
 
 Introduce yourself to your readers.
@@ -342,6 +296,57 @@ widget = "about"
 # This should be the username of a profile in your `content/author/` folder.
 author = "admin"
 ```
+
+## Experience
+
+List your professional experience on a timeline.
+
+{{< figure library="1" src="docs/widget-experience.png" title="With the Experience widget, you can list your professional experience on a timeline." >}}
+
+Add your experience by editing the front matter of `home/experience.md`. For example:
+
+```toml
+widget = "experience"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Date format for experience
+#   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+date_format = "Jan 2006"
+
+# Experiences.
+#   Add/remove as many `[[experience]]` blocks below as you like.
+#   Required fields are `title`, `company`, and `date_start`.
+#   Leave `date_end` empty if it's your current employer.
+#   Begin/end multi-line descriptions with 3 quotes `"""`.
+[[experience]]
+  title = "CEO"
+  company = "GenCoin"
+  company_url = ""
+  location = "California"
+  date_start = "2017-01-01"
+  date_end = ""
+  description = """
+  Responsibilities include:
+  
+  * Analysing
+  * Modelling
+  * Deploying
+  """
+
+[[experience]]
+  title = "Professor"
+  company = "University X"
+  company_url = ""
+  location = "California"
+  date_start = "2016-01-01"
+  date_end = "2016-12-31"
+  description = """Taught electronic engineering and researched semiconductor physics."""
+```
+
+{{% alert note %}}
+The use of three quote marks (`"""`) in the above front matter example is a [TOML configuration syntax]({{< relref "front-matter.md" >}}) that enables us to easily write multi-line content in the front matter.
+{{% /alert %}}
 
 ## Accomplishments
 
@@ -484,6 +489,53 @@ widget = "featured"  # Use the Featured widget
   #   4 = Citation (publication only)
   view = 3
 ```
+
+## Contact
+
+Communication is the cornerstone of almost any website, especially business sites. With Academic, you can easily add communicate elements including a contact form, social messaging links, appointment booking, and a map to your website. A well designed contact section is essential to network with other people, spark new business, and increase conversions.
+
+{{< figure library="1" src="docs/widget-contact.png" title="With the Contact widget, you can add elements such as a contact form, social messaging links, appointment booking, and a map to your website." >}}
+
+The contact widget will automatically display the following information according to what you entered in `config/_default/params.toml`:
+
+- [contact form](#contact-form) or an email link (see section below)
+- [contact links](#contact-links) such as for Twitter, Skype, Weixin, Weibo, Discussion Forums, etc.
+- phone number
+- address
+- office hours
+- appointment booking link
+- map
+
+For example, the following options can be added to your section front matter in order to include the Contact widget: 
+
+```toml
+widget = "contact"
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# Automatically link email and phone?
+autolink = true
+
+# Email form provider
+#   0: Disable email form
+#   1: Netlify (requires that the site is hosted by Netlify)
+#   2: formspree.io
+email_form = 2
+```
+
+### Contact links
+
+Academic enables you to use a wide range of icons in your contact links. [Learn more about icons](#icons).
+
+### Contact form
+
+You can choose whether to display simply an email address or a contact form. This can be chosen in `content/home/contact.md` by setting the `email_form` option. If set to 0, it will display your email address as a link, based on the value of `email` that you entered in `config/_default/params.toml`. If set to 1, it will use [Netlify](https://www.netlify.com/docs/form-handling/) to add a contact form with a captcha test so that visitors can send you email and spam from bots is prevented.
+
+{{% alert note %}}
+The Netlify option is only available if you are hosting your site with Netlify. In this case, user messages to you will be sent to your Netlify account admin panel. A webhook can be created in your Netlify account if you wish to forward messages to your email address. When using Netlify to provide the contact form, you do not need to provide a value for `email` in `config/_default/params.toml` since the messages will be delivered to your Netlify admin panel.
+{{% /alert %}}
+
+Otherwise, if set to 3, the widget will display a contact form using the `email` in `config/_default/params.toml` and will use the [Formspree](https://formspree.io) service for sending the email to you. For this method, simply send yourself a test message after you have configured the contact form. Formspree will then send you an email to verify your new account with them. Note that **Formspree is usually blocked for Chinese visitors** as it uses Google reCAPTCHA (unless you upgrade to Formspree's paid plan in order to disable reCAPTCHA).
 
 ## Portfolio
 
