@@ -443,13 +443,13 @@ widget = "pages"  # Use the Pages widget
 
 With the Portfolio widget you can showcase your work and optionally enable visitors to filter the items. 
 
-{{< figure library="1" src="docs/widget-portfolio-card.png" title="Visitors can easily discover popular topics with the Tag Cloud widget." >}}
+{{< figure library="1" src="docs/widget-portfolio-card.png" title="Showcase your work or product features with the Portfolio widget." >}}
 
-Different [views](#view) are available for the content. The default view is a masonry card view made famous by Pinterest.com. Other views include a large image showcase view, and a simple list view. For the *showcase* view, the `flip_alt_rows` option can be set to `true` to horizontally flip alternate rows - a style which is commonly seen on many popular sites and landing pages, such as using large images to showcase product features.
+Different [views](#view) are available for the content. The default view is a masonry card view made famous by Pinterest.com. Other views include a large image showcase view, and a simple list view. For the *showcase* view, the `flip_alt_rows` option can be set to `true` to horizontally flip alternate rows - a style which is commonly seen on many popular sites and landing pages that showcase product features by placing large images and text side-by-side.
 
 The widget is configurable in a one or two column structure by setting the `columns` option.
 
-Associate your pages with tags by placing the tags option in the front matter of your pages (e.g. `tags = ["A Tag", "Another Tag"]`). The Portfolio widget can then be configured to let visitors filter results by tags. To add a filter button, add or edit a `[[content.filter_button]]` option (see below).
+Associate your pages with tags by placing the tags option in the front matter of your pages (e.g. `tags = ["A Tag", "Another Tag"]`). The Portfolio widget can then be configured to let visitors filter results by tags. To add a filter button, add or edit a `[[content.filter_button]]` option (see below), where `name` is the filter text and `tag` is the name of the tag to filter by (type `*` to show all items).
 
 The `projects.md` section in the demo uses the *Portfolio* widget.
 
