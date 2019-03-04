@@ -26,7 +26,7 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - [Featurette](#featurette) - showcase skills or key features of a product
 - [Accomplishments](#accomplishments) - showcase your (online learning) certificates and other achievements
 - [Pages](#pages) - display recent blog posts, talks, and publications
-- Featured - display featured (i.e. *sticky*) blog posts, talks, and publications
+- [Featured](#featured) - display featured (*sticky*) blog posts, talks, and publications
 - [Contact](#contact) - display your contact details, including an optional contact form and map
 - [Portfolio](#portfolio) - showcase your work or product features in a filterable portfolio
 - [Tag cloud](#tag-cloud) - enable visitors to discover popular topics
@@ -437,6 +437,48 @@ widget = "pages"  # Use the Pages widget
   #   3 = Card
   #   4 = Citation (publication only)
   view = 2
+```
+
+## Featured
+
+Highlight featured blog posts (e.g. announcements), publications, and talks. Featured pages are also known as *sticky* pages.
+
+The Featured widget is similar to the Pages widget, but with a focus on *featured* content rather than *recent* content.
+
+{{< figure library="1" src="docs/widget-featured.png" title="Highlight featured pages, such as blog posts or selected publications, with the Featured widget." >}}
+
+The `featured.md` section in the demo uses the *Featured* widget.
+
+Edit the front matter of a section to add the Featured widget and personalize its options such as the [view](#view):
+
+```toml
+widget = "featured"  # Use the Featured widget
+
+# ... Put Your Section Options Here (title etc.) ...
+
+[content]
+  # Page type to display. E.g. post, talk, or publication.
+  page_type = "publication"
+  
+  # Choose how much pages you would like to display (0 = all pages)
+  count = 0
+
+  # Page order. Descending (desc) or ascending (asc) date.
+  order = "desc"
+
+  # Filter posts by a taxonomy term.
+  [content.filters]
+    tag = ""
+    category = ""
+    publication_type = ""
+  
+[design]
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 3
 ```
 
 ## Portfolio
