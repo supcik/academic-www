@@ -176,6 +176,12 @@ To embed **Google Documents** (e.g. slide deck), click *File > Publish to web > 
 
     {{</* gdocs src="https://docs.google.com/..." */>}}
 
+## Diagrams
+
+Diagrams can be created in the open source [draw.io](draw.io) editor. The editor has support for almost any type of diagram, from simple to complex. A diagram can be easily embedded in Academic by choosing **File > Embed > SVG** in the [draw.io](draw.io) editor and pasting the generated code into your page.
+
+Alternatively, a diagram can be exported as an [image](#images) from any drawing software, or a [document/slide](#embed-documents) containing a diagram can be embedded.
+
 ## Code highlighting
 
 Pass the *language* of the code, such as `python`, as a parameter after three backticks:
