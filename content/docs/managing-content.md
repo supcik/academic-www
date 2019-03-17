@@ -228,18 +228,22 @@ So you would like to create a page which utilizes Academic's widget system, simi
 
 Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *landing* page by creating a `content/landing/` folder to contain our new sections (widget instances).
 
-Within your new `content/landing/` folder, create a file named `_index.md` containing the following parameters:
+Within your new `content/landing/` folder, create a file named `index.md` containing the following parameters:
 
 ```
 +++
 title = "Landing Page"  # Add a page title.
-date = 2017-01-01T00:00:00  # Add today's date.
-widgets = true  # Page type is a Widget Page.
-summary = ""  # Add a page description.
+summary = "Hello!"  # Add a page description.
+date = 2019-01-01T00:00:00  # Add today's date.
+type = "widget_page"  # Page type is a Widget Page
 +++
 ```
 
-Install widgets into your `content/landing/` folder. To achieve this, widgets can be copied from either your `content/home/` or `themes/academic/exampleSite/content/home/` folder.
+Now, we can [**use the page builder to add sections**]({{< relref "page-builder.md" >}}) into your `content/landing/` folder. Widgets can also be copied from your `content/home/` folder or the `themes/academic/exampleSite/content/home/` demo site folder.
+
+{{% alert warning %}}
+To create the new widget pages, an Academic version from **18 March 2019** onwards is required (corresponding to *v4.2 dev* or greater).
+{{% /alert %}}
 
 ## Create other pages (e.g. CV)
 
