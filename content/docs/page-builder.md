@@ -58,6 +58,17 @@ To remove a navigation link from the top of the page, remove the associated `[[m
 
 The order that the homepage widgets are displayed in is defined by the `weight` parameter in each of the files in the `content/home/` directory. The widgets are displayed in ascending order of their `weight`, so you can simply edit the `weight` parameters as desired.
 
+### Link to a section
+
+You may wish to add a navigation link to the top of the page that points to a section. This can be achieved by adding something similar to the following lines to your `config/_default/menu.toml`, where the URL will consist of the first title word in lowercase:
+
+```toml
+[[main]]
+    name = "Research"  # A name for the link.
+    url = "#research"  # URL of the section.
+    weight = 10  # Position of the link in the menu.
+```
+
 ### Develop a new widget
 
 This section guides developers to create custom widgets using HTML and CSS. You may also be interested in the [Blank widget]({{< relref "page-builder.md#blank" >}}).
@@ -78,7 +89,8 @@ Finally, we will instantiate the widget on the website by creating a Markdown fi
 
 ```toml
 +++
-widget = "awesome"  # Do not modify this line!
+widget = "awesome"  # The name of the widget that you created.
+headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 1  # Order that this section will appear in.
 +++
@@ -187,18 +199,32 @@ Custom CSS code can also be directly applied to a section using the `css_style` 
 
 ## Blank
 
-You can use the Blank widget to create your own home page sections.
+You can use the Blank widget to **create your own home page sections**. Add page [**elements**]({{< relref "writing-markdown-latex.md" >}}), such as an image gallery, and [**personalize the section**](#personalizing-widgets) with a background etc.
 
-Simply duplicate (copy/paste) and rename the example *Demo* file at `content/home/demo.md`. Then edit the section title, weight (refer to *Position Sections*), and content as desired. You may write your widget content in Markdown, shortcodes, or even HTML.
+For example, a new Markdown file can be created in `content/home/` with the following front matter to begin building your new section: 
 
-You may also wish to add a navigation link to the top of the page that points to the new section. This can be achieved by adding something similar to the following lines to your `content/_default/menu.toml`, where the URL will consist of the first title word in lowercase:
+```toml
+widget = "blank"
+headless = true  # This file represents a page section.
 
-    [[main]]
-        name = "Research"
-        url = "#research"
-        weight = 10
+# ... Put Your Section Options Here (title etc.) ...
 
-You may also be interested in the [developing widgets](#develop-a-new-widget).
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "1"
+```
+
+The *Demo* homepage section in the Demo website provides an example of using a *Blank* widget. For inspiration, the associated file can be found at `themes/academic/exampleSite/content/home/demo.md`.
+
+For advanced use cases, HTML code can even be added to the body of the file.
+
+You may also be interested in [developing your own widgets](#develop-a-new-widget).
+
+### Example sections created with the Blank widget
+
+{{< figure library="1" src="docs/widget-blank-gallery.png" title="An image gallery created with the Blank widget." >}}
+
+{{< figure library="1" src="docs/widget-blank-text.png" title="A text block and custom background created with the Blank widget." >}}
 
 ## Hero
 
@@ -214,6 +240,7 @@ For example, the following options can be added to your section front matter in 
 
 ```toml
 widget = "hero"
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -252,6 +279,7 @@ For example, the following options can be added to your section front matter in 
 
 ```toml
 widget = "featurette"
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -289,6 +317,7 @@ For example, the following options can be added to your section front matter in 
 
 ```toml
 widget = "about"
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -307,6 +336,7 @@ Add your experience by editing the front matter of `home/experience.md`. For exa
 
 ```toml
 widget = "experience"
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -358,6 +388,7 @@ Add your accomplishments by editing the front matter of `home/accomplishments.md
 
 ```toml
 widget = "accomplishments"
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -414,6 +445,7 @@ Edit the front matter of a section to personalize the [view](#view) and other op
 
 ```toml
 widget = "pages"  # Use the Pages widget
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -462,6 +494,7 @@ Edit the front matter of a section to add the Featured widget and personalize it
 
 ```toml
 widget = "featured"  # Use the Featured widget
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -510,6 +543,7 @@ For example, the following options can be added to your section front matter in 
 
 ```toml
 widget = "contact"
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -555,6 +589,7 @@ To show the widget in a section, reference it in your section's front matter:
 
 ```toml
 widget = "portfolio"  # Use the Portfolio widget
+headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
@@ -611,4 +646,5 @@ To show the widget in a section, reference it in your section's front matter:
 
 ```toml
 widget = "tag_cloud"  # Use the Tag Cloud widget
+headless = true  # This file represents a page section.
 ```
