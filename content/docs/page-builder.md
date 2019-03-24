@@ -178,9 +178,21 @@ The following excerpt shows the front matter structure for defining a background
   text_color_light = true
 ```
 
+### Spacing
+
+The spacing of sections can be controlled by specifying padding for the top, right, bottom, and left sides of sections.
+
+For example, to make a section more compact, the following parameters can be added to the front matter of a section. This example will reduce the top and bottom spacing of the section to just 20 pixels (px).
+
+```toml
+[design.spacing]
+  # Customize the section spacing. Order is top, right, bottom, left.
+  padding = ["20px", "0", "20px", "0"]
+```
+
 ### Style
 
-It's possible to customize the style of a specific instance of a widget. For example, the background of a widget may be changed to an image or color gradient.
+It's possible to customize the style of a specific instance of a widget with CSS. For example, the font size of a section can be changed.
 
 First, define your custom style in CSS using the [CSS Plugin]({{< relref "customization.md#customize-style-css" >}}) feature.
 
