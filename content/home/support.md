@@ -1,13 +1,11 @@
 +++
-widget = "custom"
-active = true
-date = 2018-10-14T00:00:00
+widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 60  # Order that this section will appear.
 
 title = "Support Academic"
 subtitle = "Support further development of Academic"
-
-# Order that this section will appear in.
-weight = 60
 +++
 
 Academic is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without appropriate backing. You can support Academic development via the following methods: 

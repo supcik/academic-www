@@ -1,13 +1,11 @@
 +++
-widget = "custom"
-active = true
-date = "2016-04-20T00:00:00"
+widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 40  # Order that this section will appear.
 
 title = "A large community"
 subtitle = "See what fans are saying *#MadeWithAcademic*" 
-
-# Order that this section will appear in.
-weight = 40
 +++
 
 {{< tweet 993410504570888192 >}}

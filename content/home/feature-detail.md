@@ -1,16 +1,20 @@
 +++
-widget = "custom"
-active = true
-date = 2016-04-20T00:00:00
+widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 30  # Order that this section will appear.
 
 title = "Features"
 subtitle = ""
 
-# Order that this section will appear in.
-weight = 30
-+++
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "1"
 
-**Key features:**
+[design.spacing]
+  # Customize the section spacing. Order is top, right, bottom, left.
+  padding = ["20px", "0", "20px", "0"]  
++++
 
 - **Page builder** - Create *anything* with [**widgets**]({{< relref "/docs/page-builder.md" >}}) and [**elements**]({{< relref "/docs/writing-markdown-latex.md" >}})
 - **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!

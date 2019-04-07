@@ -9,32 +9,12 @@ figure {
   padding: 60px 0 60px 0;
 }
 
-/* HERO LIGHT: Clean, minimal style for Hero widget. */
-/*
-.hero-overlay .hero-title,
-.hero-overlay .hero-lead {
-  color: #000;
-  text-shadow: none;
+/* Hero title: use brand color and bigger font. */
+.hero-title {
+  color: #00d1b2;
+  font-weight: 600;
+  font-size: 3rem;
 }
-
-.hero-overlay .btn {
-  color: #fff;
-  text-shadow: none;
-}
-
-.hero-overlay .hero-lead a {
-  color: #aaa;
-  text-decoration-line: underline;
-}
-
-.hero-overlay {
-  padding: 0;
-}
-
-.hero-overlay a {
-  color: #3273dc;
-}
-*/
 
 /* Normal font weight for menu. */
 

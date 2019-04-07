@@ -1,10 +1,8 @@
 +++
-widget = "elements"
-active = true
-date = 2018-07-16T00:00:00
-
-# Order that this section will appear in.
-weight = 21
+widget = "elements"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 21  # Order that this section will appear.
 
 title = "Elements for **Every** Kind of Site"
 
