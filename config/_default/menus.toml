@@ -4,6 +4,12 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
+  pre = "<i class=\"fas fa-home\" style=\"color: #00d1b2;\"></i>"
+  name = "Home"
+  url = "#hero"
+  weight = 5
+
+[[main]]
   pre = "<i class=\"fas fa-book\" style=\"color: #00d1b2;\"></i>"
   name = "Documentation"
   url = "docs/"
@@ -51,7 +57,7 @@
   url = "docs/install/"
   weight = 30
 
-# Documentation 
+# Documentation
 
 [[docs]]
   name = "Overview"
