@@ -21,31 +21,39 @@ You can choose from one of the following four methods to install:
 
 ## Install with web browser
 
-1. [Install Academic with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
-    * Netlify will provide you with a customizable URL to access your new site
-2. On GitHub, go to your newly created `academic-kickstart` repository and [personalize your site by editing the files in]({{< relref "get-started.md" >}}) `config/_default/`
-   - Shortly after saving (i.e. *committing* a file), your site will automatically update
-3. Read the [Widgets]({{< relref "page-builder.md" >}}) and [Content]({{< relref "managing-content.md" >}}) guides to learn how to add widgets and content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
+[Install Academic with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
+  * One-click install of Academic creates an `academic-kickstart` repository in your GitHub or GitLab account
+  * Netlify will provide you with a customizable URL to access your new site, [or get your own domain](https://sourcethemes.com/academic/docs/domain/)
+  * Shortly after editing content in your repository, your site will automatically update
+  * To edit your site in a [Markdown editor](https://www.typora.io) on your computer, perform the steps in the [*Install with Git*](#install-with-git) section below
+
+Once you have followed the link above to automatically install Academic, head on over to your new `academic-kickstart` repository in your GitHub (or GitLab) account and [personalize your site by editing the files in]({{< relref "get-started.md" >}}) `config/_default/`. Shortly after saving (i.e. *committing* a file), your site will automatically update.
+   
+View the [Homepage Builder]({{< relref "page-builder.md" >}}) and [Content]({{< relref "managing-content.md" >}}) guides to learn how to add widgets and content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
 
 ## Install with Git
 
 Prerequisites:
 
 * [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo v0.53+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo v0.55.2+](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
-1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository and clone your fork with Git: 
+1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository to create a new website
+   * If you already created your site with **Netlify**, then skip this step
+2. Clone your fork to your computer with Git, replacing `sourcethemes` in the command below with your GitHub username: 
 
-        git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+    ```bash
+    git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+    ```
     
-    *Note that if you forked Academic Kickstart, the above command should be edited to clone your fork, i.e. replace `sourcethemes` with your GitHub username.*
+3. Initialize the theme:
 
-2. Initialize the theme:
-
-        cd My_Website
-        git submodule update --init --recursive
+    ```bash
+    cd My_Website
+    git submodule update --init --recursive
+    ```
 
 Now you're ready to [personalize and view your site]({{< relref "get-started.md" >}}).
 
@@ -53,7 +61,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 
 Prerequisites:
 
-* [Download and install Hugo v0.53+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo v0.55.2+](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
@@ -70,7 +78,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 
     ```r
     install.packages("blogdown")
-    blogdown::install_hugo()
+    blogdown::install_hugo(force = TRUE)
     ```
 
 3. Open `academic.Rproj` from the *Academic Kickstart* folder in *Step 1*
