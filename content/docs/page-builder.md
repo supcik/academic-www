@@ -665,7 +665,7 @@ headless = true  # This file represents a page section.
 
 Introduce your team members. The People widget displays photos of people within your team or organisation, and links to their user profile page. You can choose which users to display and in which order to display them by using *user groups*.
 
-First, [create a user account]({{< relref "getting-started.md#introduce-yourself" >}}) for each user that your wish to display. (This can also be performed by duplicating the example `content/author/admin/` folder for each user and modifying its contents appropriately.)
+First, [create a user account]({{< relref "get-started.md#introduce-yourself" >}}) for each user that your wish to display. (This can also be performed by duplicating the example `content/author/admin/` folder for each user and modifying its contents appropriately.)
 
 Add each user to a user group using the `user_groups` option in the user account at `content/author/<USERNAME>/_index.md`. For example setting `user_groups = ["Researchers", "Visitors"]` in a user account will add that user to the *Researcher* and *Visitors* groups which we can display in the People widget.
 
