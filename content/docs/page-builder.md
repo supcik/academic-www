@@ -669,13 +669,19 @@ Promote a lot of content in a small space with a slider (carousel). Users can cl
 
 The `slider.md` section in the demo uses the *Slider* widget. Set `active = true` in its front matter to view the section.
 
-Each slide is defined as an `[[item]]` in the section front matter. A title and content can be set for each slide - Markdown formatting  and emojis can be used. The content of each slide can be left, center, or right aligned. Customize each slide with a background color (`overlay_color`) or image (`overlay_img`). The text color for slides is always white unless it is overrided using custom CSS styling.
+Each slide is defined as an `[[item]]` in the section front matter. A title and content can be set for each slide - Markdown formatting  and emojis can be used. The content of each slide can be left, center, or right aligned.
+
+Optionally, a call-to-action (CTA) button can be added to a slide to encourage visitors to perform an action. The snippet below provides an example of using the `cta_*` options to add a CTA button to a slide.
+
+Customize each slide with a background color (`overlay_color`) or image (`overlay_img`). The text color for slides is always white unless it is overrided using custom CSS styling.
 
 To show the widget in a section, reference it in your section's front matter:
 
 ```toml
 widget = "slider"  # Use the Slider widget
 headless = true  # This file represents a page section.
+
+# ... Put Your Section Options Here (section position etc.) ...
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
@@ -724,3 +730,5 @@ height = "300px"
   overlay_img = ""  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 ```
+
+You may also be interested in the **[Hero](#hero) widget**.
