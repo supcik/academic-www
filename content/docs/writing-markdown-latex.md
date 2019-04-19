@@ -124,10 +124,11 @@ A video within a [page's folder](https://gohugo.io/content-management/page-bundl
 ## Links
 
     [I'm a link](https://www.google.com)
-    [A post]({{</* ref "post/hi.md" */>}})
-    [A publication]({{</* ref "publication/hi.md" */>}})
-    [A project]({{</* ref "project/hi.md" */>}})
-    [Another section]({{</* relref "hi.md#who" */>}})
+    [A post]({{</* ref "/post/my-page-name/index.md" */>}})
+    [A publication]({{</* ref "/publication/my-page-name/index.md" */>}})
+    [A project]({{</* ref "/project/my-page-name/index.md" */>}})
+    [A relative link from one post to another post]({{</* relref "../my-page-name/index.md" */>}})
+    [Scroll down to a page section with heading *Hi*](#hi)
     
 To enable linking to a file, such as a PDF, first place the file in your `static/files/` folder and then link to it using the following form:
 
