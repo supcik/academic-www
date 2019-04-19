@@ -31,7 +31,7 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - [Contact](#contact) - display your contact details, including an optional contact form and map
 - [Portfolio](#portfolio) - showcase your work or product features in a filterable portfolio
 - [Tag cloud](#tag-cloud) - enable visitors to discover popular topics
-- People - introduce your team members
+- [People](#people) - introduce your team members
 - [Slider](#slider) (carousel) - promote a lot of content in a small space
 
 ## Using Widgets
@@ -659,6 +659,34 @@ To show the widget in a section, reference it in your section's front matter:
 ```toml
 widget = "tag_cloud"  # Use the Tag Cloud widget
 headless = true  # This file represents a page section.
+```
+
+## People
+
+Introduce your team members. The People widget displays photos of people within your team or organisation, and links to their user profile page. You can choose which users to display and in which order to display them by using *user groups*.
+
+First, [create a user account]({{< relref "getting-started.md#introduce-yourself" >}}) for each user that your wish to display. (This can also be performed by duplicating the example `content/author/admin/` folder for each user and modifying its contents appropriately.)
+
+Add each user to a user group using the `user_groups` option in the user account at `content/author/<USERNAME>/_index.md`. For example setting `user_groups = ["Researchers", "Visitors"]` in a user account will add that user to the *Researcher* and *Visitors* groups which we can display in the People widget.
+
+The `people.md` section in the demo uses the *People* widget. Set `active = true` in its front matter to view the section.
+
+Edit the front matter of a section to add the People widget and personalize its options such as the user groups to display:
+
+```toml
+widget = "people"  # Use the Featured widget
+headless = true  # This file represents a page section.
+
+# ... Put Your Section Options Here (title etc.) ...
+
+# List user groups to display.
+#   Edit each user's `user_groups` to add them to one or more of these groups.
+user_groups = ["Principal Investigators",
+               "Researchers",
+               "Grad Students",
+               "Administration",
+               "Visitors",
+               "Alumni"]
 ```
 
 ## Slider
