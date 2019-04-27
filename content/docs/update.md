@@ -75,7 +75,7 @@ To help migrate content to be compatible with new versions of Academic, there ar
 
 Check out the [release notes]({{< relref "/updates" >}}) for the consecutive version that you are updating to, paying attention to the breaking changes. You can check which version you currently have, refer to the *Preparation* section above.
 
-If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed in `config.toml` or the `+++` front matter of content files.
+If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any TOML/YAML settings changed in the configuration files (i.e. all files in the `config/_default/` folder) or in the [front matter]({{< relref "/docs/front-matter.md" >}}) of content files (i.e. files in the `content/` folder).
 
 If you have modified files in `themes/academic`, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (`git add <filename>`).
 
