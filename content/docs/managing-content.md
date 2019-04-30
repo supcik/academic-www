@@ -19,18 +19,26 @@ Hugo **v0.49** has a bug affecting the `hugo new ...` commands on this page. Ple
 
 ## Introduction
 
-The following core metadata can be added to the [front matter]({{< relref "front-matter.md" >}}) of most types of page in Academic:
+The following common metadata can be added to the [front matter]({{< relref "front-matter.md" >}}) of most types of page in Academic.
+
+**Core metadata:**
 
 - **title**: the title of your page
-- **subtitle**: an optional subtitle that will be displayed under the title
 - **summary**: a one-sentence summary of the content on your page. The summary can be shown on the homepage and can also benefit your search engine ranking.
-- **date**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was published. You can schedule a date by setting the date in the future. If you use the `hugo new ...` commands described on this page, the date will be filled automatically when you create a page.
-- **lastmod**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was last modified. If using Git, enable `enableGitInfo` in `config.toml` to have this automatically updated.
-- **draft**: by setting `draft = true`, only you will see your page when you run Academic/Hugo locally
-- **authors**: display the authors of the page and link to their user profiles if they exist. To link to a user profile, [create a user]({{< relref "/docs/get-started.md#introduce-yourself" >}}) based on the [*admin* template](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/author) and reference their username (name of a user in your `author` folder) in the `authors` field, e.g. `authors = ["admin"]`.
-- **featured**: by setting `featured = true`, a talk or publication can be displayed in the [featured talk/publication widget]({{< relref "page-builder.md" >}}).
+- **date**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was published. A future date will schedule the page to be published in the future. If you use the `hugo new ...` commands described on this page, the date will be filled automatically when you create a page. Also see **lastmod** and **publishDate**.
+- **authors**: display the authors of the page and link to their user profiles if they exist. To link to a user profile, [create a user]({{< relref "/docs/get-started.md#introduce-yourself" >}}) based on the [*admin* template](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/author) and reference their username (the name of a user in your `author` folder) in the `authors` field, e.g. `authors = ["admin"]`.
 - **tags**: tagging your content helps users to discover similar content on your site. Tags can improve search relevancy and are displayed after the page content and also in the [Tag Cloud widget]({{< relref "page-builder.md" >}}). E.g. `tags = ["Electronics", "Diodes"]`.
+
+**Popular metadata:**
+
+- **subtitle**: an optional subtitle that will be displayed under the title
+- **featured**: by setting `featured = true`, a page can be displayed in the [Featured widget]({{< relref "page-builder.md" >}}). This is useful for *sticky, announcement blog posts* or *selected publications* etc.
 - **categories**: categorizing your content helps users to discover similar content on your site. Categories can improve search relevancy and display at the top of a page alongside a page's metadata. E.g. `categories = ["Art"]`.
+- **lastmod**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was last modified. If using Git, enable `enableGitInfo` in `config.toml` to have the page modification date automatically updated, rather than manually specifying `lastmod`.
+- **publishDate**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was published. You only need to specify this option if you wish to set **date** in the future but publish the page *now*, as is the case for publishing a journal article that is to appear in a journal etc.
+- **draft**: by setting `draft = true`, only you will see your page when you preview your site  locally on your computer
+
+A complete list of standard options can be found on the corresponding [Hugo docs page](https://gohugo.io/content-management/front-matter/#predefined).
 
 ### Featured image
 
