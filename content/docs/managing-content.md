@@ -221,6 +221,28 @@ Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo
 
 Link slides to a talk or publication by editing the `url_slides` option in the talk/publication page to point to your slides. For example, `url_slides = "slides/example-slides"` points to the slide deck in this example. See the full example front matter which includes `url_slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
 
+### Theming a slide deck
+
+Slide decks use their own theming system rather than the one configured in your site's `params.toml`. This enables the theme of each slide deck to be customized in its front matter. 
+
+For a *light* themed slide deck, consider setting the following `[slides]` options in your slide deck's front matter:
+
+```toml
+[slides]
+theme = "white"  # Reveal JS theme name
+highlight_style = "github"  # Highlight JS theme name
+```
+
+For a *dark* themed slide deck, consider setting the following `[slides]` options in your slide deck's front matter:
+
+```toml
+[slides]
+theme = "black"  # Reveal JS theme name
+highlight_style = "dracula"  # Highlight JS theme name
+```
+
+Note that the *highlight_style* option is only available for slides made with Academic **v4.3.0+**.
+
 ## Create a course or documentation
 
 The *docs* layout is designed for **knowledge sharing**. Use cases include **online courses, tutorials, software documentation, and knowledge bases**.
