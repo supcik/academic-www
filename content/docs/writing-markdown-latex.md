@@ -4,6 +4,7 @@ title = "Writing content with Markdown, LaTeX, and Shortcodes"
 date = 2016-04-17
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 70
 
 math = true
 

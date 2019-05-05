@@ -4,6 +4,7 @@ title = "Display Jupyter Notebooks with Academic"
 date = 2019-02-12
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 80
 
 linktitle = "Jupyter"
 [menu.docs]

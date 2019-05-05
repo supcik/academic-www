@@ -5,6 +5,7 @@ date = 2014-03-10
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 140
 
 linktitle = "From Jekyll"
 [menu.docs]

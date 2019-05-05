@@ -5,6 +5,7 @@ draft = false
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 170
 
 title = "Troubleshooting"
 summary = """Troubleshoot common issues."""

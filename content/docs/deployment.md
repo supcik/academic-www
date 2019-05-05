@@ -4,6 +4,7 @@ title = "Overview"
 date = 2017-12-24
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 90
 
 [menu.docs]
     parent = "deploy"

@@ -5,6 +5,7 @@ aliases = ["post/managing-content/"]
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 60
 
 [menu.docs]
   parent = "content"

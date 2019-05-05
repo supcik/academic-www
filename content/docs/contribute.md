@@ -4,6 +4,7 @@ lastmod = 2017-09-03
 draft = false
 title = "Feedback & Contributing"
 math = true
+weight = 160
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.

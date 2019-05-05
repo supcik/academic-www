@@ -5,6 +5,7 @@ aliases = ["/docs/widgets/"]
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 30
 
 linktitle = "Build your homepage"
 [menu.docs]

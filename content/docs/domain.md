@@ -4,6 +4,7 @@ title = "Get Your Own Domain Name"
 date = 2017-12-24
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 100
 
 [menu.docs]
     parent = "deploy"

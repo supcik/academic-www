@@ -7,6 +7,7 @@ lastmod = 2017-12-03
 
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
+weight = 150
 
 linktitle = "From Wordpress"
 [menu.docs]
