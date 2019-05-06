@@ -15,7 +15,7 @@ weight = 60
 This is a brief guide to managing content with the Academic framework. Content can include news/blog posts, publications, projects, talks, widget pages, and much more. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
 {{% alert warning %}}
-The front matter examples on this page have recently been converted **[from TOML to YAML]({{< relref "front-matter.md" >}})**. An [online YAML<-->TOML converter is available](https://toolkit.site/format.html) should you need it.
+Most front matter snippets in the documentation have recently been converted **[from TOML to YAML]({{< relref "front-matter.md" >}})**. The example publications, widgets, and configuration files remain in TOML format. Academic and Hugo continue to support both formats. An [online YAML<-->TOML converter is available](https://toolkit.site/format.html) should you need it. This change is to make it easier to edit content in popular Markdown editors like [Typora](https://www.typora.io) and [Visual Studio Code](https://code.visualstudio.com).
 {{% /alert %}}
 
 ## Introduction

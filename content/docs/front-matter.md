@@ -13,7 +13,7 @@ weight = 50
 
 Front matter allows page-specific metadata and functionality to be included at the top of a Markdown file.
 
-In the documentation and the example site, we will predominantly use [YAML](https://learnxinyminutes.com/docs/yaml/) to format the front matter of content files and [TOML](https://learnxinyminutes.com/docs/toml/) to format the configuration files and any publication files. This is because TOML is more human-friendly but popular Markdown editors primarily support YAML front matter.
+In the documentation and the example site, we will predominantly use [YAML](https://learnxinyminutes.com/docs/yaml/) to format the front matter of content files and [TOML](https://learnxinyminutes.com/docs/toml/) to format the configuration files and any widget/publication files. This is because TOML is more human-friendly but popular Markdown editors primarily support YAML front matter in content files.
 
 For editing your content locally on your computer, we recommend [Typora](https://www.typora.io) or [Visual Studio Code](https://code.visualstudio.com).
 
@@ -45,7 +45,7 @@ TOML aims to be simpler and more human friendly than other popular configuration
 
 ## RStudio
 
-Alternatively, if you are using RStudio to edit your site and wish to include an RMarkdown file, you'll need to utilise [YAML](https://learnxinyminutes.com/docs/yaml/) in your RMarkdown file as RMarkdown does not yet support the TOML format.
+If you are using RStudio to edit your site and wish to include an RMarkdown file, you'll need to utilise [YAML](https://learnxinyminutes.com/docs/yaml/) in your RMarkdown file as RMarkdown does not yet support the TOML format.
 
 {{% alert note %}}
 **RMarkdown should be saved with the `.Rmarkdown` file extension** rather than the `.Rmd` extension.
