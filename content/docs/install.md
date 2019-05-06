@@ -49,7 +49,7 @@ Install:
     ```bash
     git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
     ```
-    
+
 3. Initialize the theme:
 
     ```bash
