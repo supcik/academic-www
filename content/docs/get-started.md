@@ -85,13 +85,13 @@ The core parameters for the website can be edited in the `config/_default/params
 By default, a superuser is created with the username *admin* and corresponding user profile located at `content/authors/admin/_index.md`. Let's open this file in a text editor and edit this file to make it *your* profile:
 
 - Edit your display `name` (typically your full name), your `role`, and write one sentence to describe yourself in `bio`
-- Edit the `organizations` that you are affiliated with, or set this to `organizations = []` to hide it
-- List your interests or hobbies in `interests`, or set this to `interests = []` to hide it
-- List your main qualifications using the `[[education.courses]]` blocks
+- Edit the `organizations` that you are affiliated with, or set this to `[]` to hide it
+- List your interests or hobbies in `interests`, or set this to `[]` to hide it
+- List your main qualifications using the `education` --> `courses` block
   - These blocks can be created or deleted as required
   - To hide qualifications, delete these blocks or comment out the lines by prefixing them with a hash (`#`)
 - Add your social or academic networking links
-  - These are defined as instances of `[[social]]` and can be created or deleted as required
+  - These are defined as instances of `social` and can be created or deleted as required
 
 Now let's add a biography or some fun facts about you after the front matter (i.e. after the last `+++` line). You can utilize [Markdown and shortcodes for formatting]({{< relref "./writing-markdown-latex.md" >}}).
 
@@ -104,7 +104,7 @@ The superuser username can be changed from *admin* by renaming the `admin` folde
 {{% /alert %}}
 
 {{% alert warning %}}
-If you change a username, you may wish to update any references to it from the About widget (`content/home/about.md`) and the `authors` field in the front matter of your content.
+If you change a username, you may wish to update any references to it from the `author` field of the About widget (`content/home/about.md`) and the `authors` field in the front matter of your content.
 {{% /alert %}}
 
 ### Menu

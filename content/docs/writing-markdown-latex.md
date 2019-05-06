@@ -74,6 +74,17 @@ A general image:
 
 Optionally, to add captions for your images, add the following instances to the end of your page's front matter:
 
+YAML:
+
+```yaml
+gallery_item:
+- album: <ALBUM FOLDER>
+  caption: Write your image caption here
+  image: <IMAGE NAME>.jpg
+```
+
+Or, using TOML:
+
 ```toml
 [[gallery_item]]
 album = "<ALBUM FOLDER>"
@@ -216,7 +227,7 @@ option                | type    | description                     | config.toml 
 
 #### Option `highlight`
 
-The `highlight` option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified `highlight = true`. That is, the highlight.js javascript and css files will be included in every page. If you'd like to only include highlight.js files on pages that actually require source code highlighting, you can set `highlight = false` in `params.toml`, and then override it by setting `highlight = true` in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of `highlight` set in `params.toml` and/or the page's preamble.
+The `highlight` option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified `highlight = true`. That is, the highlight.js javascript and css files will be included in every page. If you'd like to only include highlight.js files on pages that actually require source code highlighting, you can set `highlight = false` in `params.toml`, and then override it by setting `highlight: true` in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of `highlight` set in `params.toml` and/or the page's preamble.
 
 config.toml   | page front matter  | highlighting enabled for page?
 --------------|----------------|-------------------------------
@@ -229,7 +240,7 @@ false         | true           | yes
 
 The `highlight_languages` option allows you to specify additional languages that are supported by highlight.js, but are not considered "common" and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set `highlight_languages = ["go", "clojure"]` in `params.toml`. If, on the other hand, you want to enable a language only for a specific page, you can set `highlight_languages` in that page's preamble.
 
-The `highlight_languages` options specified in `config.toml` and in a page's preamble are additive. That is, if `params.toml` contains, `highlight_languages = ["go"]` and the page's preamble contains `highlight_languages = ["ocaml"]`, then javascript files for *both* go and ocaml will be included for that page.
+The `highlight_languages` options specified in `config.toml` and in a page's preamble are additive. That is, if `params.toml` contains, `highlight_languages = ["go"]` and the page's preamble contains `highlight_languages: ["ocaml"]`, then javascript files for *both* go and ocaml will be included for that page.
 
 If the `highlight_languages` option is set, then the corresponding javascript files will be served from the [cdnjs server](https://cdnjs.com/libraries/highlight.js/). To see a list of available languages, visit the [cdnjs page](https://cdnjs.com/libraries/highlight.js/) and search for links with the word "languages".
 
@@ -270,6 +281,8 @@ To include a single tweet, pass the tweet’s ID from the tweet's URL as paramet
     {{</* gist USERNAME GIST-ID  */>}}
 
 ## $\rm \LaTeX$ math
+
+Prior to adding math content, math can be enabled for your site in `params.toml`.
 
 ```TeX
 $$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$

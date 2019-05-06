@@ -15,7 +15,7 @@ weight = 60
 This is a brief guide to managing content with the Academic framework. Content can include news/blog posts, publications, projects, talks, widget pages, and much more. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
 {{% alert warning %}}
-Hugo **v0.49** has a bug affecting the `hugo new ...` commands on this page. Please update Hugo to **v0.50+**.
+The front matter examples on this page have recently been converted **[from TOML to YAML]({{< relref "front-matter.md" >}})**. An [online YAML<-->TOML converter is available](https://toolkit.site/format.html) should you need it.
 {{% /alert %}}
 
 ## Introduction
@@ -27,17 +27,17 @@ The following common metadata can be added to the [front matter]({{< relref "fro
 - **title**: the title of your page
 - **summary**: a one-sentence summary of the content on your page. The summary can be shown on the homepage and can also benefit your search engine ranking.
 - **date**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was published. A future date will schedule the page to be published in the future. If you use the `hugo new ...` commands described on this page, the date will be filled automatically when you create a page. Also see **lastmod** and **publishDate**.
-- **authors**: display the authors of the page and link to their user profiles if they exist. To link to a user profile, [create a user]({{< relref "/docs/get-started.md#introduce-yourself" >}}) based on the [*admin* template](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/author) and reference their username (the name of a user in your `author` folder) in the `authors` field, e.g. `authors = ["admin"]`.
-- **tags**: tagging your content helps users to discover similar content on your site. Tags can improve search relevancy and are displayed after the page content and also in the [Tag Cloud widget]({{< relref "page-builder.md" >}}). E.g. `tags = ["Electronics", "Diodes"]`.
+- **authors**: display the authors of the page and link to their user profiles if they exist. To link to a user profile, [create a user]({{< relref "/docs/get-started.md#introduce-yourself" >}}) based on the [*admin* template](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/authors) and reference their username (the name of a user in your `authors` folder) in the `authors` field, e.g. `authors: ["admin"]`.
+- **tags**: tagging your content helps users to discover similar content on your site. Tags can improve search relevancy and are displayed after the page content and also in the [Tag Cloud widget]({{< relref "page-builder.md" >}}). E.g. `tags: ["Electronics", "Diodes"]`.
 
 **Popular metadata:**
 
 - **subtitle**: an optional subtitle that will be displayed under the title
-- **featured**: by setting `featured = true`, a page can be displayed in the [Featured widget]({{< relref "page-builder.md" >}}). This is useful for *sticky, announcement blog posts* or *selected publications* etc.
-- **categories**: categorizing your content helps users to discover similar content on your site. Categories can improve search relevancy and display at the top of a page alongside a page's metadata. E.g. `categories = ["Art"]`.
+- **featured**: by setting `featured: true`, a page can be displayed in the [Featured widget]({{< relref "page-builder.md" >}}). This is useful for *sticky, announcement blog posts* or *selected publications* etc.
+- **categories**: categorizing your content helps users to discover similar content on your site. Categories can improve search relevancy and display at the top of a page alongside a page's metadata. E.g. `categories: ["Art"]`.
 - **lastmod**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was last modified. If using Git, enable `enableGitInfo` in `config.toml` to have the page modification date automatically updated, rather than manually specifying `lastmod`.
 - **publishDate**: the [RFC 3339 date](https://github.com/toml-lang/toml#local-date-time) that the page was published. You only need to specify this option if you wish to set **date** in the future but publish the page *now*, as is the case for publishing a journal article that is to appear in a journal etc.
-- **draft**: by setting `draft = true`, only you will see your page when you preview your site  locally on your computer
+- **draft**: by setting `draft: true`, only you will see your page when you preview your site  locally on your computer
 
 A complete list of standard options can be found on the corresponding [Hugo docs page](https://gohugo.io/content-management/front-matter/#predefined).
 
@@ -51,19 +51,17 @@ If your page does not have its own folder ([*page bundle*](https://gohugo.io/con
 
 Want to caption the image or set a focal point to influence how the image is cropped? The parameters below can be added to the bottom of your page front matter to customize the appearance of the image. The caption supports Markdown and can be used to write an image caption or credit. The focal point ensures that automatic resizes of the image keep the subject in view.
 
-```toml
+```yaml
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
-[image]
+image:
   # Caption (optional)
-  caption = "Photo by [Academic](https://sourcethemes.com/academic/)"
-
+  caption: "Photo by [Academic](https://sourcethemes.com/academic/)"
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-  focal_point = "Center"
-  
+  focal_point: "Center"
   # Show image only in page previews?
-  preview_only = false
+  preview_only: false
 ```
 
 ### Page resources
@@ -72,9 +70,17 @@ Buttons can be generated in the page header to link to associated resources.
 
 The example below shows how to create a Twitter link for a project and how to create a link to a post that was originally published on Medium:
 
-```toml
-links = [{icon_pack="fab", icon="twitter", name="Follow", url="https://twitter.com/Twitter"},
-         {icon_pack="fab", icon="medium", name="Originally published on Medium", url="https://medium.com"}]
+```yaml
+links:
+  - icon_pack: fab
+    icon: twitter
+    name: Follow
+    url: 'https://twitter.com/Twitter'
+  - icon_pack: fab
+    icon: medium
+    name: Originally published on Medium
+    url: 'https://medium.com'
+
 ```
 
 The only required option is `url`, giving you the option to show a *text button*, an *icon button*, or a *combination of both*. [Learn more about icons]({{< relref "page-builder.md#icons" >}}). 
@@ -91,27 +97,27 @@ There are also several special built-in buttons that can be setup using `url_...
 
 The following parameters can be added to the front matter of a page (such as a blog post) to control its features:
 
-```toml
-reading_time = false  # Show estimated reading time?
-share = false  # Show social sharing links?
-profile = false  # Show author profile?
-comments = false  # Show comments?
+```yaml
+reading_time: false  # Show estimated reading time?
+share: false  # Show social sharing links?
+profile: false  # Show author profile?
+comments: false  # Show comments?
 ```
 
 ### Math and Code
 
-To enable **LaTeX math** rendering for a page, you should include `math = true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `params.toml`.
+To enable **LaTeX math** rendering for a page, you should include `math: true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `params.toml`.
 
-To disable **source code highlighting** for all pages, set `highlight = false` in `params.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight = true` in that page's [front matter]({{< relref "front-matter.md" >}}). See the [code highlighting guide]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for further details.
+To disable **source code highlighting** for all pages, set `highlight = false` in `params.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight: true` in that page's [front matter]({{< relref "front-matter.md" >}}). See the [code highlighting guide]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for further details.
 
 ### Header image
 
 To display a full width **header image**, the header parameters below can be inserted towards the end of a page's [front matter]({{< relref "front-matter.md" >}}). It is assumed that the image is located in your `static/img/` media library, so the full path in the example below will be `static/img/header.png`. The `caption` parameter supports Markdown and can be used to write an image caption or credit. This option can be particularly useful for adding to an archive page's `_index.md` (e.g. to display at `YOUR_URL/post/` for the blog post archive).
 
-```toml
-[header]
-  image = "header.png"
-  caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
+```yaml
+header:
+  image: "header.png"
+  caption: "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 ```
 
 ## Create a publication
@@ -200,9 +206,9 @@ Then edit the newly created file `content/post/my-article-name.md` with your ful
 
 Hugo will automatically generate summaries of posts that appear on the homepage. If you are dissatisfied with an automated summary, you can either limit the summary length by appropriately placing <code>&#60;&#33;&#45;&#45;more&#45;&#45;&#62;</code> in the article body, or completely override the automated summary by adding a `summary` parameter to the `+++` preamble such that:
 
-    summary = "Summary of my post."
+    summary: "Summary of my post."
 
-To disable commenting for a specific post, you can add `disable_comments = true` to the post `+++` preamble. Or to disable commenting for all posts, you can either set `disqusShortname = ""` or `disable_comments = true` in `config.toml`.
+To disable commenting for a specific post, you can add `disable_comments: true` to the post `+++` preamble. Or to disable commenting for all posts, you can either set `disqusShortname = ""` in `config.toml` or `disable_comments = true` in `params.toml`.
 
 ## Create a project
 
@@ -210,7 +216,7 @@ To create a project:
 
     hugo new  --kind project project/my-project-name
 
-Then edit the newly created file `content/project/my-project-name.md`. Either you can link the project to an external project website by setting the `external_link = "http://external-project.com"` variable at the top of the file, or you can add content (below the final `+++`) in order to render a project page on your website.
+Then edit the newly created file `content/project/my-project-name.md`. Either you can link the project to an external project website by setting the `external_link: "http://external-project.com"` variable at the top of the file, or you can add content (below the final `---`) in order to render a project page on your website.
 
 ## Create a talk
 
@@ -226,28 +232,28 @@ Slides can be created very efficiently using Markdown, presented to your audienc
 
 See the [slides demo](https://themes.gohugo.io//theme/academic/slides/example-slides#/) - although note that this demo is hosted by Hugo team and they have modified their demo to reduce functionality. Build the example site (`themes/academic/exampleSite/`) locally to see the full demo including speaker notes.
 
-Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/slides/example-slides.md) at `themes/academic/exampleSite/content/slides/example-slides.md` to learn how to get started.
+Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/slides/example-slides.md) at `themes/academic/exampleSite/content/slides/example/index.md` to learn how to get started.
 
-Link slides to a talk or publication by editing the `url_slides` option in the talk/publication page to point to your slides. For example, `url_slides = "slides/example-slides"` points to the slide deck in this example. See the full example front matter which includes `url_slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
+Link slides with a talk or publication by editing the external `url_slides` option or internal `slides` option in the talk/publication page to point to your slides. For example, `slides: "example"` points to the Markdown formatted slide deck in the example site at `slides/example/index.md`. See the full example front matter which includes `url_slides` and `slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
 
 ### Theming a slide deck
 
 Slide decks use their own theming system rather than the one configured in your site's `params.toml`. This enables the theme of each slide deck to be customized in its front matter. 
 
-For a *light* themed slide deck, consider setting the following `[slides]` options in your slide deck's front matter:
+For a *light* themed slide deck, consider setting the following `slides` options in your slide deck's front matter:
 
-```toml
-[slides]
-theme = "white"  # Reveal JS theme name
-highlight_style = "github"  # Highlight JS theme name
+```yaml
+slides:
+  theme: "white"  # Reveal JS theme name
+  highlight_style: "github"  # Highlight JS theme name
 ```
 
-For a *dark* themed slide deck, consider setting the following `[slides]` options in your slide deck's front matter:
+For a *dark* themed slide deck, consider setting the following `slides` options in your slide deck's front matter:
 
-```toml
-[slides]
-theme = "black"  # Reveal JS theme name
-highlight_style = "dracula"  # Highlight JS theme name
+```yaml
+slides:
+  theme: "black"  # Reveal JS theme name
+  highlight_style: "dracula"  # Highlight JS theme name
 ```
 
 Note that the *highlight_style* option is only available for slides made with Academic **v4.3.0+**.
@@ -268,7 +274,7 @@ So you would like to create a page which utilizes Academic's widget system, simi
 
 Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *landing* page by creating a `content/landing/` folder to contain our new sections (widget instances).
 
-Within your new `content/landing/` folder, create a file named `index.md` containing the following parameters:
+Within your new `content/landing/` folder, create a file named `index.md` containing the following TOML parameters:
 
 ```
 +++
@@ -301,13 +307,13 @@ You can edit the title and add your own content, such as an introduction, by cop
     /themes/academic/exampleSite/content/publication/_index.md
     /themes/academic/exampleSite/content/talk/_index.md
     
-Then edit the `title` parameter in each `_index.md` as desired and add any content after the `+++` preamble/frontmatter ends. You will notice that the `_index.md` files differ slightly, with some having special options available for the associated content type. For example, `publication/_index.md` contains an option for setting the citation style of the listings which appear on the publication archive page.
+Then edit the `title` parameter in each `_index.md` as desired and add any content after the front matter. You will notice that the `_index.md` files differ slightly, with some having special options available for the associated content type. For example, `publication/_index.md` contains an option for setting the citation style of the listings which appear on the publication archive page.
 
 ## Removing content
 
 To remove content permanently, simply delete the relevant page file/folder within your `content/` folder.
 
-To temporarily unpublish content, set `draft = true` at the top of a page's front matter.
+To temporarily unpublish content, set `draft: true` at the top of a page's front matter.
 
 ## View your updated site
 
