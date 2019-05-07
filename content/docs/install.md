@@ -44,18 +44,14 @@ Install:
 
 1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository to create a new website
    * If you already created your site with **Netlify**, then skip this step
-2. Clone your fork to your computer with Git, replacing `sourcethemes` in the command below with your GitHub username: 
+2. Clone your fork to your computer with Git, replacing `sourcethemes` in the command below with your GitHub username:
 
-    ```bash
-    git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-    ```
+        git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
 
 3. Initialize the theme:
 
-    ```bash
-    cd My_Website
-    git submodule update --init --recursive
-    ```
+        cd My_Website
+        git submodule update --init --recursive
 
 Now you're ready to [personalize and view your site]({{< relref "get-started.md" >}}).
 
@@ -78,10 +74,8 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
    - Skip the *Install Hugo* step as we'll use RStudio to install Hugo
 2. Open [RStudio](https://www.rstudio.com/products/rstudio/), installing the *Blogdown* and *Hugo* dependencies:
 
-    ```r
-    install.packages("blogdown")
-    blogdown::install_hugo(force = TRUE)
-    ```
+        install.packages("blogdown")
+        blogdown::install_hugo(force = TRUE)
 
 3. Open `academic.Rproj` from the *Academic Kickstart* folder in *Step 1*
 
