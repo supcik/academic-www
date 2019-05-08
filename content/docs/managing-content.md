@@ -262,11 +262,9 @@ Note that the *highlight_style* option is only available for slides made with Ac
 
 The *docs* layout is designed for **knowledge sharing**. Use cases include **online courses, tutorials, software documentation, and knowledge bases**.
 
-This website is using the *docs* layout for the purpose of documenting Academic. Also, there is a [online course demo](https://themes.gohugo.io//theme/academic/tutorial/).
+[This website is using](https://github.com/sourcethemes/academic-www) the *docs* layout for the purpose of documenting Academic. Also, there is a [online course demo](https://academic-demo.netlify.com/courses/).
 
-Refer to the [example course](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/tutorial) at `themes/academic/exampleSite/content/tutorial/` to learn how to get started.
-
-If you are a data analyst/scientist using the **R** language (e.g. *RStudio* and *RMarkdown*), we recommend taking a look at the dedicated [R boilerplate project on GitHub](https://github.com/sourcethemes/project-kickstart-r). 
+Refer to the [example course](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/courses) at `themes/academic/exampleSite/content/courses/` to learn how to get started.
 
 ## Create a widget page
 
