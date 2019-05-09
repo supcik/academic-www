@@ -260,11 +260,136 @@ Note that the *highlight_style* option is only available for slides made with Ac
 
 ## Create a course or documentation
 
-The *docs* layout is designed for **knowledge sharing**. Use cases include **online courses, tutorials, software documentation, and knowledge bases**.
+The *docs* feature is designed for **knowledge sharing**. Use cases include **online courses, tutorials, software documentation, and knowledge bases**.
 
-[This website is using](https://github.com/sourcethemes/academic-www) the *docs* layout for the purpose of documenting Academic. Also, there is a [online course demo](https://academic-demo.netlify.com/courses/).
+[This website is using](https://github.com/sourcethemes/academic-www) the *docs* feature for the purpose of documenting Academic. Also, there is a [online course demo](https://academic-demo.netlify.com/courses/).
 
 Refer to the [example course](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/courses) at `themes/academic/exampleSite/content/courses/` to learn how to get started.
+
+Continue reading below to learn more about creating courses, tutorials, and documentation using the *docs* feature.
+
+### Organization
+
+The *docs* feature can be used to create courses, tutorials, and documentation in the following file structure:
+
+```
+content/courses
+├── _index.md         # Lists your courses, tutorials, or documentation
+└── example           # Folder for your course/tutorial/documentation
+    ├── _index.md     # Overview of this course/tutorial/documentation
+    ├── example1.md   # A page
+    └── example2.md   # Another page
+└── course2           # Folder for another course/tutorial/documentation
+    ├── _index.md
+    ├── intro.md
+    └── ...
+```
+
+File and folder names should not contain spaces (use hyphens instead).
+
+### Renaming
+
+The `courses` folder may be renamed. For example, we can rename it to `docs` for software/project documentation, or `tutorials` for creating an online course.
+
+After renaming or deleting the `courses` folder, you may wish to update any `[[main]]` menu links to it by editing your menu configuration at `config/_default/menus.toml`.
+
+For example, if you delete this folder, you can remove the following from your menu configuration:
+
+```toml
+[[main]]
+  name = "Courses"
+  url = "courses/"
+  weight = 50
+```
+
+Or, if you are creating a software documentation site, you can rename the `courses` folder to `docs` and update the associated *Courses* menu configuration to:
+
+```toml
+[[main]]
+  name = "Docs"
+  url = "docs/"
+  weight = 50
+```
+
+### Listing courses and documentation
+
+The `content/courses/_index.md` file automatically lists any course, tutorial, or documentation folders within the `content/courses/` folder. Open the file to edit the page title.
+
+```yaml
+title: Courses
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+```
+
+### Course and documentation metadata
+
+Edit the `_index.md` within your course/documentation folder (e.g. `content/courses/example/_index.md`) in order to specify a name and summary for your course/documentation.
+
+```yaml
+# Course title, summary, and position in the list.
+linktitle: An Example Course
+summary: Learn how to use Academic's docs layout for publishing online courses, software documentation, and tutorials.
+weight: 1
+
+# Page metadata.
+title: Overview
+date: "2018-09-09T00:00:00Z"
+lastmod: "2018-09-09T00:00:00Z"
+draft: false  # Is this a draft? true/false
+toc: true  # Show table of contents? true/false
+type: docs  # Do not modify.
+
+# Add menu entry to sidebar.
+# - name: Declare this menu item as a parent with ID `name`.
+# - weight: Position of link in menu.
+menu:
+  example:
+    name: Overview
+    weight: 1
+```
+
+### Menus
+
+If you use the *docs* layout, note that the name of the menu in the front matter should be in the form `menu: X:` where `X` is the folder name. Hence, if you rename the `courses/example/` folder, you should also rename the menu definitions in the front matter of files within `courses/example/` from `menu: example:` to `menu: <NewFolderName>:`.
+
+Hugo also offers an alternative approach of storing the menu for each course/documentation centrally in `config/_default/menus.toml` rather than in the front matter of each course/documentation page.
+
+Read more about Hugo's menu system [here](https://gohugo.io/content-management/menus/).
+
+### Pages
+
+You can create as many pages as your need. Each page should have a title, menu link (`menu`) to it, and a page `type` of `docs`.
+
+`title` is the page title which appears in page header, whereas `linktitle` is the label for link to this page. If you remove `linktitle`, the menu link will display the page title.
+
+To show a table of contents generated from the headings on your page, set `toc` to `true`.
+
+To show a prev/next pager at the bottom of each docs section page, enable `docs_section_pager` in `params.toml` and then set the order of the pager by defining a `weight` for each page.
+
+An example course/documentation page is as follows:
+
+```yaml
+---
+title: Example Page 1
+linktitle: Tips 1-2
+toc: true
+type: docs
+date: "2019-05-05T00:00:00Z"
+draft: false
+menu:
+  example:
+    parent: Example Topic
+    weight: 1
+
+# Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
+weight: 1
+---
+
+Content...
+```
 
 ## Create a widget page
 
@@ -275,12 +400,12 @@ Create a new folder in your `content` folder, naming it with your new page name.
 Within your new `content/landing/` folder, create a file named `index.md` containing the following TOML parameters:
 
 ```
-+++
-title = "Landing Page"  # Add a page title.
-summary = "Hello!"  # Add a page description.
-date = 2019-01-01T00:00:00  # Add today's date.
-type = "widget_page"  # Page type is a Widget Page
-+++
+---
+title: "Landing Page"  # Add a page title.
+summary: "Hello!"  # Add a page description.
+date: "2019-01-01T00:00:00Z"  # Add today's date.
+type: "widget_page"  # Page type is a Widget Page
+---
 ```
 
 Now, we can [**use the page builder to add sections**]({{< relref "page-builder.md" >}}) into your `content/landing/` folder. Widgets can also be copied from your `content/home/` folder or the `themes/academic/exampleSite/content/home/` demo site folder.
