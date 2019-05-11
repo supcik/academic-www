@@ -74,40 +74,31 @@ A general image:
 
 Optionally, to add captions for your images, add the following instances to the end of your page's front matter:
 
-YAML:
-
 ```yaml
 gallery_item:
 - album: <ALBUM FOLDER>
-  caption: Write your image caption here
   image: <IMAGE NAME>.jpg
-```
-
-Or, using TOML:
-
-```toml
-[[gallery_item]]
-album = "<ALBUM FOLDER>"
-image = "<IMAGE NAME>.jpg"
-caption = "Write your image caption here"
+  caption: Write your image caption here
 ```
 
 **Alternatively, create an image gallery with images from the internet or your `static/img/` media library:**
 
 1. Add gallery images to within your `static/img/` media library folder
 2. Reference your images at the end of the front matter of a content file in the form:
-    ```toml
-    [[gallery_item]]
-    album = "1"
-    image = "my_image.jpg"
-    caption = "Write your image caption here"
+
+        gallery_item:
+        - album: gallery
+          image: boards.jpg
+          caption: A caption
+        - album: gallery
+          image: https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png
+          caption: Another caption
     
-    [[gallery_item]]
-    album = "1"
-    image = "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png"
-    caption = "Dark theme"
-    ```
-3. Display the gallery somewhere within your page content by using `{{</* gallery album="1" */>}}`
+3. Display the gallery somewhere within your page content by using `{{</* gallery */>}}`
+
+{{% alert note %}}
+For *docs* pages (i.e. pages using the courses and documentation layout), gallery images must be placed in the `static/` media library using the second approach (due to limitations of Hugo).
+{{% /alert %}}
 
 ## Videos
 
@@ -317,7 +308,7 @@ As Hugo and Academic attempt to parse TOML, Markdown, and LaTeX content in the a
 - escape each LaTeX backslash (`\`) with an extra backslash, yielding `\\`
 - escape each LaTeX underscore (`_`) with two backslashes, yielding `\\_`
 
-Hence, `abstract = "${O(d_{\max})}$"` becomes `abstract = "${O(d\\_{\\max})}$"`.
+Hence, `abstract: "${O(d_{\max})}$"` becomes `abstract: "${O(d\\_{\\max})}$"`.
 
 ## Table
 
