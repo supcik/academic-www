@@ -13,7 +13,7 @@ weight = 50
 
 Front matter allows page-specific metadata and functionality to be included at the top of a Markdown file.
 
-In the documentation and the example site, we will predominantly use [YAML](https://learnxinyminutes.com/docs/yaml/) to format the front matter of content files and [TOML](https://learnxinyminutes.com/docs/toml/) to format the configuration files and any widget/publication files. This is because TOML is more human-friendly but popular Markdown editors primarily support YAML front matter in content files.
+In the documentation and the example site, we will predominantly use [YAML](https://learnxinyminutes.com/docs/yaml/) to format the front matter of content files and [TOML](https://learnxinyminutes.com/docs/toml/) to format the configuration files and widget files. This is because TOML is more human-friendly but popular Markdown editors primarily support YAML front matter in content files.
 
 For editing your content locally on your computer, we recommend [Typora](https://www.typora.io) or [Visual Studio Code](https://code.visualstudio.com).
 

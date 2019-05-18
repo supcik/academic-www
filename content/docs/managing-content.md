@@ -173,7 +173,7 @@ Then edit the parameters in `content/publication/<my-publication>/index.md` to i
 - **publication:** where your title was published - Markdown formatting is enabled here for italic etc.
 - **abstract:** the summary of your publication
 
-Further details on your publication can be written in the body of the document (after the `+++` metadata section ends) using *Markdown* for formatting. This text will be displayed on the publication's page.
+Further details on your publication can be written in the body of the document (after the YAML/TOML front matter) using *Markdown* for formatting. This text will be displayed on the publication's page.
 
 To enable visitors to read your work, either paste a link to your PDF in `url_pdf` or add a PDF file with the same name as your publication's own folder to your publication's folder and a PDF link will be automatically generated. For example, if your publication is located at `publication/photons/index.md`, place a PDF at `publication/photons/photons.pdf`.
 
@@ -397,7 +397,7 @@ So you would like to create a page which utilizes Academic's widget system, simi
 
 Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *landing* page by creating a `content/landing/` folder to contain our new sections (widget instances).
 
-Within your new `content/landing/` folder, create a file named `index.md` containing the following TOML parameters:
+Within your new `content/landing/` folder, create a file named `index.md` containing the following YAML parameters:
 
 ```
 ---
@@ -409,6 +409,15 @@ type: "widget_page"  # Page type is a Widget Page
 ```
 
 Now, we can [**use the page builder to add sections**]({{< relref "page-builder.md" >}}) into your `content/landing/` folder. Widgets can also be copied from your `content/home/` folder or the `themes/academic/exampleSite/content/home/` demo site folder.
+
+We can also [create a menu link]({{< relref "get-started.md#menu" >}}) to our new Widget Page. Given a Widget Page folder named `landing`, open `config/_default/menu.toml` in your editor and add:
+
+```toml
+[[main]]
+  name = "My Widget Page"  # Title of the link.
+  url = "landing/"  # Widget Page folder name.
+  weight = 2  # Position of the link in the navigation bar.
+```
 
 {{% alert warning %}}
 To create the new widget pages, an Academic version from **18 March 2019** onwards is required (corresponding to *v4.2 dev* or greater).

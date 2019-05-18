@@ -20,4 +20,4 @@ We can highly recommend [Namecheap](https://www.namecheap.com/?aff=105828) for *
 
 **For Github deployments**, you'll need to login to your domain registrar to point your domain to Github, and create a `CNAME` file in the `static` folder of your website, so that Github knows your intentions. For more information, check out the [domains guide by Github](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
 
-Remember that after you have setup a custom domain, you will need to wait approximately 24-48 hours for the DNS to propagate and then you'll need to update `baseurl` in your `config.toml` to your new URL, regenerate your site (see above section), and redeploy.
+Remember that after you have setup a custom domain, you will need to wait approximately 24-48 hours for the DNS to propagate and then you'll need to update `baseurl` in your `config.toml` to your new URL, regenerate your site (refer to the previous section), and redeploy.
