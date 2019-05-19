@@ -119,6 +119,8 @@ To link to a section of the homepage, use the form `#<section-filename>` where `
 To create a dropdown sub-menu, add `identifier = "something"` to the parent item and `parent = "something"` to the child item.
 {{% /alert %}}
 
+Read more about Hugo's menu system [here](https://gohugo.io/content-management/menus/).
+
 ### Add your content
 
 Refer to our guide on [managing content]({{< relref "managing-content.md" >}}) to create your own content such as blog posts, publications, talks, and projects.

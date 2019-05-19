@@ -17,7 +17,7 @@ linktitle = "Build your homepage"
 
 Loading pre-made layouts is a great way to *kickstart* your new homepage. [Academic Kickstart]({{< relref "install.md" >}}) comes with some popular **Sections** preconfigured for this purpose. A **Widget** can be added inside each Section. Hence, you can have multiple instances of widgets, such as listing recent pages of different content types or categories.
 
-Widgets empower you to fully customize your site. They display as sections on the homepage or on [widget pages]({{< relref "managing-content.md" >}}). They can be added, removed, and positioned as desired.
+Widgets empower you to fully customize your site. They display as sections on the homepage or on [widget pages]({{< relref "managing-content.md#create-a-widget-page" >}}). They can be added, removed, and positioned as desired.
 
 Academic comes with the following widgets built-in. Additionally, third-party widgets can also be [developed](#develop-a-new-widget) and installed.
 

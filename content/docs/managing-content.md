@@ -317,6 +317,7 @@ The `content/courses/_index.md` file automatically lists any course, tutorial, o
 
 ```yaml
 title: Courses
+layout: docs  # Do not modify.
 
 # Optional header image (relative to `static/img/` folder).
 header:
