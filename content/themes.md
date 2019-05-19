@@ -48,6 +48,11 @@ caption = "Coffee theme with Playfair font"
 album = "1"
 image = "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-cupcake.png"
 caption = "Cupcake"
+
+[[gallery_item]]
+album = "1"
+image = "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-strawberry.png"
+caption = "Strawberry (v4.4+)"
 +++
 
 The following color themes are available and can be set by the `color_theme` option in `config.toml`:
