@@ -38,7 +38,7 @@ View the [Homepage Builder]({{< relref "page-builder.md" >}}) and [Content]({{< 
 Prerequisites:
 
 * [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo v0.55.2+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.55.6+](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
@@ -59,7 +59,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 
 Prerequisites:
 
-* [Download and install Hugo v0.55.2+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.55.6+](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
