@@ -55,7 +55,7 @@ image = "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/t
 caption = "Strawberry (v4.4+)"
 +++
 
-The following color themes are available and can be set by the `color_theme` option in `config.toml`:
+The following color themes are available and can be set by the `color_theme` option in `config/_default/params.toml`:
 
 {{< gallery album="1" >}}
 
