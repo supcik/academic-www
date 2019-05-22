@@ -93,7 +93,7 @@ By default, a superuser is created with the username *admin* and corresponding u
 - Add your social or academic networking links
   - These are defined as instances of `social` and can be created or deleted as required
 
-Now let's add a biography or some fun facts about you after the front matter (i.e. after the last `+++` line). You can utilize [Markdown and shortcodes for formatting]({{< relref "./writing-markdown-latex.md" >}}).
+Now let's add a biography or some fun facts about you after the front matter (i.e. after the last `---` line). You can utilize [Markdown and shortcodes for formatting]({{< relref "./writing-markdown-latex.md" >}}).
 
 To display an avatar, place a square cropped portrait photo named `avatar` into your profile folder at `content/authors/admin/`, overwriting the example image. Alternatively, if you have an existing Gravatar/Wordpress avatar, you can use it by setting `gravatar` to `true` in `config/_default/params.toml` and entering your associated `email` address in `content/authors/admin/_index.md`. Note that you can delete the example `avatar` image to disable the avatar feature.
 
@@ -116,7 +116,7 @@ The `[[main]]` entries define the navigation links at the top of the website. Th
 To link to a section of the homepage, use the form `#<section-filename>` where `<section-filename>` is the filename (without .md extension). For example, `#posts` references a section with filename `posts.md`. You can rename your section files in `content/home/`, just remember to use a dash (`-`) instead of spaces in the filename. 
 
 {{% alert note %}}
-To create a dropdown sub-menu, add `identifier = "something"` to the parent item and `parent = "something"` to the child item.
+To create a dropdown sub-menu, add `identifier: "something"` to the parent item and `parent: "something"` to the child item.
 {{% /alert %}}
 
 Read more about Hugo's menu system [here](https://gohugo.io/content-management/menus/).
