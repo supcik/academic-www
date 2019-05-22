@@ -15,7 +15,7 @@ weight = 60
 This is a brief guide to managing content with the Academic framework. Content can include news/blog posts, publications, projects, talks, widget pages, and much more. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< relref "writing-markdown-latex.md" >}}).<!--more-->
 
 {{% alert warning %}}
-Most front matter snippets in the documentation have recently been converted **[from TOML to YAML]({{< relref "front-matter.md" >}})**. The example publications, widgets, and configuration files remain in TOML format. Academic and Hugo continue to support both formats. An [online YAML<-->TOML converter is available](https://toolkit.site/format.html) should you need it. This change is to make it easier to edit content in popular Markdown editors like [Typora](https://www.typora.io) and [Visual Studio Code](https://code.visualstudio.com).
+Most front matter snippets in the documentation have recently been converted **[from TOML to YAML]({{< relref "front-matter.md" >}})**. The example widgets and configuration files remain in TOML format. Academic and Hugo continue to support both formats. An [online YAML<-->TOML converter is available](https://toolkit.site/format.html) should you need it. This change is to facilitate editing content in popular Markdown editors like [Typora](https://www.typora.io) and [Visual Studio Code](https://code.visualstudio.com).
 {{% /alert %}}
 
 ## Introduction
@@ -120,6 +120,175 @@ header:
   caption: "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 ```
 
+## Create a page
+
+Pages are the most fundamental building block for content. They're useful for general standalone content which does not match one of the built-in content types on this page. You may also be interested in [Widget Pages](#create-a-widget-page) which enable you to add widgets to a page.
+
+The simplest way of adding a page is to add a Markdown file using a `.md` extension at the root folder of your site.
+
+For a site with just a homepage and an author, here's what the root directory and associated URLs might look like with a new page named *example*:
+
+```plaintext
+.
+|-- authors/    # => https://example.com/authors/
+|-- example/index.md    # => https://example.com/example/
+└── home/  # => https://example.com/
+```
+
+And here's some example content for `example/index.md`:
+
+```yaml
+---
+title: An example title
+summary: Here we describe how to add a page to your site.
+date: "2018-06-28T00:00:00Z"
+
+reading_time: false  # Show estimated reading time?
+share: false  # Show social sharing links?
+profile: false  # Show author profile?
+comments: false  # Show comments?
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+---
+
+Add your *content* here...
+
+```
+
+If you have a lot of pages, you can organize them within a folder, for example:
+
+ ```plaintext
+.
+|-- authors/    # => https://example.com/authors/
+|-- example/about.md    # => https://example.com/example/about/
+|-- example/terms.md    # => https://example.com/example/terms/
+└── home/  # => https://example.com/
+```
+
+### Linking to your new page
+
+To link to your new page from the site navigation bar, edit `config/_default/menu.toml`. Add a new menu entry similar to:
+
+```toml
+[[main]]
+  name = "My new page"  # A link title for your page.
+  url = "example/"  # The URL of your page.
+  weight = 50  # The position of your page in the menu.
+```
+
+To link to your new page from another page, add something like `[My CV]{{</* ref "cv/index.md" */>}}` to the content of one of your existing pages.
+
+### Example: creating a Curriculum Vitae page
+
+Create a `cv/index.md` page for your Curriculum Vitae in your `content` folder. Add a front matter to the file, similar to that above, and add the content of your Curriculum Vitae below the front matter. Then create a link to your new page by following the steps in the above section.
+
+Alternatively, for the above example, we could use a PDF of your Curriculum Vitae. For this purpose, create a folder called `files` within your `static` folder and move a PDF file named `cv.pdf` to that location, so we have a `static/files/cv.pdf` file path. The PDF can then be linked to from any content by using the code: `{{%/* staticref "files/cv.pdf" */%}}Download my CV{{%/* /staticref */%}}`.
+
+## Create a widget page
+
+So you would like to create a page which utilizes Academic's widget system, similar to the homepage?
+
+{{% alert note %}}
+To manage the home page (a special Widget Page), refer to the [Getting Started]({{< relref "get-started.md#choose-the-right-layout-for-you" >}}) and [Page Builder]({{< relref "page-builder.md" >}}) guides.
+{{% /alert %}}
+
+Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *landing* page by creating a `content/landing/` folder to contain our new sections (widget instances).
+
+Within your new `content/landing/` folder, create a file named `index.md` containing the following YAML parameters:
+
+```yaml
+---
+title: "Landing Page"  # Add a page title.
+summary: "Hello!"  # Add a page description.
+date: "2019-01-01T00:00:00Z"  # Add today's date.
+type: "widget_page"  # Page type is a Widget Page
+---
+```
+
+Now, we can [**use the page builder to add sections**]({{< relref "page-builder.md" >}}) into your `content/landing/` folder. Widgets can also be copied from your `content/home/` folder or the `themes/academic/exampleSite/content/home/` demo site folder.
+
+We can also [create a menu link]({{< relref "get-started.md#menu" >}}) to our new Widget Page. Given a Widget Page folder named `landing`, open `config/_default/menu.toml` in your editor and add:
+
+```toml
+[[main]]
+  name = "My Widget Page"  # Title of the link.
+  url = "landing/"  # Widget Page folder name.
+  weight = 2  # Position of the link in the navigation bar.
+```
+
+{{% alert warning %}}
+To create the new widget pages, an Academic version from **18 March 2019** onwards is required (corresponding to *v4.2 dev* or greater).
+{{% /alert %}}
+
+## Create a blog post
+
+To create a blog/news article:
+
+    hugo new  --kind post post/my-article-name
+
+Then edit the newly created file `content/post/my-article-name.md` with your full title and content.
+
+Hugo will automatically generate summaries of posts that appear on the homepage. If you are dissatisfied with an automated summary, you can either limit the summary length by appropriately placing <code>&#60;&#33;&#45;&#45;more&#45;&#45;&#62;</code> in the article body, or completely override the automated summary by adding a `summary` parameter to the `+++` preamble such that:
+
+    summary: "Summary of my post."
+
+To disable commenting for a specific post, you can add `disable_comments: true` to the post `+++` preamble. Or to disable commenting for all posts, you can either set `disqusShortname = ""` in `config.toml` or `disable_comments = true` in `params.toml`.
+
+## Create a user
+
+To create a new user, please refer to the [Getting Started]({{< relref "get-started.md#introduce-yourself" >}}) guide.
+
+## Create a project
+
+To create a project:
+
+    hugo new  --kind project project/my-project-name
+
+Then edit the newly created file `content/project/my-project-name.md`. Either you can link the project to an external project website by setting the `external_link: "http://external-project.com"` variable at the top of the file, or you can add content (below the final `---`) in order to render a project page on your website.
+
+## Create a talk
+
+To create a talk:
+
+    hugo new  --kind talk talk/my-talk-name
+
+Then edit the newly created file `content/talk/my-talk-name.md` with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.
+
+## Create slides
+
+Slides can be created very efficiently using Markdown, presented to your audience, and shared on your site. Speaker notes included!
+
+See the [slides demo](https://themes.gohugo.io//theme/academic/slides/example-slides#/) - although note that this demo is hosted by Hugo team and they have modified their demo to reduce functionality. Build the example site (`themes/academic/exampleSite/`) locally to see the full demo including speaker notes.
+
+Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/slides/example-slides.md) at `themes/academic/exampleSite/content/slides/example/index.md` to learn how to get started.
+
+Link slides with a talk or publication by editing the external `url_slides` option or internal `slides` option in the talk/publication page to point to your slides. For example, `slides: "example"` points to the Markdown formatted slide deck in the example site at `slides/example/index.md`. See the full example front matter which includes `url_slides` and `slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
+
+### Theming a slide deck
+
+Slide decks use their own theming system rather than the one configured in your site's `params.toml`. This enables the theme of each slide deck to be customized in its front matter. 
+
+For a *light* themed slide deck, consider setting the following `slides` options in your slide deck's front matter:
+
+```yaml
+slides:
+  theme: "white"  # Reveal JS theme name
+  highlight_style: "github"  # Highlight JS theme name
+```
+
+For a *dark* themed slide deck, consider setting the following `slides` options in your slide deck's front matter:
+
+```yaml
+slides:
+  theme: "black"  # Reveal JS theme name
+  highlight_style: "dracula"  # Highlight JS theme name
+```
+
+Note that the *highlight_style* option is only available for slides made with Academic **v4.3.0+**.
+
 ## Create a publication
 
 ### Automatically
@@ -195,68 +364,6 @@ To rename publication types in v4+, [edit the associated `pub_*` values in your 
 https://github.com/gcushen/hugo-academic/blob/master/i18n/en.yaml) but may not have been translated to all of the other languages packs yet.
 
 To add or remove publication types in v4+, [override]({{< relref "customization.md#override-a-template" >}}) the [layouts/partials/pub_types.html](https://github.com/gcushen/hugo-academic/blob/master/layouts/partials/pub_types.html) file with your own array using the Go templating language.
-
-## Create a blog post
-
-To create a blog/news article:
-
-    hugo new  --kind post post/my-article-name
-
-Then edit the newly created file `content/post/my-article-name.md` with your full title and content.
-
-Hugo will automatically generate summaries of posts that appear on the homepage. If you are dissatisfied with an automated summary, you can either limit the summary length by appropriately placing <code>&#60;&#33;&#45;&#45;more&#45;&#45;&#62;</code> in the article body, or completely override the automated summary by adding a `summary` parameter to the `+++` preamble such that:
-
-    summary: "Summary of my post."
-
-To disable commenting for a specific post, you can add `disable_comments: true` to the post `+++` preamble. Or to disable commenting for all posts, you can either set `disqusShortname = ""` in `config.toml` or `disable_comments = true` in `params.toml`.
-
-## Create a project
-
-To create a project:
-
-    hugo new  --kind project project/my-project-name
-
-Then edit the newly created file `content/project/my-project-name.md`. Either you can link the project to an external project website by setting the `external_link: "http://external-project.com"` variable at the top of the file, or you can add content (below the final `---`) in order to render a project page on your website.
-
-## Create a talk
-
-To create a talk:
-
-    hugo new  --kind talk talk/my-talk-name
-
-Then edit the newly created file `content/talk/my-talk-name.md` with your full talk title and details. Note that many of the talk parameters are similar to the publication parameters.
-
-## Create slides
-
-Slides can be created very efficiently using Markdown, presented to your audience, and shared on your site. Speaker notes included!
-
-See the [slides demo](https://themes.gohugo.io//theme/academic/slides/example-slides#/) - although note that this demo is hosted by Hugo team and they have modified their demo to reduce functionality. Build the example site (`themes/academic/exampleSite/`) locally to see the full demo including speaker notes.
-
-Refer to the [example slide deck](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/slides/example-slides.md) at `themes/academic/exampleSite/content/slides/example/index.md` to learn how to get started.
-
-Link slides with a talk or publication by editing the external `url_slides` option or internal `slides` option in the talk/publication page to point to your slides. For example, `slides: "example"` points to the Markdown formatted slide deck in the example site at `slides/example/index.md`. See the full example front matter which includes `url_slides` and `slides` [here](https://raw.githubusercontent.com/gcushen/hugo-academic/master/exampleSite/content/talk/example/index.md).
-
-### Theming a slide deck
-
-Slide decks use their own theming system rather than the one configured in your site's `params.toml`. This enables the theme of each slide deck to be customized in its front matter. 
-
-For a *light* themed slide deck, consider setting the following `slides` options in your slide deck's front matter:
-
-```yaml
-slides:
-  theme: "white"  # Reveal JS theme name
-  highlight_style: "github"  # Highlight JS theme name
-```
-
-For a *dark* themed slide deck, consider setting the following `slides` options in your slide deck's front matter:
-
-```yaml
-slides:
-  theme: "black"  # Reveal JS theme name
-  highlight_style: "dracula"  # Highlight JS theme name
-```
-
-Note that the *highlight_style* option is only available for slides made with Academic **v4.3.0+**.
 
 ## Create a course or documentation
 
@@ -391,44 +498,6 @@ weight: 1
 
 Content...
 ```
-
-## Create a widget page
-
-So you would like to create a page which utilizes Academic's widget system, similar to the homepage?
-
-Create a new folder in your `content` folder, naming it with your new page name. In this example, we will create a *landing* page by creating a `content/landing/` folder to contain our new sections (widget instances).
-
-Within your new `content/landing/` folder, create a file named `index.md` containing the following YAML parameters:
-
-```
----
-title: "Landing Page"  # Add a page title.
-summary: "Hello!"  # Add a page description.
-date: "2019-01-01T00:00:00Z"  # Add today's date.
-type: "widget_page"  # Page type is a Widget Page
----
-```
-
-Now, we can [**use the page builder to add sections**]({{< relref "page-builder.md" >}}) into your `content/landing/` folder. Widgets can also be copied from your `content/home/` folder or the `themes/academic/exampleSite/content/home/` demo site folder.
-
-We can also [create a menu link]({{< relref "get-started.md#menu" >}}) to our new Widget Page. Given a Widget Page folder named `landing`, open `config/_default/menu.toml` in your editor and add:
-
-```toml
-[[main]]
-  name = "My Widget Page"  # Title of the link.
-  url = "landing/"  # Widget Page folder name.
-  weight = 2  # Position of the link in the navigation bar.
-```
-
-{{% alert warning %}}
-To create the new widget pages, an Academic version from **18 March 2019** onwards is required (corresponding to *v4.2 dev* or greater).
-{{% /alert %}}
-
-## Create other pages (e.g. CV)
-
-For other types of content, it is possible to create your own custom pages. For example, let's create a `cv.md` page for your Curriculum Vitae in your `content` folder. Copy across the frontmatter from the top of one of your post files, adapting it as necessary, and editing your Markdown content below. You can then link to your new page by adding the code `[My CV]{{</* ref "cv.md" */>}}` to any of your existing content.
-
-Alternatively, for the above example, we could use a PDF of your Curriculum Vitae. For this purpose, create a folder called `files` within your `static` folder and move a PDF file named `cv.pdf` to that location, so we have a `static/files/cv.pdf` file path. The PDF can then be linked to from any content by using the code: `{{%/* staticref "files/cv.pdf" */%}}Download my CV{{%/* /staticref */%}}`.
 
 ## Manage archive pages
 
