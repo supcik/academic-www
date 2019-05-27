@@ -7,6 +7,7 @@ type = "docs"  # Do not modify.
 weight = 70
 
 math = true
+diagram = true
 
 linktitle = "Writing content"
 [menu.docs]
@@ -182,7 +183,35 @@ To embed **Google Documents** (e.g. slide deck), click *File > Publish to web > 
 
 ## Diagrams
 
-Diagrams can be created in the open source [draw.io](draw.io) editor. The editor has support for almost any type of diagram, from simple to complex. A diagram can be easily embedded in Academic by choosing **File > Embed > SVG** in the [draw.io](draw.io) editor and pasting the generated code into your page.
+You can generate diagrams and flowcharts from text, in a similar manner as Markdown.
+
+Just add `diagram: true` to a page's YAML front matter and insert your [Mermaid diagram syntax](https://mermaidjs.github.io) in the *Diagram* shortcode and that's it. For example,
+
+```plaintext
+{{</* diagram */>}}
+graph LR;
+    A[Hard edge] -->|Label| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+{{</* /diagram */>}}
+```
+
+renders as
+
+{{< diagram >}}
+graph LR;
+    A[Hard edge] -->|Label| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+{{< /diagram >}}
+
+**Academic v4.4.0-dev or greater is required to use the _Diagram_ shortcode.**
+
+### Advanced diagrams
+
+More advanced diagrams can be created in the open source [draw.io](draw.io) editor. The editor has support for almost any type of diagram, from simple to complex. A diagram can be easily embedded in Academic by choosing **File > Embed > SVG** in the [draw.io](draw.io) editor and pasting the generated code into your page.
 
 Alternatively, a diagram can be exported as an [image](#images) from any drawing software, or a [document/slide](#embed-documents) containing a diagram can be embedded.
 
