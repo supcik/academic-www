@@ -7,6 +7,9 @@ weight = 21  # Order that this section will appear.
 title = "Elements for **Every** Kind of Site"
 
 [[element]]
+  name = "Widgets"
+  link = ""
+[[element]]
   name = "Themes"
   link = ""
 [[element]]
@@ -16,13 +19,13 @@ title = "Elements for **Every** Kind of Site"
   name = "Publication"
   link = ""
 [[element]]
-  name = "Talk & Slides"
+  name = "Events & Slides"
   link = ""
 [[element]]
   name = "Filterable Portfolio"
   link = ""
 [[element]]
-  name = "Blurb"
+  name = "Diagrams"
   link = ""
 [[element]]
   name = "Code"
@@ -54,5 +57,13 @@ title = "Elements for **Every** Kind of Site"
 [[element]]
   name = "Search Box"
   link = ""
-
+[[element]]
+  name = "Maps"
+  link = ""
+[[element]]
+  name = "Contact Form"
+  link = ""
+[[element]]
+  name = "Privacy Pack (GDPR)"
+  link = ""
 +++
