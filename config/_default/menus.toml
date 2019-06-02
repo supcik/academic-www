@@ -4,37 +4,37 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-  pre = "<i class=\"fas fa-home\" style=\"color: #00d1b2;\"></i>"
+  pre = "<i class=\"fas fa-home pr-1\" style=\"color: #00d1b2;\"></i>"
   name = "Home"
   url = "#hero"
   weight = 5
 
 [[main]]
-  pre = "<i class=\"fas fa-book\" style=\"color: #00d1b2;\"></i>"
+  pre = "<i class=\"fas fa-book pr-1\" style=\"color: #00d1b2;\"></i>"
   name = "Documentation"
   url = "docs/"
   weight = 10
 
 [[main]]
-  pre = "<i class=\"fas fa-newspaper\" style=\"color: #00d1b2;\"></i>"
+  pre = "<i class=\"fas fa-newspaper pr-1\" style=\"color: #00d1b2;\"></i>"
   name = "Updates"
   url = "updates/"
   weight = 20
 
 [[main]]
-  pre = "<i class=\"fas fa-brush\" style=\"color: #00d1b2;\"></i>"
+  pre = "<i class=\"fas fa-brush pr-1\" style=\"color: #00d1b2;\"></i>"
   name = "Themes"
   url = "themes/"
   weight = 30
 
 [[main]]
-  pre = "<i class=\"fas fa-donate\" style=\"color: #00d1b2;\"></i>"
+  pre = "<i class=\"fas fa-donate pr-1\" style=\"color: #00d1b2;\"></i>"
   name = "Support Academic"
   url = "#support"
   weight = 40
 
 #[[main]]
-#  pre = "<i class=\"fas fa-address-card\" style=\"color: #00d1b2;\"></i>"
+#  pre = "<i class=\"fas fa-address-card pr-1\" style=\"color: #00d1b2;\"></i>"
 #  name = "Widgets"
 #  url = "widgets/"
 #  weight = 40
