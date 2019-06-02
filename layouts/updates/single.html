@@ -1,5 +1,4 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{- define "main" -}}
 {{ $current_page := . }}
 
 <div class="container-fluid docs">
@@ -10,24 +9,18 @@
 
     {{ if .Params.toc }}
     <div class="d-none d-xl-block col-xl-2 docs-toc">
-      {{ with (i18n "on_this_page") }}
-      <p class="docs-toc-title">{{.}}</p>
-      {{ end }}
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">{{ i18n "on_this_page" }}</a></li>
+      </ul>
 
       {{ .TableOfContents }}
-
-      <ul class="nav toc-top">
-        <li><a href="#">{{ i18n "back_to_top" | default "Back to top" }}</a></li>
-      </ul>
 
       {{ partial "docs_toc_foot.html" . }}
     </div>
     {{ end }}
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
-      <div id="search-hits">
-        <!-- Search results will appear here -->
-      </div>
+
       <article class="article" itemscope itemtype="http://schema.org/Article">
 
         <div class="docs-article-container">
@@ -41,15 +34,16 @@
         </div>
 
         <div class="body-footer">
-          {{ i18n "last_updated" }} {{ $.Lastmod.Format $.Site.Params.date_format }}
+          {{ i18n "last_updated" }} {{ $.Lastmod.Format site.Params.date_format }}
         </div>
 
       </article>
 
-      {{ partial "footer_section.html" . }}
+      {{/* In v4.4.0, below partial was renamed and the main site footer from baseof tpl will be shown now instead. */}}
+      {{/* partial "footer_section.html" . */}}
 
     </main>
   </div>
 </div>
 
-{{ partial "footer.html" . }}
+{{- end -}}
