@@ -31,15 +31,25 @@ Save your main icon and mobile icon as square PNG images named `icon.png` (32x32
 
 To enable [Google Analytics](http://www.google.com/analytics), add your tracking code in `config/_default/config.toml` similarly to `googleAnalytics = "UA-12345678-9"`.
 
+To integrate other third party analytics services, refer to the **Add Scripts** section.
+
 ## Comments
 
 The Disqus commenting variable (`disqusShortname`) in `config/_default/config.toml` can be set to your own [Disqus](https://disqus.com/) shortname to enable visitors to comment on your posts.
 
 ## Add scripts (JS)
 
-To add a **third party script**, create a file named `head_custom.html` in a `layouts/partials/` folder at the root of your website (not in the `themes` folder). Any HTML code added to this file will be included within your website's `<head>`. Therefore, it's suitable for adding custom metadata or third party scripts specified with the *async* attribute.
+To add a **third party script**, create a file named `custom_js.html` in a `layouts/partials/` folder at the root of your website (not in the `themes` folder). Any HTML code added to this file will be included within your website's footer.
 
 Whereas for your own **local scripts**, let's say that you have a JS file named `custom.js`. We can place your file in  `assets/js/` (create the folders within your website root if they don't exist). Then open your `config/_default/params.toml` and set `plugins_js = ["custom"]`, where *custom* is your JS filename without its extension.
+
+## Custom head
+
+To add custom **metadata** or scripts to your website's `<head>`, create a file named `custom_head.html` in a `layouts/partials/` folder at the root of your website (not in the `themes` folder) and add your HTML code.
+
+This approach can also be used for adding third party scripts with an *async* or *defer* attribute to the site head.
+
+**NOTE: Prior to v4.4.0-dev, `head_custom.html` is used rather than `custom_head.html`.**
 
 ## Permalinks
 
@@ -59,7 +69,7 @@ Then add `aliases = ["/blog/"]` to your post archive page at `post/_index.md` so
 
 ## Customize style (CSS)
 
-To personalize Academic, you can **choose a colour theme and font theme** in `config.toml`.
+To personalize Academic, you can **choose a colour theme and font theme** in `config/_default/params.toml`.
 
 For further personalization, you can [**create your own colour theme and font theme**](#custom-theme).
 
