@@ -43,6 +43,26 @@ To add a **third party script**, create a file named `custom_js.html` in a `layo
 
 Whereas for your own **local scripts**, let's say that you have a JS file named `custom.js`. We can place your file in  `assets/js/` (create the folders within your website root if they don't exist). Then open your `config/_default/params.toml` and set `plugins_js = ["custom"]`, where *custom* is your JS filename without its extension.
 
+## Page Sharer
+
+The *Page Sharer* enables you to **grow your audience** by engaging your visitors to share pages on your site with others. Visitors can share your pages via **email, Twitter, Facebook, LinkedIn, WhatsApp, Weibo, and many more!**
+
+To enable the Page Sharer, set `sharing` to `true` in your `config/_default/params.toml`. Alternatively, it can be enabled or disabled on a per page basis using `share` in your page front matter.
+
+To customize the Page Sharer, edit `data/page_sharer.toml`. If you don't already have this file in your site, update to Academic **v4.4+** (if necessary) and copy the `themes/academic/data/page_sharer.toml` file to `data/page_sharer.toml`.
+
+### Select your social networks
+
+To enable or disable a button, set its `enable` option to `true` or `false`.
+
+### Reorder your social networks
+
+To reorder buttons, move the `[[buttons]]` instances to your preferred order.
+
+### Add a new social network
+
+We've already included some of the most popular networks, but further networks can easily be added. To add a button for a new social network, duplicate a `[[buttons]]` instance and edit its properties. [Choose an icon]({{< relref "page-builder.md#icons" >}}), and give it a `title` and a one-word, lowercase `id`. Once you have the sharing URL for the new social network, paste it into the `url` field, substituting the title of the page to share with `{title}` and page URL with `{url}`.
+
 ## Custom head
 
 To add custom **metadata** or scripts to your website's `<head>`, create a file named `custom_head.html` in a `layouts/partials/` folder at the root of your website (not in the `themes` folder) and add your HTML code.
