@@ -17,9 +17,31 @@ It is possible to carry out many customizations *without* editing any code in th
 
 ## Custom theme
 
-To **customize the color theme**, you can copy a theme such as `themes/academic/data/themes/default.toml` to `data/themes/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/themes/` folders if they do not already exist. Now you can adjust the colors within your theme file.
+Both the **colour theme** and **font** can be customized.
+
+To **customize the color theme**, you can copy a theme such as `themes/academic/data/themes/default.toml` to `data/themes/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/themes/` folders if they do not already exist. Now you can adjust the colors within your theme file using [HTML color codes](https://htmlcolorcodes.com).
 
 To **customize the font theme**, you can copy a theme such as `themes/academic/data/fonts/default.toml` to `data/fonts/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/fonts/` folders if they do not already exist. Now you can adjust the font size and family, choosing from the library of [Google Fonts](https://fonts.google.com/) if you wish.
+
+To select a free web-font available from Google Fonts:
+
+1. Visit [Google Fonts](https://fonts.google.com)
+2. Click `+` on the fonts you wish to use
+3. Open the `Families Selected` dialog box at the bottom
+4. Under **Embed Font**, copy the part of the URL in bold and paste it as the `google_fonts` option in your new font theme
+    - For example, if Google gives you `<link href="https://fonts.googleapis.com/css?family=B612+Mono|Open+Sans&display=swap" rel="stylesheet">`, set `google_fonts = "B612+Mono|Open+Sans"`
+5. Under **Specify in CSS** in Google Font's dialog, copy the font name and paste it as one of the fonts in your font theme
+    - For example, given `font-family: 'B612 Mono', monospace;`, copy `B612 Mono`
+
+### Naming your theme
+
+If you rename a theme file, the associated `color_theme` or `font_theme` values in `config/_default/params.toml` will also need to be updated to reflect the new name. Avoid using spaces in filenames.
+
+### Example
+
+An example of a custom theme in action can be found in the [repo for this site](https://github.com/sourcethemes/academic-www/blob/master/data/themes/academic.toml) - refer to `data/themes/academic.toml` and the value of `theme` in `params.toml`,
+
+### Share your theme
 
 If you create your own theme, consider giving it a unique name and *sharing* your new color or font theme with the [community](http://discuss.gohugo.io/).
 
