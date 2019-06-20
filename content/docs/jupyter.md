@@ -75,14 +75,12 @@ Alternatively, a Jupyter notebook can be embedded in a page by following one of 
 2. [Convert your notebook to HTML](
 https://nbconvert.readthedocs.io/) using `nbconvert --to html <NOTEBOOK_NAME>.ipynb`. Then move the resulting HTML file to your page's folder and embed it into the body of the page's Markdown file using:
 
-      ```html
-      <iframe
-            src="./<CONVERTED_NOTEBOOK_FILENAME>"
-            width="90%"
-            height="1000px"
-            style="border:none;">
-          </iframe>
-      ```
+        <iframe
+              src="./<CONVERTED_NOTEBOOK_FILENAME>"
+              width="90%"
+              height="1000px"
+              style="border:none;">
+        </iframe>
 
 3. Upload your notebook to a cloud notebook service such as [Microsoft Azure](https://notebooks.azure.com/), [Google Cloud Datalab](https://cloud.google.com/datalab/) or [Kyso](https://kyso.io). Then click their *Embed* button, pasting their custom embedding code into the body of your page's Markdown file
 
