@@ -590,7 +590,7 @@ With the Portfolio widget you can showcase your work and optionally enable visit
 
 {{< figure library="1" src="docs/widget-portfolio-card.png" title="Showcase your work or product features with the Portfolio widget." >}}
 
-Different [views](#view) are available for the content. The default view is a masonry card view made famous by Pinterest.com. Other views include a large image showcase view, and a simple list view. For the *showcase* view, the `flip_alt_rows` option can be set to `true` to horizontally flip alternate rows - a style which is commonly seen on many popular sites and landing pages that showcase product features by placing large images and text side-by-side.
+Different [views](#view) are available for the content. The default view is a masonry card view made famous by Pinterest.com. Other views include a large image showcase view, a compact view with image, and a simple list view. For the *showcase* view, the `flip_alt_rows` option can be set to `true` to horizontally flip alternate rows - a style which is commonly seen on many popular sites and landing pages that showcase product features by placing large images and text side-by-side.
 
 The widget is configurable in a one or two column structure by setting the `columns` option.
 
@@ -637,6 +637,7 @@ headless = true  # This file represents a page section.
 
   # Toggle between the various page layout types.
   #   1 = List
+  #   2 = Compact  
   #   3 = Card
   #   5 = Showcase
   view = 3
