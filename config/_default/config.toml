@@ -18,9 +18,6 @@ copyright = "&copy; 2016-{year} [George Cushen](https://twitter.com/georgecushen
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-78646709-1"
 
-# Enable comments by entering your Disqus shortname
-disqusShortname = "academic-3"
-
 ############################
 ## Advanced options below ##
 ############################
