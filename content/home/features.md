@@ -8,7 +8,7 @@ weight = 20  # Order that this section will appear.
   icon = "battery-full"
   icon_pack = "fas"
   name = "Highly Flexible"
-  description = "Easily manage many different types of content including the homepage, blog posts, publications, talks, slides, tutorials, projects, and custom pages. Academic even has multilingual support."
+  description = "Easily manage many different types of content including the homepage, blog posts, publications, talks, slides, online courses, software documentation, projects, and custom pages. Academic even has multilingual support for 15+ languages."
   
 [[feature]]
   icon = "edit"

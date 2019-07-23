@@ -53,14 +53,14 @@ Want to caption the image or set a focal point to influence how the image is cro
 
 ```yaml
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+# To use, place an image named `featured.jpg/png` in your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+# Set `preview_only` to `true` to just use the image for thumbnails.
 image:
-  # Caption (optional)
+  placement: 1
   caption: "Photo by [Academic](https://sourcethemes.com/academic/)"
-  # Focal point (optional)
-  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
   focal_point: "Center"
-  # Show image only in page previews?
   preview_only: false
 ```
 
@@ -101,14 +101,15 @@ The following parameters can be added to the front matter of a page (such as a b
 reading_time: false  # Show estimated reading time?
 share: false  # Show social sharing links?
 profile: false  # Show author profile?
-comments: false  # Show comments?
+commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
+editable: true  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
 ```
 
 ### Math and Code
 
-To enable **LaTeX math** rendering for a page, you should include `math: true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `params.toml`.
+To enable **LaTeX math** rendering for a page, you should include `markup: mmark` and `math: true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config/_default/params.toml`. See the [math guide]({{< relref "writing-markdown-latex.md" >}}) for further details.
 
-To disable **source code highlighting** for all pages, set `highlight = false` in `params.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight: true` in that page's [front matter]({{< relref "front-matter.md" >}}). See the [code highlighting guide]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for further details.
+To disable **source code highlighting** for all pages, set `highlight = false` in `config/_default/params.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight: true` in that page's [front matter]({{< relref "front-matter.md" >}}). See the [code highlighting guide]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for further details.
 
 ### Header image
 
@@ -360,10 +361,15 @@ Any double quotes (`"`) or backslashes (e.g. LaTeX `\times`) occurring within th
 
 **Modifying Publication Types**
 
-To rename publication types in v4+, [edit the associated `pub_*` values in your language pack]({{< relref "language.md" >}}). These values can be found in the default [English language pack](
-https://github.com/gcushen/hugo-academic/blob/master/i18n/en.yaml) but may not have been translated to all of the other languages packs yet.
+To rename publication types in v4+, [edit the associated `pub_*` values in your language pack]({{< relref "language.md" >}}). Note that the master values can always be found in the [English language pack](
+https://github.com/gcushen/hugo-academic/blob/master/i18n/en.yaml).
 
-To add or remove publication types in v4+, [override]({{< relref "customization.md#override-a-template" >}}) the [layouts/partials/pub_types.html](https://github.com/gcushen/hugo-academic/blob/master/layouts/partials/pub_types.html) file with your own array using the Go templating language.
+To **add or remove publication types** in Academic v4.4+,
+
+1. [Add the names of your new publication types to your language pack(s)]({{< relref "language.md" >}})
+2. Copy `themes/academic/data/publication_types.toml` to `data/publication_types.toml`
+3. Edit `data/publication_types.toml`to add your own types
+   - Each type in the list should be the key of a translation entry in your language pack(s) rather than the actual text of the publication type
 
 ## Create a course or documentation
 

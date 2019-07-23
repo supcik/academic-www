@@ -6,6 +6,7 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 weight = 70
 
+markup = "mmark"
 math = true
 diagram = true
 
@@ -15,7 +16,7 @@ linktitle = "Writing content"
   weight = 30
 +++
 
-Content can be written using [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics), and [Hugo Shortcodes](http://gohugo.io/extras/shortcodes/). Additionally, HTML may be used for advanced formatting.<!--more--> This article gives an overview of the most common formatting options.
+Content can be written using [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics), Shortcodes. *Shortcodes* are plugins which are bundled with Academic or inherited from [Hugo](http://gohugo.io/extras/shortcodes/). Additionally, HTML may be written in Markdown documents for advanced formatting.<!--more--> This article gives an overview of the most common formatting options, including features that are exclusive to Academic.
 
 ## Sub-headings
 
@@ -45,21 +46,37 @@ Content can be written using [Markdown](https://github.com/adam-p/markdown-here/
     * First item
     * Another item
 
+### Todo lists
+
+Todo lists can be written in Academic by using the standard Markdown syntax:
+
+```markdown
+- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
+```
+
+renders as
+
+- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
+
 ## Images
 
 Images may be added to a page by either placing them in your `static/img/` media library or in your [page's folder](https://gohugo.io/content-management/page-bundles/), and then referencing them using one of the following notations:
 
 A figure from your `static/img/` media library:
 
-    {{</* figure library="1" src="image.jpg" title="A caption" */>}}
+    {{</* figure library="true" src="image.jpg" title="A caption" lightbox="true" */>}}
 
 A figure within a [page's folder](https://gohugo.io/content-management/page-bundles/) (e.g. `content/post/hello/`) :
 
-    {{</* figure src="image.jpg" title="A caption" */>}}
+    {{</* figure src="image.jpg" title="A caption" lightbox="true" */>}}
 
 A numbered figure with caption:
 
-    {{</* figure src="image.jpg" title="A caption" numbered="true" */>}}
+    {{</* figure src="image.jpg" title="A caption" numbered="true" lightbox="true" */>}}
 
 A general image:
 
@@ -183,31 +200,85 @@ To embed **Google Documents** (e.g. slide deck), click *File > Publish to web > 
 
 ## Diagrams
 
-You can generate diagrams and flowcharts from text, in a similar manner as Markdown.
+Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the `diagram` option in your `config/_default/params.toml` file or by adding `diagram: true` to your page front matter. Then insert your [Mermaid diagram syntax](https://mermaidjs.github.io) within a *mermaid* code block as seen below and that's it. _Note: Academic v4.4.0+ is required to make diagrams._
 
-Just add `diagram: true` to a page's YAML front matter and insert your [Mermaid diagram syntax](https://mermaidjs.github.io) in the *Diagram* shortcode and that's it. For example,
+An example **flowchart**:
 
-```plaintext
-{{</* diagram */>}}
-graph LR;
-    A[Hard edge] -->|Label| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-{{</* /diagram */>}}
-```
+    ```mermaid
+    graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+    ```
 
 renders as
 
-{{< diagram >}}
-graph LR;
-    A[Hard edge] -->|Label| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-{{< /diagram >}}
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```
 
-**Academic v4.4.0-dev or greater is required to use the _Diagram_ shortcode.**
+An example **sequence diagram**:
+
+    ```mermaid
+    sequenceDiagram
+      participant Alice
+      participant Bob
+      Alice->John: Hello John, how are you?
+      loop Healthcheck
+          John->John: Fight against hypochondria
+      end
+      Note right of John: Rational thoughts <br/>prevail...
+      John-->Alice: Great!
+      John->Bob: How about you?
+      Bob-->John: Jolly good!
+    ```
+
+renders as
+
+```mermaid
+sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice->John: Hello John, how are you?
+  loop Healthcheck
+      John->John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts <br/>prevail...
+  John-->Alice: Great!
+  John->Bob: How about you?
+  Bob-->John: Jolly good!
+```
+
+An example **Gantt diagram**:
+
+    ```mermaid
+    gantt
+      dateFormat  YYYY-MM-DD
+      section Section
+      A task           :a1, 2014-01-01, 30d
+      Another task     :after a1  , 20d
+      section Another
+      Task in sec      :2014-01-12  , 12d
+      another task      : 24d
+    ```
+
+renders as
+
+```mermaid
+gantt
+  dateFormat  YYYY-MM-DD
+  section Section
+  A task           :a1, 2014-01-01, 30d
+  Another task     :after a1  , 20d
+  section Another
+  Task in sec      :2014-01-12  , 12d
+  another task      : 24d
+```
 
 ### Advanced diagrams
 
@@ -302,42 +373,47 @@ To include a single tweet, pass the tweet’s ID from the tweet's URL as paramet
 
 ## $\rm \LaTeX$ math
 
-Prior to adding math content, math can be enabled for your site in `params.toml`.
+Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file and adding `markup: mmark` to your page front matter.
 
-```TeX
-$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+To render *inline* or *block* math, wrap your LaTeX math with `$$...$$`.
+
+Example **math block**:
+
+```tex
+$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 ```
 
-$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+renders as
 
-Alternatively, inline math can be written by wrapping the formula with only a single `$`:
+$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 
-    This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+Example **inline math** `$$\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2$$` renders as $$\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2$$ .
 
-This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+Example **multi-line math** using the `\\` math linebreak:
 
-Note that Markdown special characters need to be escaped with a backslash so they are treated as math rather than Markdown. For example, `*` and `_` become `\*` and `\_` respectively.
-
-### Multiline equations
-
-The standard LaTeX line break consisting of 2 backslashes needs to be replaced with 6 backslashes:
-
-```TeX
-$$f(k;p\_0^\*) = \begin{cases} p\_0^\* & \text{if }k=1, \\\\\\
-1-p\_0^\* & \text {if }k=0.\end{cases}$$
+```tex
+$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
+1-p_0^* & \text {if }k=0.\end{cases}$$
 ```
 
-$$f(k;p\_0^\*) = \begin{cases} p\_0^\* & \text{if }k=1, \\\\\\
-1-p\_0^\* & \text {if }k=0.\end{cases}$$
+renders as
 
-### Publication abstracts
+$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
+1-p_0^* & \text {if }k=0.\end{cases}$$
 
-As Hugo and Academic attempt to parse TOML, Markdown, and LaTeX content in the abstract, the following guidelines should be followed just for the publication `abstract` and `abstract_short` fields:
+{{% alert warning %}}
+If `markup: mmark` is not placed in the front matter of all pages using math, then Markdown special characters need to be escaped in the math with a backslash to prevent the math being parsed as Markdown. For example, `*` and `_` become `\*` and `\_` respectively.
+
+As Hugo and Academic attempt to parse YAML, Markdown, and LaTeX content in the abstract, the following guidelines should be followed just for the publication `abstract` and `abstract_short` fields:
 
 - escape each LaTeX backslash (`\`) with an extra backslash, yielding `\\`
 - escape each LaTeX underscore (`_`) with two backslashes, yielding `\\_`
 
 Hence, `abstract: "${O(d_{\max})}$"` becomes `abstract: "${O(d\\_{\\max})}$"`.
+{{% /alert %}}
 
 ## Table
 
@@ -360,7 +436,23 @@ Result:
 
 ## Alerts
 
-Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:
+Academic supports a Markdown extension for asides, also referred to as *alerts*.
+
+Asides are a useful feature that add side content such as notes, hints, or warnings to your articles. They are especially handy when writing educational tutorial-style articles or documentation.
+
+You can enable this feature either by using the _Alert_ shortcode below or by adding `markup: mmark` to your page front matter and prefixing a paragraph with `A>`. The paragraph will render as an aside with the default *note* style:
+
+```markdown
+A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+```
+
+renders as
+
+A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+
+Alternatively, you can use the more powerful _Alert_ shortcode which offers more options and does not require `markup: mmark`.
+
+Use the corresponding shortcodes to enable alerts inside your content:
 
     {{%/* alert note */%}}
     Here's a tip or note...
@@ -385,3 +477,5 @@ Here's some important information...
 ## Table of Contents
 
 A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the `{{%/* toc */%}}` shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.
+
+_Note that this feature is not currently compatible with the `markup: mmark` front matter option._
