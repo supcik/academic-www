@@ -47,7 +47,7 @@ If you create your own theme, consider giving it a unique name and *sharing* you
 
 ## Website icon
 
-Save your main icon and mobile icon as square PNG images named `icon.png` (32x32 pixels) and `icon-192.png` (192x192 pixels), respectively. Place them in your root `static/img/` folder.
+Save your desktop and mobile icons as square PNG images named `icon-32.png` (32x32 pixels), `icon-192.png` (192x192 pixels), and `icon-512.png` (512x512 pixels) respectively. Place them in your root `static/img/` folder.
 
 ## Analytics
 
@@ -57,7 +57,27 @@ To integrate other third party analytics services, refer to the **Add Scripts** 
 
 ## Comments
 
-The Disqus commenting variable (`disqusShortname`) in `config/_default/config.toml` can be set to your own [Disqus](https://disqus.com/) shortname to enable visitors to comment on your posts.
+**Academic supports both the extremely popular [Disqus](https://disqus.com) commenting platform and the [Commento](https://commento.io/) fast, Markdown supported, privacy-focused commenting platform.
+
+To configure commenting, open `config/_default/params.toml` in your text editor and scroll down to edit the Comments section:
+
+```toml
+# Comments.
+[comments]
+  # Comment provider:
+  #   0: Disabled
+  #   1: Disqus (https://disqus.com)
+  #   2: Commento (https://commento.io)
+  engine = 0
+
+  # Which page types are commentable?
+  commentable = {page = true, post = true, docs = true}
+
+  # Configuration of Disqus.
+  [comments.disqus]
+    shortname = ""  # Paste the shortname from your Disqus dashboard.
+    show_count = true  # Show comment count in page header? (true/false)
+```
 
 ## Add scripts (JS)
 
