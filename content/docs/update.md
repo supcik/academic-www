@@ -33,30 +33,37 @@ Academic Kickstart comes with an [update script](https://github.com/sourcethemes
 
 Please follow the method below which corresponds to how you originally installed Academic:
 
-### If you installed `academic-kickstart`
+### If you installed Academic Kickstart
 
-By default, Academic is installed as a Git sub-module which can be updated by running the following command:
+By default, Academic is installed as a Git sub-module which can be updated by opening a Terminal at the root of your site and running the following command from :
 
 ```bash
 git submodule update --remote --merge
+cd themes/academic
+git checkout <VERSION>
 ```
 
-### If you installed by Git cloning `hugo-academic`
+where `<VERSION>` is the [version](https://github.com/gcushen/hugo-academic/releases) in the form *vX.X.X* that you wish to update to. Otherwise, to update to the latest development version, substitute `<VERSION>` with *master*.
+
+### If you installed by Git cloning *hugo-academic*
 
 Before updating for the first time, the remote *origin* repository should be renamed to *upstream*:
 
-    $ cd themes/academic
-    $ git remote rename origin upstream
+    cd themes/academic
+    git remote rename origin upstream
 
-To list available updates:
+To list all available updates:
 
-    $ cd themes/academic
-    $ git fetch upstream
-    $ git log --pretty=oneline --abbrev-commit --decorate HEAD..upstream/master
+    cd themes/academic
+    git fetch upstream
+    git log --pretty=oneline --abbrev-commit --decorate HEAD..upstream/master
 
 Then, update by running:
 
-    $ git pull upstream
+    git checkout <VERSION>
+    git pull upstream
+
+where `<VERSION>` is defined in the previous section.
 
 ### If you installed from a ZIP
 
