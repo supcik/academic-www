@@ -19,9 +19,9 @@ This quick tutorial will show you how to setup and use Academic.
 
 ## Choose the right theme for you
 
-Check out the [available color themes]({{< relref "../themes.md" >}}) and have fun choosing a design you love.
+Check out the [available themes]({{< relref "../themes.md" >}}) and have fun choosing a design you love.
 
-Once you have settled on a theme, edit your `config/_default/params.toml` file in a text editor and set the `color_theme` option to the name of the chosen theme.
+Once you have settled on a theme, edit your `config/_default/params.toml` file in a text editor and set the `theme` option to the name of the chosen theme.
 
 {{% alert note %}}
 If you are unfamiliar with setting options in a TOML file, you can [learn more about this human-friendly configuration syntax here]({{< relref "./front-matter.md" >}}).
@@ -31,13 +31,16 @@ If you are unfamiliar with setting options in a TOML file, you can [learn more a
 In older versions, the configuration is stored entirely in one file named `config.toml`.
 {{% /alert %}}
 
-The following font styles are also available and can be set by the `font` option:
+Your theme comes with a font set to style your titles and text, but you may choose to override it by specifying one of the available font sets with the `font` option:
 
-- default (modern)
-- classic (original Academic v1 style)
-- playfair (traditional serif)
+- **Minimal** (modern)
+- **Classic** (original Academic v1 style)
+- **Rose** (traditional serif)
+- **Mr Robot** (futuristic)
 
-Don't worry if you are not 100% happy with the colors or font yet, as these can be fully customized [later on]({{< relref "customization.md" >}}).
+The font size may be adjusted from _XS_ (extra small) to _XL_ (extra large) with the `font_size` option.
+
+Don't worry if you are not 100% happy with the colors or font yet, as these can be [fully customized]({{< relref "customization.md" >}}) later.
 
 ## Choose the right layout for you
 
@@ -71,14 +74,30 @@ After selecting a theme and a layout, make it your own.
 
 ### Core parameters
 
-The core parameters for the website can be edited in the `config/_default/params.toml` file:
+The core parameters for the website can be edited in the `config/_default/params.toml` file.
 
-- Edit your personal/business details under the *Contact Widget* section
-  - Any details entered here will be displayed in the *Contact* widget (if used)
-  - To hide a contact field, simply clear the value to `""` or comment the line out by prefixing it with a hash (`#`) 
-  - The [contact form can be configured]({{< relref "page-builder.md#contact" >}}) separately in the front matter of the *Contact* widget itself
-- If you write technical content, consider setting `highlight = true` and/or `math = true`, otherwise set them to `false`
-  - If you write *R* code, uncomment `highlight_languages` (remove the `#` line prefix) so that `highlight_languages = ["r"]`
+Edit your personal/business details under the _Contact Details_ section:
+
+- Any details entered here will be displayed in the _Contact_ widget (if used)
+- For organizations, some contact details (such as phone) may be used to enrich search results (such as on Google)
+- To hide a contact field, simply clear the value to `""` or comment the line out by prefixing it with a hash (`#`) 
+- The [contact form can be configured]({{< relref "page-builder.md#contact" >}}) separately in the front matter of the *Contact* widget itself
+
+If you are an **organization or project**,
+
+- edit your `site_type` to reflect the nature of your business
+- add your organization or project name under `org_name`
+- upload your logo image to the `static/img/` folder and then reference the filename in the `logo` option
+
+Enable **rich content** for your site under the _Site Features_ section. If you write technical content, consider enabling the following options, otherwise set these options to `false`:
+
+  - [Code syntax highlighting](https://academic-demo.netlify.com/post/writing-technical-content/#code) with `highlight = true`
+  - [LaTeX math](https://academic-demo.netlify.com/post/writing-technical-content/#math) with `math = true`
+  - [Mermaid diagram drawing](https://academic-demo.netlify.com/post/writing-technical-content/#diagrams) with `diagram = true`
+
+The **Privacy Pack** can also be activated from the _Site Features_ section. When the privacy pack is enabled, a cookie consent message will be shown to visitors (linking to your Privacy Policy) and visitor IPs anonymized in Google Analytics (if enabled).
+
+To add a **Privacy Policy**, create a `privacy.md` file in your `content` folder and remove any `draft` option from the front matter to publish it. Similarly, to add **Legal Terms**, create a `terms.md` file. Links to these documents will automatically appear in your site footer.
 
 ### Introduce yourself
 
@@ -146,7 +165,9 @@ Now visit [localhost:1313](http://localhost:1313) and your new Academic powered 
 Before deploying your site, there are some final options we can set in `config/_default/config.toml`:
 
 - Set `title` to your desired website title, such as your name or business name
-- Set `baseurl` to your website URL (this will be provided by your host such as [Netlify]({{< relref "deployment.md" >}})) - **come back to this option later if you don't have your URL/domain yet**
+- Set `baseurl` to your website URL (this can be provided by your host such as [Netlify]({{< relref "deployment.md" >}}))
+  - You can make a great impression on your visitors with your own [**custom domain name**]({{< relref "domain.md" >}})
+  - If you don't have your URL/domain yet, come back to add it later - some features may not fully function until it is added
 
 Publish your site to the world by following the [deployment steps]({{< relref "deployment.md" >}}).
 
