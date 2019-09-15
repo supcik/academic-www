@@ -32,3 +32,9 @@ To get the most out of Academic, start by reviewing a few introductory topics:
 [Add content]({{< relref "managing-content.md" >}}) - Add content to your homepage such as blog posts, projects, talks, or publications.
 
 [Community](http://discuss.gohugo.io) - Connect with the Academic and Hugo community.
+
+## A note on versions
+
+The documentation on this site aims to track the _latest version_ of Academic. 
+
+For _previous versions_ of Academic, one can travel back in time via the GitHub [repository for this site](https://github.com/sourcethemes/academic-www). Simply note the [date of your version](https://github.com/gcushen/hugo-academic/releases), and view the Markdown pages in the [repository for this site](https://github.com/sourcethemes/academic-www) shortly after that point in time.

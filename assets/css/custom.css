@@ -4,6 +4,11 @@ figure {
   margin-bottom: 0;
 }
 
+figure img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Make homepage section padding compact. */
 .home-section {
   padding: 60px 0 60px 0;

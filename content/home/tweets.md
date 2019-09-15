@@ -5,7 +5,7 @@ active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
 title = "A large community"
-subtitle = "See what fans are saying *#MadeWithAcademic*" 
+subtitle = "See what fans are saying [*#MadeWithAcademic*](https://twitter.com/search?q=%23MadeWithAcademic&src=typd)"
 +++
 
 {{< tweet 993410504570888192 >}}

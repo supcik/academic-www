@@ -16,7 +16,7 @@ subtitle = ""
   padding = ["20px", "0", "20px", "0"]  
 +++
 
-{{< figure library="true" src="docs/writing-technical-content.gif" title="Intuitive technical content writing." lightbox="true" >}}
+{{< figure library="true" src="docs/writing-technical-content.gif" title="Intuitive technical content writing." >}}
 
 - **Page builder** - Create *anything* with [**widgets**]({{< relref "/docs/page-builder.md" >}}) and [**elements**]({{< relref "/docs/writing-markdown-latex.md" >}})
 - **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
