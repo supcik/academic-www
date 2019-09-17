@@ -29,7 +29,6 @@ Note that this search engine runs entirely in the web browser on the visitor's d
 
 ### Algolia
 
-1. Under `[search]` in `config/_default/params.toml` set `engine = 2`
 1. Register a **free** [Algolia](https://www.algolia.com) account and follow their wizard to create a new search app 
 1. Build your site by running the `hugo` command in Terminal or Command Prompt
 1. Upload the generated `public/index.json` file to the *Indicies* page in your Algolia dashboard
