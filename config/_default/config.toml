@@ -15,9 +15,6 @@ baseurl = "https://sourcethemes.com/academic/"
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
 copyright = "&copy; 2016-{year} [George Cushen](https://twitter.com/georgecushen)"
 
-# Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-78646709-1"
-
 ############################
 ## Advanced options below ##
 ############################
