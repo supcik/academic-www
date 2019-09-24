@@ -685,24 +685,32 @@ First, [create a user account]({{< relref "get-started.md#introduce-yourself" >}
 
 Add each user to a user group using the `user_groups` option in the user account at `content/authors/<USERNAME>/_index.md`. For example setting `user_groups = ["Researchers", "Visitors"]` in a user account will add that user to the *Researcher* and *Visitors* groups which we can display in the People widget.
 
-The `people.md` section in the demo uses the *People* widget. Set `active = true` in its front matter to view the section.
+The _Meet The Team_ section in the demo with filename `people.md` uses the *People* widget. Set `active = true` in its front matter to view the section.
 
-Edit the front matter of a section to add the People widget and personalize its options such as the user groups to display:
+Edit the front matter of a section to add the People widget. You can personalize options such as the user groups to display and whether you would like the show each user's social links and interests:
 
 ```toml
-widget = "people"  # Use the Featured widget
+widget = "people"  # Use the People widget
 headless = true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
 
-# List user groups to display.
-#   Edit each user's `user_groups` to add them to one or more of these groups.
-user_groups = ["Principal Investigators",
-               "Researchers",
-               "Grad Students",
-               "Administration",
-               "Visitors",
-               "Alumni"]
+[content]
+  # Choose which groups/teams of users to display.
+  #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
+  user_groups = ["Principal Investigators",
+                 "Researchers",
+                 "Grad Students",
+                 "Administration",
+                 "Visitors",
+                 "Alumni"]
+
+[design]
+  # Show user's social networking links? (true/false)
+  show_social = false
+
+  # Show user's interests? (true/false)
+  show_interests = true
 ```
 
 ## Slider
