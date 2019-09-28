@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-hugo server --i18n-warnings -p 59000
+hugo server --minify --i18n-warnings -p 59000
