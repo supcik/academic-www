@@ -17,11 +17,21 @@ It is possible to carry out many customizations *without* editing any code in th
 
 ## Custom theme
 
-Both the **colour theme** and **font** can be customized.
+Both the **colour theme** and **font set** can be customized.
 
-To **customize the color theme**, you can copy a theme such as `themes/academic/data/themes/default.toml` to `data/themes/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/themes/` folders if they do not already exist. Now you can adjust the colors within your theme file using [HTML color codes](https://htmlcolorcodes.com).
+To **customize a color theme**:
 
-To **customize the font theme**, you can copy a theme such as `themes/academic/data/fonts/default.toml` to `data/fonts/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/fonts/` folders if they do not already exist. Now you can adjust the font size and family, choosing from the library of [Google Fonts](https://fonts.google.com/) if you wish.
+1. Copy a theme such as `themes/academic/data/themes/minimal.toml` to `data/themes/my_theme.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/themes/` folders if they do not already exist. Note: avoid using spaces in filenames.
+2. Adjust the colors within your theme file using [HTML color codes](https://htmlcolorcodes.com)
+3. Tell Academic to use your new theme by setting `theme = "my_theme"` in `config/_default/params.toml`
+
+### Custom font
+
+To **customize the font set**:
+
+1. Copy a font set such as `themes/academic/data/fonts/minimal.toml` to `data/fonts/my_font_set.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/fonts/` folders if they do not already exist. Note: avoid using spaces in filenames.
+2. Adjust the font family, choosing from the library of [Google Fonts](https://fonts.google.com) if you wish - refer to the Google Font guide below
+3. Tell Academic to use your new font set by setting `font = "my_font_set"` in `config/_default/params.toml`
 
 To select a free web-font available from Google Fonts:
 
@@ -33,17 +43,17 @@ To select a free web-font available from Google Fonts:
 5. Under **Specify in CSS** in Google Font's dialog, copy the font name and paste it as one of the fonts in your font theme
     - For example, given `font-family: 'B612 Mono', monospace;`, copy `B612 Mono`
 
-### Naming your theme
+### Change font size
 
-If you rename a theme file, the associated `color_theme` or `font_theme` values in `config/_default/params.toml` will also need to be updated to reflect the new name. Avoid using spaces in filenames.
+You can modify the font size all the way from extra small to extra large using the `font_size` option in `config/_default/params.toml`.
 
 ### Example
 
-An example of a custom theme in action can be found in the [repo for this site](https://github.com/sourcethemes/academic-www/blob/master/data/themes/academic.toml) - refer to `data/themes/academic.toml` and the value of `theme` in `params.toml`,
+An example of a custom theme in action can be found in the [repo for this site](https://github.com/sourcethemes/academic-www/blob/master/data/themes/academic.toml) - refer to `data/themes/academic.toml` and the value of `theme` in `params.toml`.
 
 ### Share your theme
 
-If you create your own theme, consider giving it a unique name and *sharing* your new color or font theme with the [community](http://discuss.gohugo.io/).
+If you create your own theme, consider giving it a unique name and *sharing* your new theme or font set with the [community](http://discuss.gohugo.io/) or following the guide on our [Themes]({{< relref "/themes.md" >}}) page so that it can be considered for curation.
 
 ## Website icon
 
@@ -51,7 +61,22 @@ Save your desktop and mobile icons as square PNG images named `icon-32.png` (32x
 
 ## Analytics
 
-To enable [Google Analytics](http://www.google.com/analytics), add your tracking code in `config/_default/config.toml` similarly to `googleAnalytics = "UA-12345678-9"`.
+If you wish to use [Google Analytics](https://analytics.google.com) or [Google Tag Manager](https://tagmanager.google.com), include your associated tracking code (e.g. `UA-12345678-9`):
+
+```toml
+############################
+## Marketing
+############################
+[marketing]
+  google_analytics = ""
+  google_tag_manager = ""
+```
+
+GA only tracks users on your live _production_ website. Hugo's default environments are `development` with the `hugo serve` command and `production` with the `hugo` command. You can explicitly set the environment to production with `HUGO_ENV` or Hugo's `--environment` [option](https://gohugo.io/commands/hugo_env/#readout). If you deploy with Netlify, check that your Netlify settings in `netlify.toml` are similar to the [latest Netlify settings in the _Academic Kickstart_ template](https://github.com/sourcethemes/academic-kickstart/blob/master/netlify.toml).
+
+We recommend testing that your analytics are working as expected. If they are not, check that your production environment is as described above and check that your URL in your GA admin panel matches your site's URL. Furthermore, GA provide a troubleshooting guide to help with any issues.
+
+If you choose to use GA via Google Tag Manager instead (`google_tag_manager`), it will override the direct GA implementation (`google_analytics`) to prevent tracking each user twice.
 
 To integrate other third party analytics services, refer to the **Add Scripts** section.
 
