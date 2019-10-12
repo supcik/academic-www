@@ -1,0 +1,113 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+#[[main]]
+#  pre = "<i class=\"fas fa-home pr-1\" style=\"color: #00d1b2;\"></i>"
+#  name = "Home"
+#  url = "#hero"
+#  weight = 5
+
+[[main]]
+  pre = "<i class=\"fas fa-book pr-1\" style=\"color: #00d1b2;\"></i>"
+  name = "文档"
+  url = "docs/"
+  weight = 10
+
+[[main]]
+  pre = "<i class=\"fas fa-newspaper pr-1\" style=\"color: #00d1b2;\"></i>"
+  name = "更新"
+  url = "updates/"
+  weight = 20
+
+[[main]]
+  pre = "<i class=\"fas fa-images pr-1\" style=\"color: #00d1b2;\"></i>"
+  name = "展示柜"
+  url = "#expo"
+  weight = 30
+
+[[main]]
+  pre = "<i class=\"fas fa-brush pr-1\" style=\"color: #00d1b2;\"></i>"
+  name = "主题"
+  url = "themes/"
+  weight = 30
+
+[[main]]
+  pre = "<i class=\"fas fa-donate pr-1\" style=\"color: #00d1b2;\"></i>"
+  name = "参与贡献"
+  url = "#support"
+  weight = 40
+
+#[[main]]
+#  pre = "<i class=\"fas fa-address-card pr-1\" style=\"color: #00d1b2;\"></i>"
+#  name = "Widgets"
+#  url = "widgets/"
+#  weight = 40
+
+[[main_right]]
+  name = "<i class=\"fab fa-github-alt\" style=\"color: #333; font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
+  url = "https://github.com/gcushen/hugo-academic"
+  weight = 10
+
+[[main_right]]
+  name = "<i class=\"fas fa-comments\" style=\"color: rgb(123, 22, 255); font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
+  url = "https://spectrum.chat/academic"
+  weight = 20
+
+[[main_right]]
+  name = "<i class=\"fab fa-twitter\" style=\"color: #55acee; font-size: 1rem; line-height: 1.25\"></i>"
+  post = ""
+  url = "https://twitter.com/source_themes"
+  weight = 20
+
+[[main_right]]
+  pre = "<span class=\"btn btn-primary d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3\">"
+  name = "快速开始"
+  post = "</span>"
+  url = "docs/install/"
+  weight = 30
+
+# Documentation
+
+[[docs]]
+  name = "指南"
+  weight = 10
+  url = "/docs/"
+
+[[docs]]
+  name = "开始"
+  weight = 20
+  identifier = "setup"
+
+[[docs]]
+  name = "建立内容"
+  weight = 30
+  identifier = "content"
+
+[[docs]]
+  name = "部署网站"
+  weight = 40
+  identifier = "deploy"
+
+[[docs]]
+  name = "功能"
+  weight = 50
+  identifier = "features"
+
+[[docs]]
+  name = "汇入"
+  identifier = "migrate"
+  weight = 60
+
+[[docs]]
+  name = "贡献"
+  url = "/docs/contribute/"
+  weight = 70
+
+[[docs]]
+  name = "FAQ"
+  weight = 80
+  url = "/docs/faq/"

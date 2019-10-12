@@ -19,13 +19,54 @@ Both the **interface** and **content** language can be changed to suit your need
 
 ## Interface
 
-The **Interface Language** is used to change the language throughout your site. The following interface languages are currently available: English, 中文 (简体), Español, Português, Deutsch, Euskara, Français, Italiano, 日本語, 한국어, Nederlands, Polski, Русский, Türkçe, Tiếng Việt and Catalan.
+The **Interface Language** is used to change the language throughout your site. By default, Academic activates the English language pack as the display language.
+
+### Available Language Packs
+
+The following interface languages are currently available:
+
+- **Català** (ca)
+- **Dansk** (da)
+- **Deutsch** (de)
+- **Ελληνικά** (el)
+- **English** (en)
+- **Español** (es)
+- **Euskara** (eu)
+- **Français** (fr)
+- **Magyar** (hu)
+- **Bahasa Indonesia** (id)
+- **Italiano** (it)
+- **日本語** (ja)
+- **한국어** (ko)
+- **Nederlands** (nl)
+- **Polski** (pl)
+- **Português** (pt)
+- **Română** (ro)
+- **Русский** (ru)
+- **Türkçe** (tr)
+- **Tiếng Việt** (vi)
+- **中文 (简体)** (zh)
+- **中文 (繁體)** (zh-Hant)
+
+### Setting the Language
+
+Choose the languages you wish to use from the list above, noting their identifiers in brackets. Alternatively, a new language pack can be created by following the guide in the next section.
+
+Follow the brief instructions in your `config/_default/languages.toml` to configure which language packs you wish to use.
+
+To change the **default language** used by Academic, set `defaultContentLanguage` to the desired language identifier in your `config.toml` file.
+
+### Create or Modify a Language Pack
 
 The interface text is stored in language files which are collected from Academic's `themes/academic/i18n/` folder, as well as an `i18n/` folder at the root of your project.
 
-To edit the interface text, copy `themes/academic/i18n/en.yaml` to `i18n/en.yaml` (relative to the root of your website). Open the new file and make any desired changes to the text appearing after `translation:`. Note that the language files are formatted in YAML syntax.
+To edit the interface text, copy a language pack such as `themes/academic/i18n/en.yaml` to your own `i18n` folder at the root of your site folder, so you have a path like `i18n/en.yaml`. Open the new file and make any desired changes to the text appearing after `translation:`. Note that the language files are formatted in YAML syntax.
 
-To translate the interface text to another language, follow the above instructions, but name the new file in the form `i18n/X.yaml` where `X` is the appropriate [ISO/RFC5646 language identifier](http://www.w3schools.com/tags/ref_language_codes.asp) for the translation. Then follow the brief instructions in the *Language* section at the bottom of your `config.toml`. To change the default language used by Academic, set `defaultContentLanguage` to the desired language identifier in your configuration file.
+To create a new language pack, translating the interface text to another language, follow the above instructions, but name the new file in the form `i18n/X.yaml` where `X` is the appropriate [ISO/RFC5646 language identifier](http://www.w3schools.com/tags/ref_language_codes.asp) for the translation.
+
+If you translate the interface into a new language, please consider contributing it by opening a Pull Request on our GitHub.
+
+### Navigation Bar
 
 To translate the navigation bar, you can edit the default `[[main]]` instances in `config/_default/menu.toml`. However, for a multilingual site, you will need to duplicate this file to `config/_default/menu.XX.toml` and translate its menu items, where `XX` is the language identifier (e.g. `menu.zh.toml` for Simplified Chinese). Thus, the navigation bar can be displayed in multiple languages.
 
