@@ -156,13 +156,17 @@ Then add `aliases = ["/blog/"]` to your post archive page at `post/_index.md` so
 
 ## Customize style (CSS)
 
-To personalize Academic, you can **choose a colour theme and font theme** in `config/_default/params.toml`.
+To personalize Academic, you can **choose a colour theme and font set** in `config/_default/params.toml`.
 
 For further personalization, you can [**create your own colour theme and font theme**](#custom-theme).
 
-If advanced style customization is required, **CSS code** can be written to override or enhance the existing styles.
+If advanced style customization is required, **CSS code** can be written to override or enhance the existing styles:
 
-Given some custom CSS named `custom.css`, we can place it in `assets/css/` (create the folders within your website root if they don't exist). Then open your `config/_default/params.toml` and set `plugins_css = ["custom"]`, where *custom* is your CSS filename without its extension.
+1. Create the `assets/scss/` folder if it doesn't exist
+2. Create a file named `custom.scss`
+3. Add your custom CSS code to the file you created and re-run Hugo to view changes
+
+**Note: prior to v4.6, custom CSS can be added using the `plugins_css` option in `params.toml`.**
 
 ## Override a template
 
