@@ -181,6 +181,12 @@ I :heart: Academic :smile:
 
 This is a {{< hl >}}highlighted quote{{< /hl >}}.
 
+## Mention a user
+
+To mention someone, type `{{% mention "username" %}}` where `username` corresponds to a user account in Academic.
+
+_Requires Academic v4.6+._
+
 ## Footnotes
 
     I have more [^1] to say.
@@ -312,7 +318,7 @@ The following table lists the supported options for configuring highlight.js, al
 option                | type    | description                     | config.toml | preamble
 ----------------------|---------|---------------------------------|-------------|---------
 `highlight`           | boolean | enable/disable highlighting     | yes         | yes
-`highlight_languages` | slice   | choose additional languages     | yes         | yes
+`highlight_languages` | slice   | choose additional languages     | yes         | no
 `highlight_style`     | string  | choose a highlighting style     | yes         | no
 
 

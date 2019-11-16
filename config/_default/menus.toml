@@ -11,7 +11,7 @@
 
 [[main]]
   pre = "<i class=\"fas fa-book pr-1\" style=\"color: #00d1b2;\"></i>"
-  name = "Documentation"
+  name = "Docs"
   url = "docs/"
   weight = 10
 
@@ -35,7 +35,7 @@
 
 [[main]]
   pre = "<i class=\"fas fa-donate pr-1\" style=\"color: #00d1b2;\"></i>"
-  name = "Support Academic"
+  name = "Support Us"
   url = "#support"
   weight = 40
 
