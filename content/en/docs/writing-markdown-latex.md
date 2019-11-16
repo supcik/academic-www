@@ -183,7 +183,7 @@ This is a {{< hl >}}highlighted quote{{< /hl >}}.
 
 ## Mention a user
 
-To mention someone, type `{{% mention "username" %}}` where `username` corresponds to a user account in Academic.
+To mention someone, type `{{%/* mention "username" */%}}` where `username` corresponds to a user account in Academic.
 
 _Requires Academic v4.6+._
 
