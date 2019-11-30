@@ -44,6 +44,7 @@ The following interface languages are currently available:
 - **Română** (ro)
 - **Русский** (ru)
 - **Türkçe** (tr)
+- **Українська** (uk)
 - **Tiếng Việt** (vi)
 - **中文 (简体)** (zh)
 - **中文 (繁體)** (zh-Hant)
