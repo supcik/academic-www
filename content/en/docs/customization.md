@@ -102,6 +102,11 @@ To configure commenting, open `config/_default/params.toml` in your text editor 
   [comments.disqus]
     shortname = ""  # Paste the shortname from your Disqus dashboard.
     show_count = true  # Show comment count in page header? (true/false)
+
+  # Configuration of Commento.
+  [comments.commento]
+    # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
+    url = ""
 ```
 
 ## Add scripts (JS)
