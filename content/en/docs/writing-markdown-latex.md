@@ -6,7 +6,6 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 weight = 70
 
-markup = "mmark"
 math = true
 diagram = true
 
@@ -36,17 +35,18 @@ Content can be written using [Markdown](https://github.com/adam-p/markdown-here/
 
     Strikethrough with ~~two tildes~~.
 
-## Ordered lists
+## Lists
+### Ordered
 
     1. First item
     2. Another item
 
-## Unordered lists
+### Unordered 
 
     * First item
     * Another item
 
-### Todo lists
+### Todo
 
 Todo lists can be written in Academic by using the standard Markdown syntax:
 
@@ -379,7 +379,11 @@ To include a single tweet, pass the tweet’s ID from the tweet's URL as paramet
 
 ## $\rm \LaTeX$ math
 
-Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file and adding `markup: mmark` to your page front matter.
+Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file.
+
+{{% alert warning %}}
+Prior to Academic v4.7, you'll also need to add `markup: mmark` to your page front matter in order to display math.
+{{% /alert %}}
 
 To render *inline* or *block* math, wrap your LaTeX math with `$$...$$`.
 
@@ -411,9 +415,7 @@ $$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
 1-p_0^* & \text {if }k=0.\end{cases}$$
 
 {{% alert warning %}}
-If `markup: mmark` is not placed in the front matter of all pages using math, then Markdown special characters need to be escaped in the math with a backslash to prevent the math being parsed as Markdown. For example, `*` and `_` become `\*` and `\_` respectively.
-
-As Hugo and Academic attempt to parse YAML, Markdown, and LaTeX content in the abstract, the following guidelines should be followed just for the publication `abstract` and `abstract_short` fields:
+As Hugo and Academic attempt to parse YAML, Markdown, and LaTeX content in the abstract field for publications and talks, Markdown special characters need to be escaped in any math within the abstract fields by using a backslash to prevent the math being parsed as Markdown. The following tips may help:
 
 - escape each LaTeX backslash (`\`) with an extra backslash, yielding `\\`
 - escape each LaTeX underscore (`_`) with two backslashes, yielding `\\_`
@@ -446,35 +448,25 @@ Academic supports a Markdown extension for asides, also referred to as *alerts*.
 
 Asides are a useful feature that add side content such as notes, hints, or warnings to your articles. They are especially handy when writing educational tutorial-style articles or documentation.
 
-You can enable this feature either by using the _Alert_ shortcode below or by adding `markup: mmark` to your page front matter and prefixing a paragraph with `A>`. The paragraph will render as an aside with the default *note* style:
-
-```markdown
-A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-```
-
-renders as
-
-A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-
-Alternatively, you can use the more powerful _Alert_ shortcode which offers more options and does not require `markup: mmark`.
-
-Use the corresponding shortcodes to enable alerts inside your content:
+You can enable this feature either by using the _Alert_ shortcode below. The paragraph will render as an aside with the default *note* style:
 
     {{%/* alert note */%}}
-    Here's a tip or note...
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
     {{%/* /alert */%}}
 
 This will display the following *note* block:
 
 {{% alert note %}}
-Here's a tip or note...
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
 {{% /alert %}}
+
+Alternatively, a warning can be displayed to the reader using the the _warning_ option:
 
     {{%/* alert warning */%}}
     Here's some important information...
     {{%/* /alert */%}}
 
-This will display the following *warning* block:
+This will display the following *warning* notice to the reader:
 
 {{% alert warning %}}
 Here's some important information...
@@ -483,5 +475,3 @@ Here's some important information...
 ## Table of Contents
 
 A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the `{{%/* toc */%}}` shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.
-
-_Note that this feature is not currently compatible with the `markup: mmark` front matter option._

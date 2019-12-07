@@ -107,7 +107,7 @@ editable: true  # Allow visitors to edit the page? Supported by the Page, Post, 
 
 ### Math and Code
 
-To enable **LaTeX math** rendering for a page, you should include `markup: mmark` and `math: true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config/_default/params.toml`. See the [math guide]({{< relref "writing-markdown-latex.md" >}}) for further details.
+To enable **LaTeX math** rendering for a page, you should include `math: true` in the page's [front matter]({{< relref "front-matter.md" >}}), as demonstrated in the included example site. Otherwise, to enable math on the homepage or for all pages, you must globally set `math = true` in `config/_default/params.toml`. See the [math guide]({{< relref "writing-markdown-latex.md" >}}) for further details.
 
 To disable **source code highlighting** for all pages, set `highlight = false` in `config/_default/params.toml`. You can then enable source code highlighting only on pages that need it by setting `highlight: true` in that page's [front matter]({{< relref "front-matter.md" >}}). See the [code highlighting guide]({{< relref "writing-markdown-latex.md#code-highlighting" >}}) for further details.
 
