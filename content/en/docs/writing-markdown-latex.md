@@ -442,11 +442,11 @@ Result:
 | `hugo serve -w`   | View your website.             |
 
 
-## Alerts
+## Asides
 
 Academic supports a Markdown extension for asides, also referred to as *alerts*.
 
-Asides are a useful feature that add side content such as notes, hints, or warnings to your articles. They are especially handy when writing educational tutorial-style articles or documentation.
+Asides are a useful feature that **add side content such as notes, hints, or warnings to your articles**. They are especially handy when writing educational tutorial-style articles or documentation.
 
 You can enable this feature either by using the _Alert_ shortcode below. The paragraph will render as an aside with the default *note* style:
 
@@ -475,3 +475,5 @@ Here's some important information...
 ## Table of Contents
 
 A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the `{{%/* toc */%}}` shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.
+
+_Note: the `toc` shortcode may not yet function correctly in **Hugo v0.60+** due to a known Hugo limitation. As a temporary workaround, `markup: blackfriday` can be added to a page's front matter to enable use of `toc` shortcode._

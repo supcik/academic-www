@@ -31,4 +31,11 @@ Duplicate an existing documentation page and rename it appropriately.
 hugo new updates/vX.X.X.md
 ```
 
+## License
+
+Documentation and content (including guides, references, and associated images) are licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+Everything in this repository not covered above, such as the site's code, is licensed under the [included MIT license](LICENSE.md).
+
+
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/academic-www/readme?pixel)](https://github.com/igrigorik/ga-beacon)
