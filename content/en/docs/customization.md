@@ -57,7 +57,15 @@ If you create your own theme, consider giving it a unique name and *sharing* you
 
 ## Website icon
 
+Are you looking to customize the desktop and mobile icon which appears in your site's Progressive Web App (PWA) and web browser tab?
+
+Save your icon as a square 512x512 pixel image named `icon.png` and place the image in your root `assets/images/` folder, creating the `assets` and `images` folders if they don't already exist.
+
+{{% alert note %}}
+**For versions of Academic prior to v4.7:**
+
 Save your desktop and mobile icons as square PNG images named `icon-32.png` (32x32 pixels), `icon-192.png` (192x192 pixels), and `icon-512.png` (512x512 pixels) respectively. Place them in your root `static/img/` folder.
+{{% /alert %}}
 
 ## Analytics
 
