@@ -48,7 +48,7 @@ description = "The website builder for Hugo. Create a beautifully simple site fr
 
 # Display a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-logo = "icon-192.png"
+logo = "menu_logo.png"
 
 ############################
 ## Site Features
