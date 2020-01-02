@@ -1,19 +1,17 @@
-+++
-title = "Getting started"
-
-date = 2016-04-20
-toc = true  # Show table of contents? true/false
-type = "docs"  # Do not modify.
-weight = 20
-
-math = true
-
-aliases = ["post/getting-started/"]
-
-[menu.docs]
-    parent = "setup"
-    weight = 20
-+++
+---
+title: Getting started
+date: 2016-04-20
+toc: true
+type: docs
+weight: 20
+math: true
+aliases:
+  - post/getting-started/
+menu:
+  docs:
+    parent: setup
+    weight: 20
+---
 
 This quick tutorial will show you how to setup and use Academic.
 
@@ -87,7 +85,7 @@ If you are an **organization or project**,
 
 - edit your `site_type` to reflect the nature of your business
 - add your organization or project name under `org_name`
-- upload your logo image to the `static/img/` folder and then reference the filename in the `logo` option
+- save your logo image as `logo.png` and upload the image to the `assets/images/` folder, creating the `assets` and `images` folders if they don't already exist at the root of your site
 
 Enable **rich content** for your site under the _Site Features_ section. If you write technical content, consider enabling the following options, otherwise set these options to `false`:
 
@@ -119,7 +117,7 @@ To display an avatar, place a square cropped portrait photo named `avatar` into 
 Once you have setup your account, your username can be referenced in the `authors` field of content, as per the demo post.
 
 {{% alert note %}}
-The superuser username can be changed from *admin* by renaming the `admin` folder. Usernames must be lowercase with any spaces replaced with hyphens (`-`). The [ASCII](https://www.w3schools.com/charsets/ref_html_ascii.asp) alphanumeric character set is recommended.
+The superuser username can be changed from *admin* by renaming the `admin` folder. Usernames must be lowercase with any spaces replaced with hyphens (`-`).
 {{% /alert %}}
 
 {{% alert warning %}}
