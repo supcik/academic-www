@@ -16,3 +16,11 @@ Academic is an MIT licensed open source project and completely free to use. Howe
 - [Wear the T-shirt](https://academic.threadless.com/)
 - Spread the word - Tweet/blog/vlog about your Academic experience
 - Assist on GitHub by responding to issues, reviewing code, and submitting pull requests
+
+---
+
+Your support is really appreciated!
+
+_Pen Pal_ supporters on [Patreon](https://www.patreon.com/cushen) include:
+
+- Yuto Sasaki
