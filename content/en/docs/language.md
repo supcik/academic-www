@@ -23,7 +23,7 @@ The **Interface Language** is used to change the language throughout your site. 
 
 ### Available Language Packs
 
-The following interface languages are currently available:
+Choose from **25+** interface languages including:
 
 - **Català** (ca)
 - **Dansk** (da)
@@ -31,18 +31,22 @@ The following interface languages are currently available:
 - **Ελληνικά** (el)
 - **English** (en)
 - **Español** (es)
+- **Eesti** (et)
 - **Euskara** (eu)
 - **Français** (fr)
 - **Magyar** (hu)
 - **Bahasa Indonesia** (id)
 - **Italiano** (it)
 - **日本語** (ja)
+- **ភាសាខ្មែរ** (km)
 - **한국어** (ko)
+- **Latviešu** (lv)
 - **Nederlands** (nl)
 - **Polski** (pl)
 - **Português** (pt)
 - **Română** (ro)
 - **Русский** (ru)
+- **Svenska** (sv)
 - **Türkçe** (tr)
 - **Українська** (uk)
 - **Tiếng Việt** (vi)
