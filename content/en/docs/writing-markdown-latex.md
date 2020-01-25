@@ -15,7 +15,11 @@ linktitle = "Writing content"
   weight = 30
 +++
 
-Content can be written using [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics), Shortcodes. *Shortcodes* are plugins which are bundled with Academic or inherited from [Hugo](http://gohugo.io/extras/shortcodes/). Additionally, HTML may be written in Markdown documents for advanced formatting.<!--more--> This article gives an overview of the most common formatting options, including features that are exclusive to Academic.
+Rich content can be written in Academic using **Markdown**, [**LaTeX math**](https://en.wikibooks.org/wiki/LaTeX/Mathematics), and **Shortcodes**. This article gives an overview of the most common formatting options, including features that are exclusive to Academic.<!--more-->
+
+{{% alert note %}}
+*Shortcodes* are plugins which are bundled with Academic or inherited from [Hugo](http://gohugo.io/extras/shortcodes/). Additionally, **HTML** may be written in Markdown documents for advanced formatting.
+{{% /alert %}}
 
 ## Sub-headings
 
@@ -168,6 +172,26 @@ See the [Emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/) f
     I : heart : Academic : smile :
     
 I :heart: Academic :smile:
+
+## Icons
+
+Since **v4.8+**, Academic enables you to use a wide range of [icons from _Font Awesome_ and _Academicons_]({{< relref "page-builder.md#icons" >}}) in addition to [emojis](#emojis).
+
+Here are some examples using the _icon_ shortcode to render icons:
+
+```markdown
+{{</* icon name="terminal" pack="fas" */>}} Terminal  
+{{</* icon name="python" pack="fab" */>}} Python  
+{{</* icon name="r-project" pack="fab" */>}} R
+```
+
+renders as
+
+{{< icon name="terminal" pack="fas" >}} Terminal  
+{{< icon name="python" pack="fab" >}} Python  
+{{< icon name="r-project" pack="fab" >}} R
+
+Optionally, left and right padding can be added to an icon using the `padding_left="3"` and `padding_right="3"` options, respectively.
 
 ## Blockquote
 
