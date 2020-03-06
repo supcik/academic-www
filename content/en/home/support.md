@@ -24,3 +24,4 @@ Your support is really appreciated!
 _Pen Pal_ supporters on [Patreon](https://www.patreon.com/cushen) include:
 
 - Yuto Sasaki
+- Alan Hinchcliffe
