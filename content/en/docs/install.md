@@ -27,7 +27,11 @@ You can choose from one of the following four methods to install:
   * One-click install of Academic creates an `academic-kickstart` repository in your GitHub or GitLab account
   * Netlify will provide you with a customizable URL to access your new site, [or get your own domain](https://sourcethemes.com/academic/docs/domain/)
   * Shortly after editing content in your repository, your site will automatically update
-  * To edit your site in a [Markdown editor](https://www.typora.io) on your computer, perform the steps in the [*Install with Git*](#install-with-git) section below
+  * To write blog posts in a rich online editor in your web browser,
+    - [Login to Netlify](https://www.netlify.com/), find the site you deployed with Netlify, and add yourself as an editor under the _Identity_ section by clicking _Invite Users_ and entering your email address
+    - Head over to **`YOUR_SITE.com/admin/`** to view your content management panel and begin publishing content
+  * To edit your site in a [Markdown editor](https://www.typora.io) on your computer,
+    - Perform the steps in the [*Install with Git*](#install-with-git) section below
 
 Once you have followed the link above to automatically install Academic, head on over to your new `academic-kickstart` repository in your GitHub (or GitLab) account and [personalize your site by editing the files in]({{< relref "get-started.md" >}}) `config/_default/`. Shortly after saving (i.e. *committing* a file), your site will automatically update.
    
