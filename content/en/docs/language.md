@@ -26,6 +26,7 @@ The **Interface Language** is used to change the language throughout your site. 
 Choose from **25+** interface languages including:
 
 - **Català** (ca)
+- **Česky** (cs)
 - **Dansk** (da)
 - **Deutsch** (de)
 - **Ελληνικά** (el)
