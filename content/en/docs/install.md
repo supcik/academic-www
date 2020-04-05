@@ -26,10 +26,15 @@ You can choose from one of the following four methods to install:
 
   * One-click install of Academic creates an `academic-kickstart` repository in your GitHub or GitLab account
   * Netlify will provide you with a customizable URL to access your new site, [or get your own domain](https://sourcethemes.com/academic/docs/domain/)
-  * Shortly after editing content in your repository, your site will automatically update
-  * To write blog posts in a rich online editor in your web browser,
-    - [Login to Netlify](https://www.netlify.com/), find the site you deployed with Netlify, and add yourself as an editor under the _Identity_ section by clicking _Invite Users_ and entering your email address
+  * Around 1-5 minutes after editing content in your repository, your site will automatically update
+    - If your site fails to update, [login to Netlify](https://www.netlify.com/), click your site, go to **Deploys**, and review the latest deploy log for any errors
+  * To **easily edit your site in a rich online editor in your browser**,
+    - [Login to Netlify](https://www.netlify.com/) and click the site you deployed with Netlify
+    - Go to **Settings > Identity**, and select **Enable Identity** service
+    - Under **Registration** preferences, select **Invite Only**
+    - Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**
     - Head over to **`YOUR_SITE.com/admin/`** to view your content management panel and begin publishing content
+    - For support with _Netlify CMS_ admin panel, refer to the [Netlify CMS docs](https://www.netlifycms.org/docs/add-to-your-site/#authentication) and the very active [Netlify CMS community](https://www.netlifycms.org/community/)
   * To edit your site in a [Markdown editor](https://www.typora.io) on your computer,
     - Perform the steps in the [*Install with Git*](#install-with-git) section below
 
