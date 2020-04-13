@@ -21,12 +21,12 @@ Then read on for some tips to help guide you.
 1. Remove the `static/admin/` folder if it exists
 2. [Install]({{< relref "customization.md#custom-font" >}}) the [_native_ font theme](https://github.com/gcushen/hugo-academic/blob/master/data/fonts/native.toml) in `data/fonts/` if it's not preinstalled at `themes/academic/data/fonts/native.toml`
 2. In `params.toml`:
-   a. Change the `font` to `native` (use local native fonts optimised for every device)
-   b. Set `netlify_cms` to `false` (disable the Netlify CMS integration)
+    1. Change the `font` to `native` (use local native fonts optimised for every device)
+    2. Set `netlify_cms` to `false` (disable the Netlify CMS integration)
 3. Add concatenated JS assets to `static/js/vendor/main.min.js`
-   - View the list of full assets to download in `themes/academic/data/assets.toml`
+    - View the list of full assets to download in `themes/academic/data/assets.toml`
 4. Add concatenated CSS assets to `static/css/vendor/main.min.css`
-   - View the list of full assets to download in `themes/academic/data/assets.toml`
+    - View the list of full assets to download in `themes/academic/data/assets.toml`
 5. Add Font Awesome font assets to `static/`
 
 Notes
