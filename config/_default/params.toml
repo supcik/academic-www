@@ -117,7 +117,7 @@ edit_page = {repo_url = "https://github.com/sourcethemes/academic-www", content_
 ############################
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = "screenshot.png"
+sharing_image = "sharing.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = "source_themes"
