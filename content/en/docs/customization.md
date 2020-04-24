@@ -218,3 +218,9 @@ To modify the format, edit `date_format` and `time_format` in `config/_default/p
 | `15:04`                           | Time              |
 | `3:04 PM`                         |                   |
 | `15:04 MST`                       |                   |
+
+## Customizing Taxonomy Pages
+
+Academic makes available taxonomies such as tags and categories for organizing content.
+
+If you need to display custom page elements, such as custom title or header image, for each taxonomy term, you can create a page for that term at `/content/<TAXONOMY>/<TERM>/_index.md` and [add your metadata]({{< relref "managing-content.md" >}}) to its [front matter]({{< relref "front-matter.md" >}}).
