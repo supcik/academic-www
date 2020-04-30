@@ -26,3 +26,4 @@ _Pen Pal_ supporters on [Patreon](https://www.patreon.com/cushen) include:
 - [Yuto Sasaki](https://www.yewton.net/)
 - [Alan Hinchcliffe](http://alanhinchcliffe.com/)
 - Julio Meneses
+- Dominik Schürmann
