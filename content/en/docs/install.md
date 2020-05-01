@@ -47,7 +47,7 @@ View the [Homepage Builder]({{< relref "page-builder.md" >}}) and [Content]({{< 
 Prerequisites:
 
 * [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo Extended v0.63.1+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.65.3+](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
@@ -68,7 +68,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 
 Prerequisites:
 
-* [Download and install Hugo Extended v0.63.1+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.65.3+](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
@@ -84,7 +84,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 2. Open [RStudio](https://www.rstudio.com/products/rstudio/), installing the *Blogdown* and *Hugo* dependencies:
 
         install.packages("blogdown")
-        blogdown::install_hugo(version = "0.63.1", force = TRUE)
+        blogdown::install_hugo(version = "0.69.2", force = TRUE)
 
 3. Open `academic.Rproj` from the *Academic Kickstart* folder in *Step 1*
 

@@ -51,6 +51,7 @@ What kind of content would you like to publish? Academic supports:
 - **Posts**: blog posts or news
 - **Projects**: publish your portfolio or projects
 - **Online Courses**: share knowledge online
+- **Notes**: collaborate on content across notebooks, sections, and pages
 - **Software Documentation**: document your software projects
 - **Talks**: publish any talks which you are presenting
 - **Slides**: write slides very efficiently with Markdown, present them at your talk, and share them online
@@ -101,7 +102,9 @@ To add a **Privacy Policy**, create a `privacy.md` file in your `content` folder
 
 By default, a superuser is created with the username *admin* and corresponding user profile located at `content/authors/admin/_index.md`. Let's open this file in a text editor and edit this file to make it *your* profile:
 
-- Edit your display `name` (typically your full name), your `role`, and write one sentence to describe yourself in `bio`
+- Add your display name (typically your full name) to the `title` field
+- Add your role/position or tagline to the `role` field
+- Write a brief sentence to describe yourself in the `bio` field - this can appear in the list of authors after the page content
 - Edit the `organizations` that you are affiliated with, or set this to `[]` to hide it
 - List your interests or hobbies in `interests`, or set this to `[]` to hide it
 - List your main qualifications using the `education` --> `courses` block
