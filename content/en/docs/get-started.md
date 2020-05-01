@@ -133,7 +133,7 @@ The `[[main]]` entries define the navigation links at the top of the website. Th
 To link to a section of the homepage, use the form `#<section-filename>` where `<section-filename>` is the filename (without .md extension). For example, `#posts` references a section with filename `posts.md`. You can rename your section files in `content/home/`, just remember to use a dash (`-`) instead of spaces in the filename. 
 
 {{% alert note %}}
-To create a dropdown sub-menu, add `identifier: "something"` to the parent item and `parent: "something"` to the child item.
+To create a dropdown sub-menu, add `identifier = "a-unique-reference"` to the parent item and `parent = "a-unique-reference"` to the child item, replacing `a-unique-reference` with a unique reference of your choice.
 {{% /alert %}}
 
 Read more about Hugo's menu system [here](https://gohugo.io/content-management/menus/).
