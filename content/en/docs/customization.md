@@ -61,6 +61,8 @@ Are you looking to customize the desktop and mobile icon which appears in your s
 
 Save your icon as a square 512x512 pixel image named `icon.png` and place the image in your root `assets/images/` folder, creating the `assets` and `images` folders if they don't already exist.
 
+Note that the icon might also be referred to as a _favicon_.
+
 {{% alert note %}}
 **For versions of Academic prior to v4.7:**
 
