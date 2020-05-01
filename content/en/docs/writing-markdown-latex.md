@@ -86,6 +86,8 @@ A general image:
 
     ![alternative text for search engines](/img/image.jpg)
 
+Figures may be [cross-referenced](#links).
+
 ## Image gallery
 
 **To add an image gallery to a page bundle:**
@@ -160,6 +162,13 @@ To enable linking to a file, such as a PDF, first place the file in your `static
     {{%/* staticref "files/cv.pdf" "newtab" */%}}Download my CV{{%/* /staticref */%}}
 
 The optional `"newtab"` argument for `staticref` will cause the link to be opened in a new tab.
+
+### Figures
+
+To cross-reference a figure:
+
+1. Retrieve the figure ID. The figure ID consists of a URL friendly equivalent of the image caption prefixed with `figure-`. To grab the exact ID, preview the page in Hugo, right click a figure and click _Inspect_ in your browser to grab the value of the figure’s `id` field.
+2. Create a link to the figure in the form `[a link to a figure](#figure-FIGURES-CAPTION)`. 
 
 ### Tags and Categories
 
