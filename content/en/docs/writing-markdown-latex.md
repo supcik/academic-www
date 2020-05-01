@@ -499,5 +499,3 @@ Here's some important information...
 ## Table of Contents
 
 A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the `{{%/* toc */%}}` shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.
-
-_Note: the `toc` shortcode may not yet function correctly in **Hugo v0.60+** due to a known Hugo limitation. As a temporary workaround, `markup: blackfriday` can be added to a page's front matter to enable use of `toc` shortcode._
