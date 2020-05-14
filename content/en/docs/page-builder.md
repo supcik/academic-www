@@ -157,7 +157,7 @@ Icon pack "ai" includes the following **academic** icons:
 Icon pack "emoji" gives you the ability to use **emojis as icons**
 
 - [See all icons](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
-- Enter the emoji shortcode, such as `:smile:`, in Academic's `icon` field
+- Enter the emoji shortcode, such as <pre>:smile:</pre>, in Academic's `icon` field
 - **Academic v4.9+ is required to utilise the _emoji_ icon pack and can currently only be used in the Featurette (skills) widget.**
 
 Icon pack "custom" gives you the ability to use **custom SVG icons**
