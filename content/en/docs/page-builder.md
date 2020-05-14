@@ -154,6 +154,19 @@ Icon pack "ai" includes the following **academic** icons:
 - cv, google-scholar, arxiv, orcid, researchgate, mendeley
 - [See all icons](https://jpswalsh.github.io/academicons/)
 
+Icon pack "emoji" gives you the ability to use **emojis as icons**
+
+- [See all icons](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+- Enter the emoji shortcode, such as `:smile:`, in Academic's `icon` field
+- **Academic v4.9+ is required to utilise the _emoji_ icon pack and can currently only be used in the Featurette (skills) widget.**
+
+Icon pack "custom" gives you the ability to use **custom SVG icons**
+
+- Create an SVG icon in your favorite image editor or download one from a site such as [Flat Icon](https://www.flaticon.com/)
+- Place the custom SVG icon in `assets/images/icon-pack/`, creating the folders if necessary
+- Reference the SVG icon name (without `.svg` extension) in the `icon` field
+- **Academic v4.9+ is required to utilise the _custom_ icon pack and can currently only be used in the Featurette (skills) widget.**
+
 ### Background
 
 A background can easily be applied to any homepage section. Choose from a range of background options including **color, gradient, and image**. Then choose either a dark or light text color, by setting `text_color_light`.
@@ -321,7 +334,25 @@ headless = true  # This file represents a page section.
   icon_pack = "fas"
   name = "Photography"
   description = "10%"
+
+# Uncomment to use emoji icons.
+# [[feature]]
+#  icon = ":smile:"
+#  icon_pack = "emoji"
+#  name = "Emojiness"
+#  description = "100%"  
+
+# Uncomment to use custom SVG icons.
+# Place custom SVG icon in `assets/images/icon-pack/`, creating folders if necessary.
+# Reference the SVG icon name (without `.svg` extension) in the `icon` field.
+# [[feature]]
+#  icon = "your-custom-icon-name"
+#  icon_pack = "custom"
+#  name = "Surfing"
+#  description = "90%"
 ```
+
+**Note: Academic v4.9+ is required to utilise the _emoji_ and _custom_ icon packs.**
 
 ## About
 
