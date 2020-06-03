@@ -22,7 +22,7 @@ You can choose from one of the following four methods to install:
 
 ## Install with web browser
 
-[Install Academic with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
+{{% button link="https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart" %}}Create your site now :rocket:{{% /button %}}
 
   * One-click install of Academic creates an `academic-kickstart` repository in your GitHub or GitLab account
   * Netlify will provide you with a customizable URL to access your new site, [or get your own domain](https://sourcethemes.com/academic/docs/domain/)
