@@ -62,3 +62,18 @@ figure img {
   margin-left: var(--button-group-margin);
   margin-right: var(--button-group-margin);
 }
+
+/* Thanks Aside */
+div.alert-thanks > div:first-child::before {
+  font-family: sans-serif;
+  font-weight: normal;
+  content: '🙏';
+}
+
+div.alert-thanks {
+  background: rgba(250, 235, 221, 0.3);
+}
+
+.dark div.alert-thanks {
+  background: rgba(250, 235, 221, 0.3);
+}
