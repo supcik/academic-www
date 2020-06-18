@@ -110,11 +110,13 @@ Head over to **`YOUR_SITE.netlify.app/admin/`** to view your content management 
 
 For support with _Netlify CMS_ admin panel, refer to the [Netlify CMS docs](https://www.netlifycms.org/docs/add-to-your-site/#authentication) and the very active [Netlify CMS community](https://www.netlifycms.org/community/).
 
-Check out the [Content]({{< relref "managing-content.md" >}}) guide to learn about all the different kinds of content we can create with Academic.
+Check out the [Content]({{< relref "managing-content.md" >}}) and [Elements]({{< relref "writing-markdown-latex.md" >}}) guides to learn about all the different kinds of content we can create with Academic.
 
 ## Personalize your homepage
 
 View the [Homepage Builder]({{< relref "page-builder.md" >}}) guide to learn how to add widgets to the homepage or other widget pages.
+
+Navigate to the `content/home/` folder in [Github](https://github.com/) to edit your homepage widgets or to create/remove widgets.
 
 ## Edit content on your computer
 
