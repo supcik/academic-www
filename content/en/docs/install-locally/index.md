@@ -1,53 +1,34 @@
 +++
-title = "Install"
+title = "Create a site locally"
 
 date = 2016-04-20
 toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
-weight = 10
+weight = 20
 
 [menu.docs]
   parent = "setup"
-  weight = 1
+  weight = 20
 +++
 
-You can choose from one of the following four methods to install:
+We highly **recommend** the [**one-minute Github/Gitlab install** using your web browser]({{< relref "install.md" >}}) **prior** to following the steps on this page to download and edit your site on your computer.
 
-* [**one-click install** using your web browser](#install-with-web-browser) **(recommended)**
+However, we can also skip the Github/Gitlab install and edit your site directly on your computer, [deploying to your preferred provider]({{< relref "deployment.md" >}}).
+
+You can choose from one of the following methods to install your site on your computer:
+
 * [install on your computer using **Git**](#install-with-git) with the Command Prompt/Terminal app
 * [install on your computer by **downloading the ZIP** files](#install-with-zip)
 * [install on your computer with **RStudio**](#install-with-rstudio)
 
 [After installing, check out the guide to personalizing your site]({{< relref "get-started.md" >}}).
 
-## Install with web browser
-
-{{% button link="https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart" %}}Create your site now :rocket:{{% /button %}}
-
-  * One-click install of Academic creates an `academic-kickstart` repository in your GitHub or GitLab account
-  * Netlify will provide you with a customizable URL to access your new site, [or get your own domain](https://sourcethemes.com/academic/docs/domain/)
-  * Around 1-5 minutes after editing content in your repository, your site will automatically update
-    - If your site fails to update, [login to Netlify](https://www.netlify.com/), click your site, go to **Deploys**, and review the latest deploy log for any errors
-  * To **easily edit your site in a rich online editor in your browser**,
-    - [Login to Netlify](https://www.netlify.com/) and click the site you deployed with Netlify
-    - Go to **Settings > Identity**, and select **Enable Identity** service
-    - Under **Registration** preferences, select **Invite Only**
-    - Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**
-    - Head over to **`YOUR_SITE.com/admin/`** to view your content management panel and begin publishing content
-    - For support with _Netlify CMS_ admin panel, refer to the [Netlify CMS docs](https://www.netlifycms.org/docs/add-to-your-site/#authentication) and the very active [Netlify CMS community](https://www.netlifycms.org/community/)
-  * To edit your site in a [Markdown editor](https://www.typora.io) on your computer,
-    - Perform the steps in the [*Install with Git*](#install-with-git) section below
-
-Once you have followed the link above to automatically install Academic, head on over to your new `academic-kickstart` repository in your GitHub (or GitLab) account and [personalize your site by editing the files in]({{< relref "get-started.md" >}}) `config/_default/`. Shortly after saving (i.e. *committing* a file), your site will automatically update.
-   
-View the [Homepage Builder]({{< relref "page-builder.md" >}}) and [Content]({{< relref "managing-content.md" >}}) guides to learn how to add widgets and content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/)
-
 ## Install with Git
 
 Prerequisites:
 
 * [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo Extended v0.65.3+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.65-v0.72](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
@@ -68,7 +49,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 
 Prerequisites:
 
-* [Download and install Hugo Extended v0.65.3+](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.65-v0.72](https://gohugo.io/getting-started/installing/#quick-install)
 
 Install:
 
@@ -84,7 +65,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 2. Open [RStudio](https://www.rstudio.com/products/rstudio/), installing the *Blogdown* and *Hugo* dependencies:
 
         install.packages("blogdown")
-        blogdown::install_hugo(version = "0.69.2", force = TRUE)
+        blogdown::install_hugo(version = "0.72.0", force = TRUE)
 
 3. Open `academic.Rproj` from the *Academic Kickstart* folder in *Step 1*
 
@@ -100,7 +81,7 @@ Note that **R content should be saved with the `.Rmarkdown` file extension** rat
 
 ## Demo content
 
-For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.com/).
+For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.app/).
 
 If you wish to initialise your site with the demo content, copy the contents of the `themes/academic/exampleSite/` folder to your website root folder, overwriting existing files if necessary. The `exampleSite` folder contains an example config file and content to help you get started. The following command can be used to accomplish this:
 
