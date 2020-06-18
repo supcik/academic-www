@@ -112,6 +112,14 @@ For support with _Netlify CMS_ admin panel, refer to the [Netlify CMS docs](http
 
 Check out the [Content]({{< relref "managing-content.md" >}}) and [Elements]({{< relref "writing-markdown-latex.md" >}}) guides to learn about all the different kinds of content we can create with Academic.
 
+Note that the preview window in the online editor is limited to rendering basic Markdown and doesn't accurately represent how your site will be rendered. However, it can be useful for getting started or writing on the go.
+
+For the full experience of seeing exactly what you are editing, check out the next section to edit on your computer.
+
+{{% alert info %}}
+If you prefer not to use the admin panel, you can optionally delete the `admin` folder at `static/admin/` and set `netlify_cms = false` under the `[cms]` section of `config/_default/params.toml`.
+{{% /alert %}}
+
 ## Personalize your homepage
 
 View the [Homepage Builder]({{< relref "page-builder.md" >}}) guide to learn how to add widgets to the homepage or other widget pages.
