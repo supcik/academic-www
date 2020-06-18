@@ -90,9 +90,9 @@ If you are an **organization or project**,
 
 Enable **rich content** for your site under the _Site Features_ section. If you write technical content, consider enabling the following options, otherwise set these options to `false`:
 
-  - [Code syntax highlighting](https://academic-demo.netlify.com/post/writing-technical-content/#code) with `highlight = true`
-  - [LaTeX math](https://academic-demo.netlify.com/post/writing-technical-content/#math) with `math = true`
-  - [Mermaid diagram drawing](https://academic-demo.netlify.com/post/writing-technical-content/#diagrams) with `diagram = true`
+  - [Code syntax highlighting](https://academic-demo.netlify.app/post/writing-technical-content/#code) with `highlight = true`
+  - [LaTeX math](https://academic-demo.netlify.app/post/writing-technical-content/#math) with `math = true`
+  - [Mermaid diagram drawing](https://academic-demo.netlify.app/post/writing-technical-content/#diagrams) with `diagram = true`
 
 The **Privacy Pack** can also be activated from the _Site Features_ section. When the privacy pack is enabled, a cookie consent message will be shown to visitors (linking to your Privacy Policy) and visitor IPs anonymized in Google Analytics (if enabled).
 

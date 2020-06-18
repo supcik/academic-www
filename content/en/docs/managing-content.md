@@ -384,7 +384,7 @@ To **add or remove publication types** in Academic v4.4+,
 
 The *docs* feature is designed for **knowledge sharing**. Use cases include **online courses, tutorials, software documentation, and knowledge bases**.
 
-[This website is using](https://github.com/sourcethemes/academic-www) the *docs* feature for the purpose of documenting Academic. Also, there is a [online course demo](https://academic-demo.netlify.com/courses/).
+[This website is using](https://github.com/sourcethemes/academic-www) the *docs* feature for the purpose of documenting Academic. Also, there is a [online course demo](https://academic-demo.netlify.app/courses/).
 
 Refer to the [example course](https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/courses) at `themes/academic/exampleSite/content/courses/` to learn how to get started.
 

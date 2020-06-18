@@ -36,6 +36,6 @@ subtitle = ""
 
 This website is powered by **Academic**, [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/), and can be built in **under 10 minutes for free**.
 
-Explore the [personal demo](https://academic-demo.netlify.com/) or project/organization demo (this site), and then consider heading on over to [install]({{< relref "/docs/install.md" >}}) and [personalize]({{< relref "/docs/get-started.md" >}}) your own site.
+Explore the [personal demo](https://academic-demo.netlify.app/) or project/organization demo (this site), and then consider heading on over to [install]({{< relref "/docs/install.md" >}}) and [personalize]({{< relref "/docs/get-started.md" >}}) your own site.
 
 If you like Academic, [_star_ it on Github](https://github.com/gcushen/hugo-academic) to show your support and keep track of updates :smiley:
