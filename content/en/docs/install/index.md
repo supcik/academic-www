@@ -55,13 +55,13 @@ Some creativity may be required to find a subdomain that is freely available. Do
 
 Lastly, click _Save_ to update our Netlify subdomain.
 
-Awesome! We can now visit the site at the URL you choose!
+Awesome! We can now visit the site at the URL you chose!
 
 We'll see something similar to the [Demo website](https://academic-demo.netlify.app/), but without the demo content.
 
 Now, let's personalize our shiny new site based on our requirements :star: :star: :star:
 
-### Personalize your site
+## Personalize your site
 
 Login to [GitHub](https://github.com/) and view the `academic-kickstart` repository which you created in the steps above:
 
@@ -95,7 +95,7 @@ A few minutes after saving (i.e. committing a file), your site will automaticall
 
 Next, let's setup the admin panel and use it to edit our author profile and begin adding content to our site!
 
-### Edit content online
+## Edit content online
 
 To **easily edit your site in a rich online editor in your browser**,
 
