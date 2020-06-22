@@ -140,5 +140,5 @@ For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo
 
 <script type="text/javascript" src="http://www.polljunkie.com/Scripts/embedder.js?v=1"></script>
 <script type="text/javascript">
-PollJunkie.show({"s":"academic","width":"300","height":"300","code":"bbggyy","borderColor":"#44ADE9","barBgColor":"#44ADE9","fontColor":"#fff"});
+PollJunkie.show({"s":"academic","width":"300","height":"400","code":"bbggyy","borderColor":"#44ADE9","barBgColor":"#44ADE9","fontColor":"#fff"});
 </script>
