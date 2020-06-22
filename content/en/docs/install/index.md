@@ -138,7 +138,4 @@ Alternatively, to edit **Rmarkdown** content, check out the [*Install with RStud
 
 For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.app/).
 
-<script type="text/javascript" src="http://www.polljunkie.com/Scripts/embedder.js?v=1"></script>
-<script type="text/javascript">
-PollJunkie.show({"s":"academic","width":"300","height":"400","code":"bbggyy","borderColor":"#44ADE9","barBgColor":"#44ADE9","fontColor":"#fff"});
-</script>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemiBqrMoNq0PYvrnWBRXevjzT618bEW-AvTVF6iWVPQAfw9w/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
