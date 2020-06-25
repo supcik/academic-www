@@ -2,6 +2,7 @@
 title: Themes
 date: 2017-11-16
 summary: Choose a theme and font for your Academic powered site.
+type: page
 ---
 
 Academic comes bundled with a variety of popular themes built-in including:
@@ -10,11 +11,11 @@ Academic comes bundled with a variety of popular themes built-in including:
 
 To choose a theme, set the `theme` option in `config/_default/params.toml`.
 
-Alternatively, you can [create your own theme]({{< relref "/docs/customization.md#custom-theme" >}}).
+Alternatively, you can [create your own theme]({{< relref "./docs/customization.md#custom-theme" >}}).
 
 ## Fonts
 
-Your theme comes with a _font set_ to style your titles and text, but you may choose to override it by specifying one of the following built-in font sets or [creating your own font set]({{< relref "/docs/customization.md#custom-theme" >}}):
+Your theme comes with a _font set_ to style your titles and text, but you may choose to override it by specifying one of the following built-in font sets or [creating your own font set]({{< relref "./docs/customization.md#custom-theme" >}}):
 
 - **Minimal** (modern)
 - **Classic** (original Academic v1 style)
@@ -31,6 +32,6 @@ The font size can be changed all the way from extra small to extra large using t
 
 In this section, we will curate themes submitted by users. To create your own theme and request it to be added to this section, follow these steps:
 
-* Follow the [guide to create a new theme]({{< relref "/docs/customization.md#custom-theme" >}})
+* Follow the [guide to create a new theme]({{< relref "./docs/customization.md#custom-theme" >}})
 * Upload your theme file to a new Github repository
 * [Open a ticket](https://github.com/sourcethemes/academic-www/issues) with a link to your theme's Github repository and a screenshot

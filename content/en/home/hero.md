@@ -34,13 +34,13 @@ hero_media = "screenshot-alpha.png"
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
 [cta]
-  url = "docs/install/"
+  url = "./docs/install/"
   label = "Get Started"
   icon_pack = "fas"
   icon = "download"
   
 [cta_alt]
-  url = "https://academic-demo.netlify.com"
+  url = "https://academic-demo.netlify.app"
   label = "View Demo"
 
 # Note. An optional note to show underneath the links.

@@ -75,7 +75,7 @@ When you update Academic itself, you can jump straight to the latest and greates
 
 To migrate your TOML/YAML front matter and configuration, apply any relevant steps from the *Breaking Changes* section of each **consecutive [release note](/academic/updates/)** since the version you were originally on. If a release has no *Breaking Changes* section, then no changes are required.
  
-For example, if you are updating from *v2.4.0* to *v3.1.0*, then [apply the breaking changes](/academic/updates/) for the relevant **consecutive** releases. In this case, that would require **first** applying the breaking changes from [v3.0.0]({{< relref "/updates/v3.0.0.md#breaking-changes" >}}) **and then** applying the breaking changes from [v3.1.0]({{< relref "/updates/v3.1.0.md#breaking-changes" >}}).
+For example, if you are updating from *v2.4.0* to *v3.1.0*, then [apply the breaking changes]({{< relref "../updates" >}}) for the relevant **consecutive** releases. In this case, that would require **first** applying the breaking changes from [v3.0.0]({{< relref "../updates/v3.0.0.md#breaking-changes" >}}) **and then** applying the breaking changes from [v3.1.0]({{< relref "../updates/v3.1.0.md#breaking-changes" >}}).
 
 To help migrate content to be compatible with new versions of Academic, there are some tools available in the **[Academic Scripts](https://github.com/sourcethemes/academic-scripts)** repository.
 
@@ -83,7 +83,7 @@ To help migrate content to be compatible with new versions of Academic, there ar
 
 Check out the [release notes]({{< relref "/updates" >}}) for the consecutive version that you are updating to, paying attention to the breaking changes. You can check which version you currently have, refer to the *Preparation* section above.
 
-If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any TOML/YAML settings changed in the configuration files (i.e. all files in the `config/_default/` folder) or in the [front matter]({{< relref "/docs/front-matter.md" >}}) of content files (i.e. files in the `content/` folder).
+If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any TOML/YAML settings changed in the configuration files (i.e. all files in the `config/_default/` folder) or in the [front matter]({{< relref "front-matter.md" >}}) of content files (i.e. files in the `content/` folder).
 
 If you have modified files in `themes/academic`, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (`git add <filename>`).
 
