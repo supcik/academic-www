@@ -138,4 +138,15 @@ Alternatively, to edit **Rmarkdown** content, check out the [*Install with RStud
 
 For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://academic-demo.netlify.app/).
 
+## Unlock rewards
+
+{{% alert thanks %}}
+**We're full steam ahead on improving Academic, and we need your help!**
+
+- ☕️ [**Donate a coffee**](https://paypal.me/cushen)
+- :heart: [Become a backer on **Patreon** and **unlock rewards**](https://www.patreon.com/cushen) such as stickers
+- 💵 [Become a **sponsor** and **advertise your site**](https://www.patreon.com/join/cushen)
+- :woman_technologist: [**Contribute** code, PR reviews, documentation, color themes, tutorials, etc.](https://github.com/gcushen/hugo-academic/blob/master/.github/contributing.md)
+{{% /alert %}}
+
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemiBqrMoNq0PYvrnWBRXevjzT618bEW-AvTVF6iWVPQAfw9w/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
