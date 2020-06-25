@@ -3,14 +3,14 @@ title: Getting started
 date: 2016-04-20
 toc: true
 type: docs
-weight: 20
+weight: 25
 math: true
 aliases:
   - post/getting-started/
 menu:
   docs:
     parent: setup
-    weight: 20
+    weight: 25
 ---
 
 This quick tutorial will show you how to setup and use Academic.
