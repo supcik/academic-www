@@ -28,7 +28,8 @@ You can choose from one of the following methods to install your site on your co
 Prerequisites:
 
 * [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo Extended v0.65-v0.72](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.73](https://gohugo.io/getting-started/installing/#quick-install)
+  - Ensure you install the **full** version of Hugo, named **_Hugo Extended_**
 
 Install:
 
@@ -49,7 +50,8 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 
 Prerequisites:
 
-* [Download and install Hugo Extended v0.65-v0.72](https://gohugo.io/getting-started/installing/#quick-install)
+* [Download and install Hugo Extended v0.73](https://gohugo.io/getting-started/installing/#quick-install)
+  - Ensure you install the **full** version of Hugo, named **_Hugo Extended_**
 
 Install:
 
@@ -65,7 +67,7 @@ Now you're ready to [personalize and view your site]({{< relref "get-started.md"
 2. Open [RStudio](https://www.rstudio.com/products/rstudio/), installing the *Blogdown* and *Hugo* dependencies:
 
         install.packages("blogdown")
-        blogdown::install_hugo(version = "0.72.0", force = TRUE)
+        blogdown::install_hugo(version = "0.73.0", force = TRUE)
 
 3. Open `academic.Rproj` from the *Academic Kickstart* folder in *Step 1*
 
@@ -88,6 +90,17 @@ If you wish to initialise your site with the demo content, copy the contents of 
 ```bash
 cp -av themes/academic/exampleSite/* .
 ```
+
+## Unlock rewards
+
+{{% alert thanks %}}
+**We're full steam ahead on improving Academic, and we need your help!**
+
+- ☕️ [**Donate a coffee**](https://paypal.me/cushen)
+- :heart: [Become a backer on **Patreon** and **unlock rewards**](https://www.patreon.com/cushen) such as stickers
+- 💵 [Become a **sponsor** and **advertise your site**](https://www.patreon.com/join/cushen)
+- :woman_technologist: [**Contribute** code, PR reviews, documentation, color themes, tutorials, etc.](https://github.com/gcushen/hugo-academic/blob/master/.github/contributing.md)
+{{% /alert %}}
 
 ## Next steps
 
