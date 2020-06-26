@@ -149,4 +149,4 @@ For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo
 - :woman_technologist: [**Contribute** code, PR reviews, documentation, color themes, tutorials, etc.](https://github.com/gcushen/hugo-academic/blob/master/.github/contributing.md)
 {{% /alert %}}
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemiBqrMoNq0PYvrnWBRXevjzT618bEW-AvTVF6iWVPQAfw9w/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+{{< poll_academic >}}
