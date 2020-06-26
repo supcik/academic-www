@@ -715,7 +715,11 @@ headless = true  # This file represents a page section.
 
 ## People
 
-Introduce your team members. The People widget displays photos of people within your team or organisation, and links to their user profile page. You can choose which users to display and in which order to display them by using *user groups*.
+Introduce your team members.
+
+{{< figure library="1" src="docs/widget-people.png" title="Introduce your team members with the People widget." >}}
+
+The People widget displays photos of people within your team or organisation, and links to their user profile page. You can choose which users to display and in which order to display them by using *user groups*.
 
 First, [create a user account]({{< relref "get-started.md#introduce-yourself" >}}) for each user that your wish to display. (This can also be performed by duplicating the example `content/authors/admin/` folder for each user and modifying its contents appropriately.)
 
@@ -747,6 +751,15 @@ headless = true  # This file represents a page section.
 
   # Show user's interests? (true/false)
   show_interests = true
+```
+
+**Person not showing in the People widget?**
+
+Hugo will only generate a user's profile if the user is associated with a piece of content by having their username appear in the `authors` field of a page's front matter. Therefore, if a user does not appear in the widget, edit the user's profile to add an `authors` field containing their username (folder name) to force Hugo to generate their profile even though it's not directly associated with any content. For example,
+
+```
+authors:
+- <USERNAME>
 ```
 
 ## Slider
