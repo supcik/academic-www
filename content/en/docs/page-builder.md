@@ -35,6 +35,15 @@ Academic comes with the following widgets built-in. Additionally, third-party wi
 - [People](#people) - introduce your team members
 - [Slider](#slider) (carousel) - promote a lot of content in a small space
 
+{{% alert thanks %}}
+**We're full steam ahead on improving Academic, and we need your help!**
+
+- ☕️ [**Donate a coffee**](https://paypal.me/cushen)
+- :heart: [Become a backer on **Patreon** and **unlock rewards**](https://www.patreon.com/cushen) such as stickers
+- 💵 [Become a **sponsor** and **advertise your site**](https://www.patreon.com/join/cushen)
+- :woman_technologist: [**Contribute** code, PR reviews, documentation, color themes, tutorials, etc.](https://github.com/gcushen/hugo-academic/blob/master/.github/contributing.md)
+{{% /alert %}}
+
 ## Using Widgets
 
 Academic Kickstart includes instances of all the built-in widgets. Delete the sections in `content/home/` that you don't need (or set `active = false` in their front matter) and personalize the front matter options of the sections that you wish to keep by opening them in a text editor.

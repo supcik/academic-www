@@ -7,8 +7,6 @@ type = "docs"  # Do not modify.
 
 The Academic framework enables you to easily create a beautifully simple website using the [Hugo](https://gohugo.io) static site generator in under 10 minutes :rocket:
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemiBqrMoNq0PYvrnWBRXevjzT618bEW-AvTVF6iWVPQAfw9w/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
 ## Why Academic?
 
 Learn [why Academic was created and the benefits of using it to power your site](https://georgecushen.com/create-your-website-with-hugo/).
