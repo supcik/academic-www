@@ -34,8 +34,8 @@ Prerequisites:
 Install:
 
 1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository to create a new website
-   * If you already created your site with **Netlify**, then skip this step
-2. Clone your fork to your computer with Git, replacing `sourcethemes` in the command below with your GitHub username:
+   * If you already created your site with **Netlify**, then **skip this step**
+2. Clone your fork to your computer with Git, **replacing `sourcethemes` in the command below with your GitHub username**:
 
         git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
 
